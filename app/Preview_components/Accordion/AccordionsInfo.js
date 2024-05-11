@@ -1,5 +1,5 @@
-const AccordionsInfo = {
-  base_accordion: {
+const AccordionsInfo = [
+  {
     title: "Base Accordion",
     details: {
       description: "Simple accordion with simple click functionality",
@@ -97,6 +97,6 @@ const AccordionsInfo = {
     
     `,
   },
-};
+];
 
 export default AccordionsInfo;

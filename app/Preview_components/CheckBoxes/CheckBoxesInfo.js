@@ -1,5 +1,5 @@
-const CheckBoxesInfo = {
-  base_checkbox: {
+const CheckBoxesInfo = [
+  {
     title: "Base Checkbox",
     details: {
       description:
@@ -89,6 +89,6 @@ const CheckBoxesInfo = {
         
         `,
   },
-};
+];
 
 export default CheckBoxesInfo;

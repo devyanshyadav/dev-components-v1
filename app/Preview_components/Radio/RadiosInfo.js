@@ -1,5 +1,5 @@
-const RadiosInfo = {
-  base_radio: {
+const RadiosInfo = [
+  {
     title: "Base Radio",
     details: {
       description:
@@ -109,6 +109,6 @@ export default BaseRadio;
 
     `,
   },
-};
+];
 
 export default RadiosInfo;

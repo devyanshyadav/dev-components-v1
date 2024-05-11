@@ -9,8 +9,8 @@ const page = () => {
   const [radioStatus, setRadioStatus] = useState([0, "Male"]);
   return (
     <ComponentPreview
-      component_name={RadiosInfo.base_radio.title}
-      component_details={RadiosInfo.base_radio.details}
+      component_name={RadiosInfo[0].title}
+      component_details={RadiosInfo[0].details}
       component_preview={
         <BaseRadio
           radioStatus={radioStatus}
@@ -18,8 +18,8 @@ const page = () => {
           radioOptions={["Male", "Female", "Other"]}
         />
       }
-      component_code={RadiosInfo.base_radio.code}
-      component_packages={RadiosInfo.base_radio.packages}
+      component_code={RadiosInfo[0].code}
+      component_packages={RadiosInfo[0].packages}
     />
   );
 };

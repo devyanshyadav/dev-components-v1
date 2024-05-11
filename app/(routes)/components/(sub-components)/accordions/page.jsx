@@ -27,13 +27,15 @@ const page = () => {
     },
   ];
   return (
+    <>
     <ComponentPreview
-        component_name={AccordionsInfo.base_accordion.title}
-        component_details={AccordionsInfo.base_accordion.details}
+        component_name={AccordionsInfo[0].title}
+        component_details={AccordionsInfo[0].details}
         component_preview={<BaseAccordion AccordData={AccordData} />}
-        component_code={AccordionsInfo.base_accordion.code}
-        component_packages={AccordionsInfo.base_accordion.packages}
+        component_code={AccordionsInfo[0].code}
+        component_packages={AccordionsInfo[0].packages}
       />
+    </>
 
   )
 }

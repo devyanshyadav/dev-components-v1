@@ -9,19 +9,19 @@ const page = () => {
   return (
     <>
       <ComponentPreview
-        component_name={ButtonsInfo.base_button.title}
-        component_details={ButtonsInfo.base_button.details}
-        component_preview={<BaseButton />}
-        component_code={ButtonsInfo.base_button.code}
-        component_packages={ButtonsInfo.base_button.packages}
+        component_name={ButtonsInfo[0].title}
+        component_details={ButtonsInfo[0].details}
+        component_preview={<BaseButton onClick={() => {alert("This is Base Button")}}>Base Button</BaseButton> /*fgg*/}
+        component_code={ButtonsInfo[0].code}
+        component_packages={ButtonsInfo[0].packages}
       />
 
       <ComponentPreview
-        component_name={ButtonsInfo.async_button.title}
-        component_details={ButtonsInfo.async_button.details}
+        component_name={ButtonsInfo[1].title}
+        component_details={ButtonsInfo[1].details}
         component_preview={<AsyncButton />}
-        component_code={ButtonsInfo.async_button.code}
-        component_packages={ButtonsInfo.async_button.packages}
+        component_code={ButtonsInfo[1].code}
+        component_packages={ButtonsInfo[1].packages}
       />
     </>
   );

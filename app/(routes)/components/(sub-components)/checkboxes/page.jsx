@@ -10,16 +10,16 @@ const page = () => {
 
   return (
     <ComponentPreview
-      component_name={CheckBoxesInfo.base_checkbox.title}
-      component_details={CheckBoxesInfo.base_checkbox.details}
+      component_name={CheckBoxesInfo[0].title}
+      component_details={CheckBoxesInfo[0].details}
       component_preview={
         <BaseCheckBox
           checkStatus={checkStatus}
           setCheckStatus={setCheckStatus}
         />
       }
-      component_code={CheckBoxesInfo.base_checkbox.code}
-      component_packages={CheckBoxesInfo.base_checkbox.packages}
+      component_code={CheckBoxesInfo[0].code}
+      component_packages={CheckBoxesInfo[0].packages}
     />
   );
 };

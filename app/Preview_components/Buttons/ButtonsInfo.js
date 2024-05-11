@@ -1,43 +1,79 @@
+const ButtonsInfo = [
+  {
+    title: "Base Button",
+    details: {
+      description: "A simple and customizable button component.",
+      features: [
+        "Renders a button with customizable content and props",
+        "Provides default styles and hover/active effects",
+        "Supports additional props for further customization",
+      ],
+      props: [
+        {
+          propName: "children",
+          propExample: '"Base Button"',
+          propDetail:
+            "The content to be displayed inside the button. If not provided, it defaults to 'Base Button'.",
+        },
+        {
+          propName: "...props",
+          propExample: `onClick={alert("This is Base Button")}`,
+          propDetail:
+            "Additional props to be passed to the button element, such as onClick, disabled, etc.",
+        },
+      ],
+      packages: [],
+      usage_code: `
+        import BaseButton from "@/app/Preview_components/Buttons/BaseButton";
+        import React from "react";
+        
+        const page = () => {
+          return <BaseButton onClick={() => {alert("This is Base Button")}}>Base Button</BaseButton>;
+        };
+        
+        export default page;
+        
+        `,
+    },
+    code: `import React from "react";
 
-const ButtonsInfo = {
-  "base_button": {
-      "title": "Base Button",
-      "details": "This is a base button with simple click functionality",
-      "packages":[],
-      "code":` import React from "react";
-      const BaseButton = () => {
+      const BaseButton = ({ children = "Base Button", ...props }) => {
         return (
-          <button className="p-2 px-3 bg-cyan-500 select-none hover:bg-cyan-700 text-white rounded-xl font-semibold">
-            Base Button
+          <button {...props} className="p-2 px-3 bg-cyan-500 select-none hover:bg-cyan-700 text-white rounded-xl font-semibold active:scale-95 transition-all">
+            {children}
           </button>
         );
       };
-      export default BaseButton;`
+      
+      export default BaseButton;`,
   },
-  "async_button": {
-    "title": "Async Button",
+  {
+    title: "Async Button",
     details: {
       description:
         "Simulates async button behavior: fetches data, displays loading animation, updates button text for status.",
-      features: ["Fetches data from a specified URL when clicked",
-      "Displays a loading animation while the data is being fetched",
-      "Updates the button text to indicate the status of the operation",
-      "Handles errors gracefully"],
-      props: [{
-        propName: "Fetching",
-        propExample: `[false, "Submit"]`,
-        propDetail:
-          "This is an array containing a boolean value and a string value.",
-      },
-      {
-        propName: "handleSubmit",
-        propExample: `handleSubmit`,
-        propDetail:
-          "This is a function that is called when the button is clicked.",
-      }      
-    ],
+      features: [
+        "Fetches data from a specified URL when clicked",
+        "Displays a loading animation while the data is being fetched",
+        "Updates the button text to indicate the status of the operation",
+        "Handles errors gracefully",
+      ],
+      props: [
+        {
+          propName: "Fetching",
+          propExample: `[false, "Submit"]`,
+          propDetail:
+            "This is an array containing a boolean value and a string value.",
+        },
+        {
+          propName: "handleSubmit",
+          propExample: `handleSubmit`,
+          propDetail:
+            "This is a function that is called when the button is clicked.",
+        },
+      ],
       packages: ["zustand", "react", "react-dom", "react-icons"],
-      usage_code:`"use client";
+      usage_code: `"use client";
       import AsyncButton from "@/app/dev_components/AsyncButton";
       import React, { useState } from "react";
       
@@ -63,9 +99,9 @@ const ButtonsInfo = {
       };
       
       export default page;
-      `
+      `,
     },
-    "code":`import React from "react";
+    code: `import React from "react";
 
     const AsyncButton = ({ Fetching, handleSubmit }) => {
       return (
@@ -103,8 +139,8 @@ const ButtonsInfo = {
     
     export default AsyncButton;
     
-    `
-},
-}
+    `,
+  },
+];
 
-export default ButtonsInfo
+export default ButtonsInfo;
