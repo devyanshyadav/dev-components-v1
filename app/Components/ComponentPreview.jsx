@@ -45,7 +45,7 @@ const ComponentPreview = ({
           </button>
         </CopyCode>
         {CurrTab == 0 ? (
-          <div className="flex-1 w-full svg-pattern-dots rounded-xl grid place-content-center">
+          <div className="flex-1 w-full svg-pattern-dots rounded-xl flex items-center justify-center p-5">
             {component_preview}
           </div>
         ) : CurrTab == 1 ? (

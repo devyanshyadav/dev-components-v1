@@ -48,6 +48,14 @@ const useDevStore = create((set, get) => ({
         "A radio button allows users to select a single option from a set of mutually exclusive choices.",
       url: "/components/radios",
     },
+    {
+      name: "Responsive Navbar",
+      image: "/svg_icons/nav.png",
+      components_no: countObjects(RadiosInfo),
+      description:
+        "A navbar provides navigation options to users.",
+      url: "/components/navbar",
+    },
   ],
 }));
 
