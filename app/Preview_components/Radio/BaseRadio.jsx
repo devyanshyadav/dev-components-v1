@@ -5,12 +5,12 @@ const BaseRadio = ({ radioValue, setRadioValue, radioOptions }) => {
   return (
     <div className=" space-y-2 bg-cyan-700/20 p-3 rounded-md">
       {radioOptions.map((item, index) => (
-        <div className="flex gap-2 items-center text-white text-sm">
+        <div key={index} className="flex gap-2 items-center text-white text-sm">
           <span className="relative overflow-hidden border border-accent-400  rounded-full bg-white w-4 text-cyan-400 aspect-square place-content-center cursor-pointer grid place-items-center">
             {item.toLowerCase() === radioValue.toLocaleLowerCase() && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                wnameth="1em"
+                width="1em"
                 height="1em"
                 viewBox="0 0 24 24"
               >
@@ -21,7 +21,7 @@ const BaseRadio = ({ radioValue, setRadioValue, radioOptions }) => {
                   strokeDasharray={60}
                   strokeDashoffset={60}
                   strokeLinecap="round"
-                  strokeWnameth={2.8}
+                  strokeWidth={2.8}
                   d="M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z"
                 >
                   <animate
