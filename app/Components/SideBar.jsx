@@ -17,7 +17,7 @@ const SideBar = () => {
           <li
             key={index}
             className={`w-full group flex items-center gap-2 hover:bg-secondary/20 hover:text-white rounded-lg cursor-pointer p-1 px-2 ${
-              data[0].name && data[0].name === item.name && "text-accent"
+              data[0].name && data[0].name === item.name ? "text-accent" : ""
             } `}
           >
             <GoDotFill className="text-xs group-hover:text-accent" />{" "}
