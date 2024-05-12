@@ -5,6 +5,7 @@ import countObjects from "./utils/countObjects";
 import AccordionsInfo from "../Preview_components/Accordion/AccordionsInfo";
 import CheckBoxesInfo from "../Preview_components/CheckBoxes/CheckBoxesInfo";
 import RadiosInfo from "../Preview_components/Radio/RadiosInfo";
+import RangeSliderInfo from "../Preview_components/RangeSlider/RangeSlidersInfo";
 
 const useDevStore = create((set, get) => ({
   ThemeColors: {
@@ -55,6 +56,14 @@ const useDevStore = create((set, get) => ({
       description:
         "A navbar provides navigation options to users.",
       url: "/components/navbar",
+    },
+    {
+      name: "Range Slider",
+      image: "/svg_icons/range.png",
+      components_no: countObjects(RangeSliderInfo),
+      description:
+        "A range slider component that allows users to select a value within a specific range.",
+      url: "/components/range-slider",
     },
   ],
 }));
