@@ -9,7 +9,6 @@ const SideBar = () => {
   const { ComponentData } = useDevStore((state) => state);
   const params = usePathname();
   const data = ComponentData.filter((item) => item.url === params);
-  console.log(data)
 
   return (
     <section className="h-full w-[20vw] bg-primary border border-secondary/30 rounded-r-xl p-3 text-white/60">
@@ -17,7 +16,9 @@ const SideBar = () => {
         {ComponentData.map((item, index) => (
           <li
             key={index}
-            className={`w-full group flex items-center gap-2 hover:bg-secondary/20 hover:text-white rounded-lg cursor-pointer p-1 px-2`}
+            className={`w-full group flex items-center gap-2 hover:bg-secondary/20 hover:text-white rounded-lg cursor-pointer p-1 px-2 ${
+              data[0].name && data[0].name === item.name && "text-accent"
+            } `}
           >
             <GoDotFill className="text-xs group-hover:text-accent" />{" "}
             <Link href={item.url} className="w-full">
