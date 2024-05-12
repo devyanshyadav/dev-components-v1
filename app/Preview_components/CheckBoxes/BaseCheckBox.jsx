@@ -1,11 +1,9 @@
+'use client';
 import React from "react";
 
 const BaseCheckBox = ({ checkStatus, setCheckStatus }) => {
   return (
-    <div
-      onClick={() => setCheckStatus(!checkStatus)}
-      className="flex gap-2 items-center justify-start cursor-pointer min-w-40"
-    >
+    <div className="flex gap-2 text-white items-center justify-start cursor-pointer w-40 bg-cyan-700/20 p-3 rounded-md">
       <span
         id="dev-checkbox"
         className={`border-2 border-cyan-500 w-5 text-white aspect-square grid place-content-center rounded-md cursor-pointer ${
@@ -38,8 +36,17 @@ const BaseCheckBox = ({ checkStatus, setCheckStatus }) => {
             </path>
           </svg>
         )}
+        <input
+          type="checkbox"
+          id="base-checkbox"
+          className="absolute inset-0 opacity-0 cursor-pointer"
+          checked={checkStatus}
+          onChange={(e) => setCheckStatus(e.target.checked)}
+        />
       </span>
-      <p className="text-white select-none">{checkStatus ? "Checked" : "Unchecked"}</p>
+      <label htmlFor="base-checkbox">
+        {checkStatus ? "Checked" : "Unchecked"}
+      </label>
     </div>
   );
 };

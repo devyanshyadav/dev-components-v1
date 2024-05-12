@@ -6,15 +6,16 @@ import ComponentPreview from "@/app/Components/ComponentPreview";
 
 
 const page = () => {
-  const [radioStatus, setRadioStatus] = useState([0, "Male"]);
+  const [radioValue, setRadioValue] = useState("Male");
+
   return (
     <ComponentPreview
       component_name={RadiosInfo[0].title}
       component_details={RadiosInfo[0].details}
       component_preview={
         <BaseRadio
-          radioStatus={radioStatus}
-          setRadioStatus={setRadioStatus}
+          radioValue={radioValue}
+          setRadioValue={setRadioValue}
           radioOptions={["Male", "Female", "Other"]}
         />
       }
