@@ -5,7 +5,7 @@ import BaseRangeSlider from "@/app/Preview_components/RangeSlider/BaseRangeSlide
 import RangeSliderInfo from "@/app/Preview_components/RangeSlider/RangeSlidersInfo";
 
 const page = () => {
-  const [rangeValue, setRangeValue] = useState([0, "Male"]);
+  const [rangeValue, setRangeValue] = useState(30);
   return (
     <ComponentPreview
       component_name={RangeSliderInfo[0].title}
