@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import ComponentPreview from "@/app/Components/ComponentPreview";
-import BaseModal from "@/app/Preview_components/Modal/BaseModal";
 import ModalsInfo from "@/app/Preview_components/Modal/ModalsInfo";
+import CustomModal from "@/app/Preview_components/Modal/CustomModal";
 
 const page = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -13,7 +13,7 @@ const page = () => {
       component_details={ModalsInfo[0].details}
       component_usage_code={ModalsInfo[0].usage_code}
       component_preview={
-        <BaseModal
+        <CustomModal
           openModal={openModal}
           setOpenModal={setOpenModal}
           modalTitle="Modal Title"
@@ -24,7 +24,7 @@ const page = () => {
           }
         >
           <div className="text-white font-semibold text-lg">Modal Content</div>
-        </BaseModal>
+        </CustomModal>
       }
       component_code={ModalsInfo[0].code}
       component_packages={ModalsInfo[0].packages}

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-const AsyncButton = () => {
+const CustomAsyncBtn = () => {
   const [Fetching, setFetching] = useState([false, "Submit"]);
 
   // Example to use async button by using fakestore api
@@ -56,4 +56,4 @@ const AsyncButton = () => {
   );
 };
 
-export default AsyncButton;
+export default CustomAsyncBtn;

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Hamburger from "hamburger-react";
 
-const BaseNavbar = ({ navList }) => {
+const CustomNavbar = ({ navList }) => {
   const [on, toggle] = useState(false);
   return (
     <header className="w-full h-16 select-none bg-slate-800 md:border border-secondary/50 md:rounded-lg self-start text-white flex items-center justify-between px-3 md:relative fixed inset-0 z-50">
@@ -39,4 +39,4 @@ const BaseNavbar = ({ navList }) => {
   );
 };
 
-export default BaseNavbar;
+export default CustomNavbar;

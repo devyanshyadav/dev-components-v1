@@ -1,6 +1,6 @@
 const ModalsInfo = [
   {
-    title: "Base Modal",
+    title: "Custom Modal",
     details: {
       description:
         "A modal component that can be used to display content or prompts.",
@@ -54,14 +54,14 @@ const ModalsInfo = [
       ],
     },
     usage_code: `
-    import BaseModal from "@/app/dev_components/BaseModal";
+    import CustomModal from "@/app/dev_components/CustomModal";
     import React, { useState } from "react";
     
     const page = () => {
       const [openModal, setOpenModal] = useState(false);
     
       return (
-        <BaseModal
+        <CustomModal
           openModal={openModal}
           setOpenModal={setOpenModal}
           modalTitle="Modal Title"
@@ -72,7 +72,7 @@ const ModalsInfo = [
           }
         >
           <div className="text-white font-semibold text-lg">Modal Content</div>
-        </BaseModal>
+        </CustomModal>
       );
     };
     
@@ -84,7 +84,7 @@ const ModalsInfo = [
     import { IoIosCloseCircleOutline } from "react-icons/io";
     import { motion } from "framer-motion";
     
-    const BaseModal = ({
+    const CustomModal = ({
       children,
       openModal,
       setOpenModal,
@@ -150,7 +150,7 @@ const ModalsInfo = [
       );
     };
     
-    export default BaseModal;
+    export default CustomModal;
     `,
   },
 ];

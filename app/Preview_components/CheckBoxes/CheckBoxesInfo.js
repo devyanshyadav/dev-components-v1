@@ -1,6 +1,6 @@
 const CheckBoxesInfo = [
   {
-    title: "Base Checkbox",
+    title: "Custom Checkbox",
     details: {
       description:
         "A simple checkbox component that allows users to toggle a boolean value.",
@@ -40,7 +40,7 @@ const CheckBoxesInfo = [
     code: `
     import React from "react";
     
-    const BaseCheckBox = ({ checkStatus, setCheckStatus }) => {
+    const CustomCheckBox = ({ checkStatus, setCheckStatus }) => {
       return (
         <div className="flex gap-2 text-white items-center justify-start cursor-pointer w-40 bg-cyan-700/20 p-3 rounded-md">
           <span
@@ -78,20 +78,20 @@ const CheckBoxesInfo = [
             )}
             <input
               type="checkbox"
-              id="base-checkbox"
+              id="custom-checkbox"
               className="absolute inset-0 opacity-0 cursor-pointer"
               checked={checkStatus}
               onChange={(e) => setCheckStatus(e.target.checked)}
             />
           </span>
-          <label htmlFor="base-checkbox">
+          <label htmlFor="custom-checkbox">
             {checkStatus ? "Checked" : "Unchecked"}
           </label>
         </div>
       );
     };
     
-    export default BaseCheckBox;
+    export default CustomCheckBox;
     
         `,
   },

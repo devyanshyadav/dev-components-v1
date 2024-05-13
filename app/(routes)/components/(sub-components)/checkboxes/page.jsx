@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import BaseCheckBox from "@/app/Preview_components/CheckBoxes/BaseCheckBox";
 import CheckBoxesInfo from "@/app/Preview_components/CheckBoxes/CheckBoxesInfo";
 import ComponentPreview from "@/app/Components/ComponentPreview";
+import CustomCheckBox from "@/app/Preview_components/CheckBoxes/CustomCheckBox";
 
 
 const page = () => {
@@ -14,7 +14,7 @@ const page = () => {
       component_details={CheckBoxesInfo[0].details}
       component_usage_code={CheckBoxesInfo[0].usage_code}
       component_preview={
-        <BaseCheckBox
+        <CustomCheckBox
           checkStatus={checkStatus}
           setCheckStatus={setCheckStatus}
         />

@@ -1,6 +1,6 @@
 const TooltipsInfo = [
   {
-    title: "Base Tooltip",
+    title: "React Tooltip",
     details: {
       description:
         "A tooltip component that displays additional information or a helpful message when hovering over an element.",
@@ -31,24 +31,20 @@ const TooltipsInfo = [
       doc_links: ["https://react-tooltip.com/docs/getting-started"],
       packages: [
         {
-          pckg_name: "framer-motion",
-          pckg_link: "https://www.framer.com/motion/",
-        },
-        {
           pckg_name: "react-tooltip",
           pckg_link: "https://react-tooltip.com/docs/getting-started",
         }
       ],
     },
-    usage_code: `import BaseTooltip from "@/app/dev_components/BaseTooltip";
+    usage_code: `import ReactTooltip from "@/app/dev_components/ReactTooltip";
       import React from "react";
       
       const page = () => {
         return (
           <div className="bg-cyan-700/20 p-5 rounded-lg">
-            <BaseTooltip tipData="I am tooltip">
+            <ReactTooltip tipData="I am tooltip">
               <h3 className="text-cyan-400 ">Hover on me</h3>
-            </BaseTooltip>
+            </ReactTooltip>
           </div>
         );
       };
@@ -60,7 +56,7 @@ const TooltipsInfo = [
       import React from "react";
       import { Tooltip } from "react-tooltip";
       
-      const BaseTooltip = ({ children, place = "top", tipData }) => {
+      const ReactTooltip = ({ children, place = "top", tipData }) => {
         return (
           <>
             <Tooltip
@@ -80,7 +76,7 @@ const TooltipsInfo = [
         );
       };
       
-      export default BaseTooltip;
+      export default ReactTooltip;
       
       `,
   },

@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import ComponentPreview from "@/app/Components/ComponentPreview";
-import BaseRangeSlider from "@/app/Preview_components/RangeSlider/BaseRangeSlider";
 import RangeSliderInfo from "@/app/Preview_components/RangeSlider/RangeSlidersInfo";
+import CustomRangeSlider from "@/app/Preview_components/RangeSlider/CustomRangeSlider";
 
 const page = () => {
   const [rangeValue, setRangeValue] = useState(30);
@@ -12,7 +12,7 @@ const page = () => {
       component_details={RangeSliderInfo[0].details}
       component_usage_code={RangeSliderInfo[0].usage_code}
       component_preview={
-        <BaseRangeSlider
+        <CustomRangeSlider
           rangeValue={rangeValue}
           setRangeValue={setRangeValue}
         />

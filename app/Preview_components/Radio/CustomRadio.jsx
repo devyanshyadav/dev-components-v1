@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-const BaseRadio = ({ radioValue, setRadioValue, radioOptions }) => {
+const CustomRadio = ({ radioValue, setRadioValue, radioOptions }) => {
   return (
     <div className=" space-y-2 bg-cyan-700/20 p-3 rounded-md">
       {radioOptions.map((item, index) => (
@@ -43,7 +43,7 @@ const BaseRadio = ({ radioValue, setRadioValue, radioOptions }) => {
             <input
               className="absolute inset-0 cursor-pointer opacity-0 "
               type="radio"
-              name="base-radio"
+              name="custom-radio"
               id={item}
               value={item}
               onChange={(e) => setRadioValue(e.target.value)}
@@ -58,4 +58,4 @@ const BaseRadio = ({ radioValue, setRadioValue, radioOptions }) => {
   );
 };
 
-export default BaseRadio;
+export default CustomRadio;

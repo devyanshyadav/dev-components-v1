@@ -1,6 +1,6 @@
 const AccordionsInfo = [
   {
-    title: "Base Accordion",
+    title: "Custom Accordion",
     details: {
       description: "Simple accordion with simple click functionality",
       features: [
@@ -54,7 +54,7 @@ const AccordionsInfo = [
           },
         ];
       
-        return <BaseAccordion AccordData={AccordData} />;
+        return <CustomAccordion AccordData={AccordData} />;
       };
       
       export default page;
@@ -66,7 +66,7 @@ const AccordionsInfo = [
     import { RiAddLine, RiSubtractFill } from "react-icons/ri";
     import { motion } from "framer-motion";
     
-    const BaseAccordion = ({ AccordData }) => {
+    const CustomAccordion = ({ AccordData }) => {
       const [open, setOpen] = useState(0);
     
       const variants = {
@@ -103,7 +103,7 @@ const AccordionsInfo = [
       );
     };
     
-    export default BaseAccordion;
+    export default CustomAccordion;
     
     `,
   },

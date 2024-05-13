@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import BaseRadio from "@/app/Preview_components/Radio/BaseRadio";
 import RadiosInfo from "@/app/Preview_components/Radio/RadiosInfo";
 import ComponentPreview from "@/app/Components/ComponentPreview";
+import CustomRadio from "@/app/Preview_components/Radio/CustomRadio";
 
 
 const page = () => {
@@ -14,7 +14,7 @@ const page = () => {
       component_details={RadiosInfo[0].details}
       component_usage_code={RadiosInfo[0].usage_code}
       component_preview={
-        <BaseRadio
+        <CustomRadio
           radioValue={radioValue}
           setRadioValue={setRadioValue}
           radioOptions={["Male", "Female", "Other"]}

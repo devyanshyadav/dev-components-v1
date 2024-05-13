@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-function BaseRangeSlider({ rangeValue, setRangeValue }) {
+function CustomRangeSlider({ rangeValue, setRangeValue }) {
   return (
     <div className=" max-w-md w-full bg-cyan-700/20 p-3 rounded-md">
       <div className="flex justify-between items-center">
@@ -34,4 +34,4 @@ function BaseRangeSlider({ rangeValue, setRangeValue }) {
   );
 }
 
-export default BaseRangeSlider;
+export default CustomRangeSlider;

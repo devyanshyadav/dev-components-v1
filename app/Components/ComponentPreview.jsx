@@ -21,9 +21,23 @@ const ComponentPreview = ({
   const codeString = component_code;
   return (
     <div className="w-full">
-      <h3 className="font-semibold text-white/80 text-xl">#{component_name}</h3>
+      <h3 className="font-semibold flex items-center gap-4 text-white/80 text-xl">
+        # {component_name}{" "}
+        {component_details.doc_links &&
+          component_details.doc_links.length > 0 &&
+          component_details.doc_links.map((item, index) => (
+            <Link
+              target="_blank"
+              href={item}
+              key={index}
+              className="p-1 gap-2 hover:opacity-80 text-xs flex items-center justify-center w-fit px-2 rounded-md border border-secondary bg-secondary/20 text-accent"
+            >
+              Docs <GoLinkExternal />
+            </Link>
+          ))}
+      </h3>
 
-      <div className="w-full max-h-96 min-h-56 bg-primary rounded-lg p-3 overflow-hidden relative flex flex-col">
+      <div className="w-full mt-2 max-h-96 min-h-56 bg-primary rounded-lg p-3 overflow-hidden relative flex flex-col">
         <ul className="w-full flex items-center gap-5 text-white/80 text-sm   ">
           {["Preview", "Code", "Usage", "Details"].map((item, index) => (
             <li
@@ -99,9 +113,9 @@ const ComponentPreview = ({
                 <CopyCode
                   textToCopy={
                     "npm i " +
-                    component_details.packages.map(
-                      (item) => item.pckg_name + " "
-                    ).join("")
+                    component_details.packages
+                      .map((item) => item.pckg_name + " ")
+                      .join("")
                   }
                   copied={copyNPM}
                   setCopied={setCopyNPM}

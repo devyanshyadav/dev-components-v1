@@ -1,6 +1,6 @@
 const ButtonsInfo = [
   {
-    title: "Base Button",
+    title: "Custom Button",
     details: {
       description: "A simple and customizable button component.",
       features: [
@@ -11,13 +11,13 @@ const ButtonsInfo = [
       props: [
         {
           propName: "children",
-          propExample: '"Base Button"',
+          propExample: '"Custom Button"',
           propDetail:
             "The content to be displayed inside the button. If not provided, it defaults to 'Base Button'.",
         },
         {
           propName: "...props",
-          propExample: `onClick={alert("This is Base Button")}`,
+          propExample: `onClick={alert("This is Custom Button")}`,
           propDetail:
             "Additional props to be passed to the button element, such as onClick, disabled, etc.",
         },
@@ -30,7 +30,7 @@ const ButtonsInfo = [
       import React from "react";
       
       const page = () => {
-        return <BaseButton onClick={() => {alert("This is Base Button")}}>Base Button</BaseButton>;
+        return <BaseButton onClick={() => {alert("This is Custom Button")}}>Custom Button</BaseButton>;
       };
       
       export default page;
@@ -39,7 +39,7 @@ const ButtonsInfo = [
 
     code: `import React from "react";
 
-      const BaseButton = ({ children = "Base Button", ...props }) => {
+      const BaseButton = ({ children = "Custom Button", ...props }) => {
         return (
           <button {...props} className="p-2 px-3 bg-cyan-500 select-none hover:bg-cyan-700 text-white rounded-xl font-semibold active:scale-95 transition-all">
             {children}
@@ -50,7 +50,7 @@ const ButtonsInfo = [
       export default BaseButton;`,
   },
   {
-    title: "Async Button",
+    title: "Custom Async Button",
     details: {
       description:
         "Simulates async button behavior: fetches data, displays loading animation, updates button text for status.",
@@ -77,7 +77,7 @@ const ButtonsInfo = [
       packages: [],
     },
     usage_code: `
-      import AsyncButton from "@/app/dev_components/AsyncButton";
+      import CustomAsyncBtn from "@/app/dev_components/CustomAsyncBtn";
       import React, { useState } from "react";
       
       const page = () => {
@@ -99,14 +99,14 @@ const ButtonsInfo = [
             console.log("error :", error, "fetching_status: ", Fetching);
           }
         };
-        return <AsyncButton Fetching={Fetching} handleSubmit={handleSubmit} />;
+        return <CustomAsyncBtn Fetching={Fetching} handleSubmit={handleSubmit} />;
       };
       
       export default page;
       `,
     code: `import React from "react";
 
-    const AsyncButton = ({ Fetching, handleSubmit }) => {
+    const CustomAsyncBtn = ({ Fetching, handleSubmit }) => {
       return (
         <button
           className="bg-cyan-500 flex items-center justify-center gap-1 text-white fill-white p-2 px-4 rounded-full select-none"
@@ -142,7 +142,7 @@ const ButtonsInfo = [
       );
     };
     
-    export default AsyncButton;
+    export default CustomAsyncBtn;
     
     `,
   },

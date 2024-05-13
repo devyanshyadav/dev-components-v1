@@ -1,6 +1,6 @@
 const RangeSliderInfo = [
   {
-    title: "Base Range Slider",
+    title: "Custom Range Slider",
     details: {
       description:
         "A range slider component that allows users to select a value within a specific range.",
@@ -26,13 +26,13 @@ const RangeSliderInfo = [
       packages: [],
     },
     usage_code: `
-    import BaseRangeSlider from "@/app/dev_components/BaseRangeSlider";
+    import CustomRangeSlider from "@/app/dev_components/CustomRangeSlider";
     import React from "react";
     
     const page = () => {
       const [rangeValue, setRangeValue] = useState(30);
       return (
-        <BaseRangeSlider rangeValue={rangeValue} setRangeValue={setRangeValue} />
+        <CustomRangeSlider rangeValue={rangeValue} setRangeValue={setRangeValue} />
       );
     };
     
@@ -41,7 +41,7 @@ const RangeSliderInfo = [
     code: `
     import React from "react";
     
-    function BaseRangeSlider({ rangeValue, setRangeValue }) {
+    function CustomRangeSlider({ rangeValue, setRangeValue }) {
       return (
         <div className=" max-w-md w-full bg-cyan-700/20 p-3 rounded-md">
           <div className="flex justify-between items-center">
@@ -74,7 +74,7 @@ const RangeSliderInfo = [
       );
     }
     
-    export default BaseRangeSlider;
+    export default CustomRangeSlider;
     
         `,
   },

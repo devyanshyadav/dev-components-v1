@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { RiAddLine, RiSubtractFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 
-const BaseAccordion = ({ AccordData }) => {
+const CustomAccordion = ({ AccordData }) => {
   const [open, setOpen] = useState(0);
 
   const variants = {
@@ -40,4 +40,4 @@ const BaseAccordion = ({ AccordData }) => {
   );
 };
 
-export default BaseAccordion;
+export default CustomAccordion;

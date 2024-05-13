@@ -2,7 +2,7 @@
 import React from "react";
 import { Tooltip } from "react-tooltip";
 
-const BaseTooltip = ({ children, place = "top", tipData }) => {
+const ReactTooltip = ({ children, place = "top", tipData }) => {
   return (
     <>
       <Tooltip
@@ -22,4 +22,4 @@ const BaseTooltip = ({ children, place = "top", tipData }) => {
   );
 };
 
-export default BaseTooltip;
+export default ReactTooltip;

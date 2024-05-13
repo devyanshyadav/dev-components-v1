@@ -4,7 +4,7 @@ import { createPortal } from "react-dom";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { motion } from "framer-motion";
 
-const BaseModal = ({
+const CustomModal = ({
   children,
   openModal,
   setOpenModal,
@@ -70,4 +70,4 @@ const BaseModal = ({
   );
 };
 
-export default BaseModal;
+export default CustomModal;

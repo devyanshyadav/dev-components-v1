@@ -8,7 +8,7 @@ let navLinkCase = `/${e.toLowerCase()}`;
 
 const NavbarsInfo = [
   {
-    title: "Base NavBar",
+    title: "Custom NavBar",
     details: {
       description:
         "A responsive navigation bar component with a hamburger menu for smaller screens.",
@@ -31,12 +31,12 @@ const NavbarsInfo = [
         pckg_link: "https://www.npmjs.com/package/hamburger-react",
       }],
     },
-    usage_code: `import BaseNavbar from "@/app/dev_components/BaseNavbar";
+    usage_code: `import CustomNavbar from "@/app/dev_components/CustomNavbar";
         import React from "react";
         
         const page = () => {
           return (
-            <BaseNavbar navList={["Home", "About", "Contact"]} />
+            <CustomNavbar navList={["Home", "About", "Contact"]} />
           );
         };
         
@@ -46,7 +46,7 @@ const NavbarsInfo = [
       import React, { useState } from "react";
       import Hamburger from "hamburger-react";
       
-      const BaseNavbar = ({ navList }) => {
+      const CustomNavbar = ({ navList }) => {
         const [on, toggle] = useState(false);
         return (
           <header className="w-full h-16 select-none bg-slate-800 md:border border-secondary/50 md:rounded-lg self-start text-white flex items-center justify-between px-3 md:relative fixed inset-0 z-50">
@@ -81,7 +81,7 @@ const NavbarsInfo = [
         );
       };
       
-      export default BaseNavbar;`,
+      export default CustomNavbar;`,
   },
 ];
 
