@@ -27,8 +27,8 @@ const NavbarsInfo = [
         },
       ],
       packages: [{
-        name: "Hamburger",
-        url: "https://www.npmjs.com/package/hamburger-react",
+        pckg_name: "Hamburger",
+        pckg_link: "https://www.npmjs.com/package/hamburger-react",
       }],
     },
     usage_code: `import BaseNavbar from "@/app/dev_components/BaseNavbar";
