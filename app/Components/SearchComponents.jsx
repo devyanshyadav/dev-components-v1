@@ -57,7 +57,7 @@ const SearchComponents = () => {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
                   key={i}
-                  className="w-full flex items-center p-2 min-h-10 gap-2 bg-secondary/20 rounded-lg"
+                  className="w-full hover:bg-secondary/40 flex items-center p-2 min-h-10 gap-3 bg-secondary/20 rounded-lg"
                 >
                   <Image
                     src={e.image}
@@ -67,7 +67,7 @@ const SearchComponents = () => {
                     height={60}
                   />
                   <Link
-                    className="text-white"
+                    className="text-white text-left w-full"
                     target="_blank"
                     onClick={() => setSearchData([])}
                     href={e.url}
