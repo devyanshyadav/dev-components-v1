@@ -103,6 +103,7 @@ const ModalsInfo = [
               animate={openModal ? "open" : "close"}
               variants={mainVariants}
               transition={{ duration: 0.2 }}
+              initial={{ visibility: "hidden", opacity: 0 }}
               onClick={() => setOpenModal(false)}
               className="bg-black/50 z-50 fixed filter backdrop-blur-sm inset-0 h-screen w-screen grid place-content-center"
             >
