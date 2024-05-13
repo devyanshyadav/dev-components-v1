@@ -34,6 +34,10 @@ const TooltipsInfo = [
           pckg_name: "framer-motion",
           pckg_link: "https://www.framer.com/motion/",
         },
+        {
+          pckg_name: "react-tooltip",
+          pckg_link: "https://react-tooltip.com/docs/getting-started",
+        }
       ],
     },
     usage_code: `import BaseTooltip from "@/app/dev_components/BaseTooltip";
