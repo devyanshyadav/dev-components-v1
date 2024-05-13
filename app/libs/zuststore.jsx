@@ -58,13 +58,21 @@ const useDevStore = create((set, get) => ({
       url: "/components/navbar",
     },
     {
-      name: "Range Slider",
+      name: "Range Sliders",
       image: "/svg_icons/range.png",
       components_no: countObjects(RangeSliderInfo),
       description:
         "A range slider component that allows users to select a value within a specific range.",
-      url: "/components/range-slider",
+      url: "/components/range-sliders",
     },
+    {
+      name: "Modals",
+      image: "/svg_icons/modal.png",
+      components_no: countObjects(RangeSliderInfo),
+      description:
+        "A modal component that can be used to display content or prompts.",
+      url: "/components/modals",
+    }
   ],
 }));
 
