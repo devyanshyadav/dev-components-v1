@@ -20,7 +20,7 @@ const ComponentPreview = ({
     <div className="w-full">
       <h3 className="font-semibold text-white/80 text-xl">#{component_name}</h3>
 
-      <div className="w-full h-64 bg-primary rounded-lg p-3 overflow-hidden relative flex flex-col">
+      <div className="w-full max-h-96 min-h-56 bg-primary rounded-lg p-3 overflow-hidden relative flex flex-col">
         <ul className="w-full flex items-center gap-5 text-white/80 text-sm   ">
           {["Preview", "Code", "Details"].map((item, index) => (
             <li
