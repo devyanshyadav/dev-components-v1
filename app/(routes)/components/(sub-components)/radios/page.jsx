@@ -12,6 +12,7 @@ const page = () => {
     <ComponentPreview
       component_name={RadiosInfo[0].title}
       component_details={RadiosInfo[0].details}
+      component_usage_code={RadiosInfo[0].usage_code}
       component_preview={
         <BaseRadio
           radioValue={radioValue}

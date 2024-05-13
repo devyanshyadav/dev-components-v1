@@ -41,33 +41,43 @@ const ModalsInfo = [
           propDetail: "The title to be displayed in the modal header.",
         },
       ],
-      packages: ["react-icons", "framer-motion"],
-      usage_code: `
-        import BaseModal from "@/app/dev_components/BaseModal";
-        import React, { useState } from "react";
-        
-        const page = () => {
-          const [openModal, setOpenModal] = useState(false);
-        
-          return (
-            <BaseModal
-              openModal={openModal}
-              setOpenModal={setOpenModal}
-              modalTitle="Modal Title"
-              openBtn={
-                <button className="bg-cyan-400 p-2 px-3 rounded-lg text-white active:scale-95 hover:bg-cyan-700/50">
-                  Open Modal
-                </button>
-              }
-            >
-              <div className="text-white font-semibold text-lg">Modal Content</div>
-            </BaseModal>
-          );
-        };
-        
-        export default page;
-            `,
+      doc_links:[],
+      packages: [
+        {
+          pckg_name: "framer-motion",
+          pckg_link: "https://www.framer.com/motion/",
+        },
+        {
+          pckg_name: "react-icons",
+          pckg_link: "https://react-icons.github.io/react-icons/",
+        },
+      ],
     },
+    usage_code: `
+    import BaseModal from "@/app/dev_components/BaseModal";
+    import React, { useState } from "react";
+    
+    const page = () => {
+      const [openModal, setOpenModal] = useState(false);
+    
+      return (
+        <BaseModal
+          openModal={openModal}
+          setOpenModal={setOpenModal}
+          modalTitle="Modal Title"
+          openBtn={
+            <button className="bg-cyan-400 p-2 px-3 rounded-lg text-white active:scale-95 hover:bg-cyan-700/50">
+              Open Modal
+            </button>
+          }
+        >
+          <div className="text-white font-semibold text-lg">Modal Content</div>
+        </BaseModal>
+      );
+    };
+    
+    export default page;
+        `,
     code: `
     import React, { useEffect, useState } from "react";
     import { createPortal } from "react-dom";

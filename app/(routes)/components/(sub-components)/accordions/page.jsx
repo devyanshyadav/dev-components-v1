@@ -1,6 +1,6 @@
 import React from 'react'
-import AccordionsInfo from '@/app/Preview_components/Accordion/AccordionsInfo';
-import BaseAccordion from '@/app/Preview_components/Accordion/BaseAccordion';
+import AccordionsInfo from '@/app/Preview_components/Accordions/AccordionsInfo';
+import BaseAccordion from '@/app/Preview_components/Accordions/BaseAccordion';
 import ComponentPreview from '@/app/Components/ComponentPreview';
 
 const page = () => {
@@ -33,6 +33,7 @@ const page = () => {
         component_details={AccordionsInfo[0].details}
         component_preview={<BaseAccordion AccordData={AccordData} />}
         component_code={AccordionsInfo[0].code}
+        component_usage_code={AccordionsInfo[0].usage_code}
         component_packages={AccordionsInfo[0].packages}
       />
     </>

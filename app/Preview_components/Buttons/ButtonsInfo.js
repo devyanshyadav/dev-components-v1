@@ -23,18 +23,20 @@ const ButtonsInfo = [
         },
       ],
       packages: [],
-      usage_code: `
-        import BaseButton from "@/app/Preview_components/Buttons/BaseButton";
-        import React from "react";
-        
-        const page = () => {
-          return <BaseButton onClick={() => {alert("This is Base Button")}}>Base Button</BaseButton>;
-        };
-        
-        export default page;
-        
-        `,
     },
+
+    usage_code: `
+      import BaseButton from "@/app/Preview_components/Buttons/BaseButton";
+      import React from "react";
+      
+      const page = () => {
+        return <BaseButton onClick={() => {alert("This is Base Button")}}>Base Button</BaseButton>;
+      };
+      
+      export default page;
+      
+      `,
+
     code: `import React from "react";
 
       const BaseButton = ({ children = "Base Button", ...props }) => {
@@ -72,15 +74,17 @@ const ButtonsInfo = [
             "This is a function that is called when the button is clicked.",
         },
       ],
-      packages: ["zustand", "react", "react-dom", "react-icons"],
-      usage_code: `"use client";
+      packages: [],
+    },
+    usage_code: `
       import AsyncButton from "@/app/dev_components/AsyncButton";
       import React, { useState } from "react";
       
       const page = () => {
         const [Fetching, setFetching] = useState([false, "Submit"]);
-      
-        const handleSubmit = async () => {
+
+        // Example to use async button by using fakestore api
+        const Submitting = async () => {
           setFetching([true, "Submitting..."]);
           try {
             const res = await fetch("https://fakestoreapi.com/products")
@@ -100,15 +104,16 @@ const ButtonsInfo = [
       
       export default page;
       `,
-    },
     code: `import React from "react";
 
     const AsyncButton = ({ Fetching, handleSubmit }) => {
       return (
         <button
-          className="bg-blue-500 flex items-center justify-center gap-1 text-white fill-white p-2 px-4 rounded-full select-none"
+          className="bg-cyan-500 flex items-center justify-center gap-1 text-white fill-white p-2 px-4 rounded-full select-none"
+          disabled={Fetching[1] == "Submitting..." ? true : false}
+          style={{ opacity: Fetching[0] ? 0.7 : 1 }}
           type="button"
-          onClick={() => handleSubmit()}
+          onClick={() => Submitting()}
         >
           {Fetching[1]}
           {Fetching[0] && (

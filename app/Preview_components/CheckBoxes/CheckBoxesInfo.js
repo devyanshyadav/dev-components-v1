@@ -24,19 +24,19 @@ const CheckBoxesInfo = [
         },
       ],
       packages: [],
-      usage_code: `import DevCheckbox from "@/app/dev_components/DevCheckbox";
-      import React, { useState } from "react";
-      
-      const page = () => {
-        const [checkStatus, setCheckStatus] = useState(true);
-        return (
-          <DevCheckbox checkStatus={checkStatus} setCheckStatus={setCheckStatus} />
-        );
-      };
-      
-      export default page;
-          `,
     },
+
+    usage_code: `import DevCheckbox from "@/app/dev_components/DevCheckbox";
+   import React, { useState } from "react";
+   
+   const page = () => {
+     const [checkStatus, setCheckStatus] = useState(true);
+     return (
+       <DevCheckbox checkStatus={checkStatus} setCheckStatus={setCheckStatus} />
+     );
+   };
+   
+   export default page;`,
     code: `
     import React from "react";
     

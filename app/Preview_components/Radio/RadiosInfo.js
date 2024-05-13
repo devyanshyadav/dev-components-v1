@@ -31,24 +31,24 @@ const RadiosInfo = [
         },
       ],
       packages: [],
-      usage_code: `import React, { useState } from "react";
-      import BaseRadio from "@/app/dev_components/Radio/BaseRadio";
-      
-      const page = () => {
-        const [radioValue, setRadioValue] = useState("Male");
-        return (
-          <BaseRadio
-          radioValue={radioValue}
-          setRadioValue={setRadioValue}
-          radioOptions={["Male", "Female", "Other"]}
-        />
-        );
-      };
-      
-      export default page;
-      
-      `,
     },
+    usage_code: `import React, { useState } from "react";
+    import BaseRadio from "@/app/dev_components/Radio/BaseRadio";
+    
+    const page = () => {
+      const [radioValue, setRadioValue] = useState("Male");
+      return (
+        <BaseRadio
+        radioValue={radioValue}
+        setRadioValue={setRadioValue}
+        radioOptions={["Male", "Female", "Other"]}
+      />
+      );
+    };
+    
+    export default page;
+    
+    `,
     code: `
     import React from "react";
     

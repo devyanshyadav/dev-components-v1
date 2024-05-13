@@ -16,8 +16,18 @@ const AccordionsInfo = [
             "This is an array of objects containing the title and description of the accordion.",
         },
       ],
-      packages: ["framer-motion", "react-icons"],
-      usage_code: `import BaseAccordion from "@/app/dev_components/DevAccordion";
+      packages: [
+        {
+          pckg_name: "react-icons",
+          pckg_link: "https://react-icons.github.io/react-icons/",
+        },
+        {
+          pckg_name: "framer-motion",
+          pckg_link: "https://www.framer.com/motion/",
+        },
+      ],
+    },
+    usage_code: `import BaseAccordion from "@/app/dev_components/DevAccordion";
       import React from "react";
       
       const page = () => {
@@ -50,14 +60,14 @@ const AccordionsInfo = [
       export default page;
       
       `,
-    },
+
     code: `
     import React, { useState } from "react";
     import { RiAddLine, RiSubtractFill } from "react-icons/ri";
     import { motion } from "framer-motion";
     
     const BaseAccordion = ({ AccordData }) => {
-      const [open, setOpen] = useState(true);
+      const [open, setOpen] = useState(0);
     
       const variants = {
         open: { height: "auto" },

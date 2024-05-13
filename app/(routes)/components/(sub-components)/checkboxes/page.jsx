@@ -12,6 +12,7 @@ const page = () => {
     <ComponentPreview
       component_name={CheckBoxesInfo[0].title}
       component_details={CheckBoxesInfo[0].details}
+      component_usage_code={CheckBoxesInfo[0].usage_code}
       component_preview={
         <BaseCheckBox
           checkStatus={checkStatus}

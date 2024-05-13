@@ -11,6 +11,7 @@ const page = () => {
     <ComponentPreview
       component_name={ModalsInfo[0].title}
       component_details={ModalsInfo[0].details}
+      component_usage_code={ModalsInfo[0].usage_code}
       component_preview={
         <BaseModal
           openModal={openModal}

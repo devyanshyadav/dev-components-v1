@@ -13,6 +13,7 @@ const page = () => {
         component_details={ButtonsInfo[0].details}
         component_preview={<BaseButton onClick={() => {alert("This is Base Button")}}>Base Button</BaseButton> /*fgg*/}
         component_code={ButtonsInfo[0].code}
+        component_usage_code={ButtonsInfo[0].usage_code}
         component_packages={ButtonsInfo[0].packages}
       />
 
@@ -21,6 +22,7 @@ const page = () => {
         component_details={ButtonsInfo[1].details}
         component_preview={<AsyncButton />}
         component_code={ButtonsInfo[1].code}
+        component_usage_code={ButtonsInfo[1].usage_code}
         component_packages={ButtonsInfo[1].packages}
       />
     </>

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 const AsyncButton = () => {
   const [Fetching, setFetching] = useState([false, "Submit"]);
 
+  // Example to use async button by using fakestore api
   const Submitting = async () => {
     setFetching([true, "Submitting..."]);
     try {
@@ -23,7 +24,8 @@ const AsyncButton = () => {
   return (
     <button
       className="bg-cyan-500 flex items-center justify-center gap-1 text-white fill-white p-2 px-4 rounded-full select-none"
-      disabled={Fetching[1] == "Submitted" ? true : false}
+      disabled={Fetching[1] == "Submitting..." ? true : false}
+      style={{ opacity: Fetching[0] ? 0.7 : 1 }}
       type="button"
       onClick={() => Submitting()}
     >

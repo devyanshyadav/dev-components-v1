@@ -1,5 +1,5 @@
 let on = false;
-let e="Home";
+let e = "Home";
 let NavBarCSS_0 = `z-50 flex items-start overflow-hidden duration-700 transition-[translate, opacity]  ${
   on ? "translate-x-0 " : "-translate-x-full md:translate-x-0"
 } md:flex-row flex-col  md:p-0 p-6 md:items-center gap-4 md:static  fixed top-16 translate-y-1 md:translate-y-0 left-0 right-0 bottom-0 bg-slate-800 md:bg-transparent`;
@@ -26,8 +26,12 @@ const NavbarsInfo = [
             "An array of strings representing the navigation links to be displayed.",
         },
       ],
-      packages: ["hamburger-react"],
-      usage_code: `import BaseNavbar from "@/app/dev_components/BaseNavbar";
+      packages: [{
+        name: "Hamburger",
+        url: "https://www.npmjs.com/package/hamburger-react",
+      }],
+    },
+    usage_code: `import BaseNavbar from "@/app/dev_components/BaseNavbar";
         import React from "react";
         
         const page = () => {
@@ -38,7 +42,6 @@ const NavbarsInfo = [
         
         export default page;
             `,
-    },
     code: `
       import React, { useState } from "react";
       import Hamburger from "hamburger-react";

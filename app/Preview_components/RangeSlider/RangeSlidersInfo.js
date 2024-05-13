@@ -24,20 +24,20 @@ const RangeSliderInfo = [
         },
       ],
       packages: [],
-      usage_code: `
-          import BaseRangeSlider from "@/app/dev_components/BaseRangeSlider";
-          import React from "react";
-          
-          const page = () => {
-            const [rangeValue, setRangeValue] = useState(30);
-            return (
-              <BaseRangeSlider rangeValue={rangeValue} setRangeValue={setRangeValue} />
-            );
-          };
-          
-          export default page;
-          `,
     },
+    usage_code: `
+    import BaseRangeSlider from "@/app/dev_components/BaseRangeSlider";
+    import React from "react";
+    
+    const page = () => {
+      const [rangeValue, setRangeValue] = useState(30);
+      return (
+        <BaseRangeSlider rangeValue={rangeValue} setRangeValue={setRangeValue} />
+      );
+    };
+    
+    export default page;
+    `,
     code: `
     import React from "react";
     

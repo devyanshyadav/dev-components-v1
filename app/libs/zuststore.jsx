@@ -2,10 +2,12 @@
 import { create } from "zustand";
 import ButtonsInfo from "../Preview_components/Buttons/ButtonsInfo";
 import countObjects from "./utils/countObjects";
-import AccordionsInfo from "../Preview_components/Accordion/AccordionsInfo";
+import AccordionsInfo from "../Preview_components/Accordions/AccordionsInfo";
 import CheckBoxesInfo from "../Preview_components/CheckBoxes/CheckBoxesInfo";
 import RadiosInfo from "../Preview_components/Radio/RadiosInfo";
 import RangeSliderInfo from "../Preview_components/RangeSlider/RangeSlidersInfo";
+import ModalsInfo from "../Preview_components/Modal/ModalsInfo";
+import TooltipsInfo from "../Preview_components/Tooltips/TooltipsInfo";
 
 const useDevStore = create((set, get) => ({
   ThemeColors: {
@@ -68,10 +70,18 @@ const useDevStore = create((set, get) => ({
     {
       name: "Modals",
       image: "/svg_icons/modal.png",
-      components_no: countObjects(RangeSliderInfo),
+      components_no: countObjects(ModalsInfo),
       description:
         "A modal component that can be used to display content or prompts.",
       url: "/components/modals",
+    },
+    {
+      name: "Tooltips",
+      image: "/svg_icons/tooltip.png",
+      components_no: countObjects(TooltipsInfo),
+      description:
+        "A tooltip component that displays additional information or a helpful message when hovering over an element.",
+      url: "/components/tooltips",
     }
   ],
 }));

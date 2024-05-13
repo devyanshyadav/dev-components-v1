@@ -10,6 +10,7 @@ const page = () => {
     <ComponentPreview
       component_name={RangeSliderInfo[0].title}
       component_details={RangeSliderInfo[0].details}
+      component_usage_code={RangeSliderInfo[0].usage_code}
       component_preview={
         <BaseRangeSlider
           rangeValue={rangeValue}

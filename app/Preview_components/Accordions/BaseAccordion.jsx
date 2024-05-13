@@ -4,7 +4,7 @@ import { RiAddLine, RiSubtractFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 
 const BaseAccordion = ({ AccordData }) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(0);
 
   const variants = {
     open: { height: "auto" },
