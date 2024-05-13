@@ -137,7 +137,7 @@ const ComponentPreview = ({
             <h3 className="font-semibold text-secondary flex  gap-3 items-center">
               Props{" "}
               <p className="text-xs font-light">
-                ( More props can be added on the basis of the requirements )
+                ( Additional props can be included as needed )
               </p>
             </h3>
             <ul className="text-sm font-light list-disc list-inside list-accent marker:text-accent">
