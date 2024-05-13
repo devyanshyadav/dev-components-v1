@@ -113,13 +113,14 @@ const ModalsInfo = [
                 transition={{ duration: 0.2 }}
                 onClick={() => setOpenModal(false)}
                 initial={{ visibility: "hidden", opacity: 0 }}
-                className="bg-black/50 z-50 fixed filter backdrop-blur-md inset-0 h-screen w-screen grid place-content-center"
+                className="bg-black/50 z-50 fixed filter backdrop-blur-sm inset-0 h-screen w-screen grid place-content-center"
               >
                 <motion.section
                   animate={openModal ? "open" : "close"}
                   variants={sectionVariants}
                   transition={{ duration: 0.2 }}
-                  className="relative w-[90vw] flex flex-col md:w-[40vw] min-h-60 rounded-xl shadow-md shadow-cyan-700/30 bg-slate-700 overflow-hidden"
+                  onClick={(e) => e.stopPropagation()}
+                  className="relative w-[90vw] flex flex-col md:w-[40vw] min-h-60 rounded-xl shadow-md bg-slate-700 overflow-hidden"
                 >
                   <div className="w-full  bg-cyan-700/20 font-semibold flex items-center justify-between relative">
                     <h3 className="p-3 text-cyan-400">{modalTitle}</h3>
