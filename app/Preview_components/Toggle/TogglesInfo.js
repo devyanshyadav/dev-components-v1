@@ -1,12 +1,3 @@
-let hasToggle = true;
-let toggleSize = "w-12 h-6";
-let LabelCss_0 = `${
-  hasToggle ? "bg-cyan-400" : "bg-cyan-700"
-} ${toggleSize} p-1 rounded-full relative grid `;
-
-let CircleCss_0 = `h-full  bg-white aspect-square pointer-events-none transition-all duration-400 rounded-full ${
-  hasToggle ? "justify-self-end scale-100" : "justify-self-start scale-90"
-}`;
 const TogglesInfo = [
   {
     title: "Custom Toggle",
