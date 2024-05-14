@@ -3,7 +3,7 @@ import clsx from "clsx";
 import React from "react";
 
 const CustomToggle = ({ hasToggle, setHasToggle }) => {
-  const toggleSize = { width: 60, height: 25 };
+  const toggleSize = { width: 50, height: 20 };
 
   return (
     <>
@@ -33,7 +33,7 @@ const CustomToggle = ({ hasToggle, setHasToggle }) => {
           }}
         ></div>
       </label>
-      <span className="text-white mx-3">{hasToggle ? "ON" : "OFF"}</span>
+      <span className="text-white m-3 ">{hasToggle ? "ON" : "OFF"}</span>
     </>
   );
 };
