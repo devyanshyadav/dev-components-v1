@@ -8,6 +8,7 @@ import RadiosInfo from "../Preview_components/Radio/RadiosInfo";
 import RangeSliderInfo from "../Preview_components/RangeSlider/RangeSlidersInfo";
 import ModalsInfo from "../Preview_components/Modal/ModalsInfo";
 import TooltipsInfo from "../Preview_components/Tooltips/TooltipsInfo";
+import TogglesInfo from "../Preview_components/Toggle/TogglesInfo";
 
 const useDevStore = create((set, get) => ({
   ThemeColors: {
@@ -82,6 +83,14 @@ const useDevStore = create((set, get) => ({
       description:
         "A tooltip component that displays additional information or a helpful message when hovering over an element.",
       url: "/components/tooltips",
+    },
+    {
+      name:"Toggle",
+      image: "/svg_icons/toggle.png",
+      components_no: countObjects(TogglesInfo),
+      description:
+        "A toggle component that allows users to turn an option on or off.",
+      url: "/components/toggles",
     }
   ],
 }));
