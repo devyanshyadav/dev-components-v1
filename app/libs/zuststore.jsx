@@ -9,6 +9,7 @@ import RangeSliderInfo from "../Preview_components/RangeSlider/RangeSlidersInfo"
 import ModalsInfo from "../Preview_components/Modal/ModalsInfo";
 import TooltipsInfo from "../Preview_components/Tooltips/TooltipsInfo";
 import TogglesInfo from "../Preview_components/Toggle/TogglesInfo";
+import TabsInfo from "../Preview_components/Tabs/TabsInfo";
 
 const useDevStore = create((set, get) => ({
   ThemeColors: {
@@ -91,6 +92,13 @@ const useDevStore = create((set, get) => ({
       description:
         "A toggle component that allows users to turn an option on or off.",
       url: "/components/toggles",
+    },
+    {
+      name:"Tabs",
+      image: "/svg_icons/tab.png",
+      components_no: countObjects(TabsInfo),
+      description:" A tab component that allows users to navigate between different sections of content.",
+      url: "/components/tabs",
     }
   ],
 }));
