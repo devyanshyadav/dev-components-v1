@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
+import clsx from "clsx";
 
 const CustomTab_1 = ({ tabData }) => {
   const [underNum, setUnderNum] = useState(0);
@@ -15,16 +16,16 @@ const CustomTab_1 = ({ tabData }) => {
   return (
     <main className="w-full grid place-content-center gap-1">
       <ul
-        className="list-none w-fit grid overflow-hidden"
+        className="list-none w-60 grid overflow-hidden"
         style={{ gridTemplateColumns: "repeat(" + tabData.length + ", 1fr)" }}
         ref={tabRef}
       >
         {tabData.map((elem, index) => (
           <li
-            className={
-              (underNum === index ? " !text-cyan-400" : "text-white/50 ") +
-              "text-base font-semibold select-none rounded-md px-3 hover:text-cyan-400 text-center text-cyan-400 cursor-pointer "
-            }
+            className={clsx(
+              "text-sm font-semibold select-none rounded-md hover:text-cyan-400 text-center text-cyan-400 cursor-pointer",
+              underNum === index && " !text-cyan-400"
+            )}
             onClick={() => setUnderNum(index)}
             key={index}
           >
@@ -32,7 +33,7 @@ const CustomTab_1 = ({ tabData }) => {
           </li>
         ))}
         <hr
-          className={`border rounded-lg border-cyan-400 transition-all duration-300`}
+          className="border rounded-lg border-cyan-400 transition-all duration-300"
           style={{
             width: tabWidth + "px",
             transform: "translateX(" + tabWidth * underNum + "px)",

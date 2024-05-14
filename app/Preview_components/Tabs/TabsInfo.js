@@ -20,7 +20,12 @@ const TabsInfo = [
         },
       ],
       doc_links: [],
-      packages: [],
+      packages: [
+        {
+          pckg_name: "clsx",
+          pckg_link: "https://www.npmjs.com/package/clsx",
+        },
+      ],
     },
     usage_code: `
       import CustomTab from '@/app/dev_components/CustomTab'
@@ -50,13 +55,14 @@ const TabsInfo = [
               `,
     code: `
     import React, { useState } from "react";
+    import clsx from "clsx";
     
     const CustomTab = ({ tabData }) => {
       const [currTab, setCurrTab] = useState(0);
       return (
         <main className="w-full grid place-content-center gap-1">
           <ul
-            className="list-none w-fit bg-slate-700 grid rounded-md overflow-hidden"
+            className="list-none w-60 bg-slate-700 grid rounded-md overflow-hidden"
             style={{
               gridTemplateColumns: "repeat(" + tabData.length + ", 1fr)",
             }}
@@ -64,11 +70,10 @@ const TabsInfo = [
             {tabData.map((elem, i) => (
               <li
                 onClick={() => setCurrTab(i)}
-                className={
-                  "p-1 px-4 select-none text-center transition-all border-b-2 border-transparent text-white/80 hover:text-cyan-400 hover:border-cyan-400 cursor-pointer text-sm " +
-                  (currTab === i &&
-                    "!text-cyan-400 !border-cyan-400 bg-cyan-700/50")
-                }
+                className={clsx(
+                  "p-1 px-4 select-none text-center transition-all border-b-2 border-transparent text-white/80 hover:text-cyan-400 hover:border-cyan-400 cursor-pointer text-sm ",
+                  currTab === i && "!text-cyan-400 !border-cyan-400 bg-cyan-700/50"
+                )}
                 key={i}
               >
                 {elem.title}
@@ -83,8 +88,7 @@ const TabsInfo = [
     };
     
     export default CustomTab;
-    
-       `,
+    `,
   },
 
   {
@@ -108,7 +112,12 @@ const TabsInfo = [
         },
       ],
       doc_links: [],
-      packages: [],
+      packages: [
+        {
+          pckg_name: "clsx",
+          pckg_link: "https://www.npmjs.com/package/clsx",
+        },
+      ],
     },
     usage_code: `
       import CustomTab_1 from '@/app/dev_components/CustomTab_1'
@@ -138,6 +147,7 @@ const TabsInfo = [
               `,
     code: `
     import React, { useState, useRef, useEffect } from "react";
+    import clsx from "clsx";
     
     const CustomTab_1 = ({ tabData }) => {
       const [underNum, setUnderNum] = useState(0);
@@ -153,16 +163,16 @@ const TabsInfo = [
       return (
         <main className="w-full grid place-content-center gap-1">
           <ul
-            className="list-none w-fit grid overflow-hidden"
+            className="list-none w-60 grid overflow-hidden"
             style={{ gridTemplateColumns: "repeat(" + tabData.length + ", 1fr)" }}
             ref={tabRef}
           >
             {tabData.map((elem, index) => (
               <li
-                className={
-                  (underNum === index ? " !text-cyan-400" : "text-white/50 ") +
-                  "text-base font-semibold select-none rounded-md px-3 hover:text-cyan-400 text-cyan-400 cursor-pointer "
-                }
+                className={clsx(
+                  "font-semibold text-sm select-none rounded-md hover:text-cyan-400 text-center text-cyan-400 cursor-pointer",
+                  underNum === index && " !text-cyan-400"
+                )}
                 onClick={() => setUnderNum(index)}
                 key={index}
               >
@@ -185,8 +195,7 @@ const TabsInfo = [
     };
     
     export default CustomTab_1;
-    
-       `,
+    `,
   },
   {
     title: "Custom Tab 2",
@@ -209,7 +218,12 @@ const TabsInfo = [
         },
       ],
       doc_links: [],
-      packages: [],
+      packages: [
+        {
+          pckg_name: "clsx",
+          pckg_link: "https://www.npmjs.com/package/clsx",
+        },
+      ],
     },
     usage_code: `
       import CustomTab_2 from '@/app/dev_components/CustomTab_2'
@@ -239,6 +253,7 @@ const TabsInfo = [
               `,
     code: `
     import React, { useState, useRef, useEffect } from "react";
+    import clsx from "clsx";
     
     const CustomTab_2 = ({ tabData }) => {
       const [underNum, setUnderNum] = useState(0);
@@ -260,10 +275,10 @@ const TabsInfo = [
           >
             {tabData.map((elem, index) => (
               <li
-                className={
-                  (underNum === index ? " !text-cyan-400" : "text-white/50 ") +
-                  "text-base font-semibold select-none rounded-md px-3 text-center z-10 hover:text-cyan-400 text-cyan-400 cursor-pointer "
-                }
+                className={clsx(
+                  "text-white/50 py-1 text-sm text-center cursor-pointer z-10 select-none transition-all duration-300  hover:text-white/100",
+                  underNum === index && " !text-cyan-400"
+                )}
                 onClick={() => setUnderNum(index)}
                 key={index}
               >
@@ -286,9 +301,7 @@ const TabsInfo = [
     };
     
     export default CustomTab_2;
-    
-    
-       `,
+    `,
   },
 ];
 

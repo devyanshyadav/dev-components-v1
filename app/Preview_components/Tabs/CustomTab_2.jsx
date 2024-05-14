@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
+import clsx from "clsx";
 
 const CustomTab_2 = ({ tabData }) => {
   const [underNum, setUnderNum] = useState(0);
@@ -21,10 +22,10 @@ const CustomTab_2 = ({ tabData }) => {
       >
         {tabData.map((elem, index) => (
           <li
-            className={
-              (underNum === index ? " !text-cyan-400" : "text-white/50 ") +
-              "text-base font-semibold select-none rounded-md px-3 text-center z-10 hover:text-cyan-400 text-cyan-400 cursor-pointer "
-            }
+            className={clsx(
+              "text-white/50 py-1 text-sm  text-center cursor-pointer z-10 select-none transition-all duration-300  hover:text-white/100",
+              underNum === index && " !text-cyan-400"
+            )}
             onClick={() => setUnderNum(index)}
             key={index}
           >
@@ -32,7 +33,7 @@ const CustomTab_2 = ({ tabData }) => {
           </li>
         ))}
         <hr
-          className={`rounded-full bg-cyan-700/50 inset-0 absolute h-full transition-all duration-300 border-none`}
+          className="rounded-full bg-cyan-700/50 inset-0 absolute h-full transition-all duration-300 border-none"
           style={{
             width: tabWidth + "px",
             transform: "translateX(" + tabWidth * underNum + "px)",
