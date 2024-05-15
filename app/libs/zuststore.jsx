@@ -10,6 +10,7 @@ import ModalsInfo from "../Preview_components/Modal/ModalsInfo";
 import TooltipsInfo from "../Preview_components/Tooltips/TooltipsInfo";
 import TogglesInfo from "../Preview_components/Toggle/TogglesInfo";
 import TabsInfo from "../Preview_components/Tabs/TabsInfo";
+import CarouselsInfo from "../Preview_components/Carousels/CarouselsInfo";
 
 const useDevStore = create((set, get) => ({
   ThemeColors: {
@@ -99,6 +100,13 @@ const useDevStore = create((set, get) => ({
       components_no: countObjects(TabsInfo),
       description:" A tab component that allows users to navigate between different sections of content.",
       url: "/components/tabs",
+    },
+    {
+      name:"Carousels",
+      image: "/svg_icons/carousel.png",
+      components_no: countObjects(CarouselsInfo),
+      description:" A carousels component that allows users to navigate between different sections of content.",
+      url: "/components/carousels",
     }
   ],
 }));
