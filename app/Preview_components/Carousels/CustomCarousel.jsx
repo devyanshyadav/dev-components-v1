@@ -60,7 +60,7 @@ const CustomCarousel = ({ carouselData }) => {
         className="overflow-hidden h-full w-full overflow-x-scroll flex flex-nowrap snap-mandatory snap-x  scroll-smooth gap-3 [&::-webkit-scrollbar]:hidden rounded-xl [scrollbar-width:none]"
       >
         {carouselData.map((item, index) => (
-          <div className="min-w-[100%] w-[50%] h-full snap-center flex items-center object-contain justify-center  bg-slate-700 shadow-xl rounded-xl">
+          <div key={index} className="min-w-[100%] w-[50%] h-full snap-center flex items-center object-contain justify-center  bg-slate-700 shadow-xl rounded-xl">
             {item.element}
           </div>
         ))}
