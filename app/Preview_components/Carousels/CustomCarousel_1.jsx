@@ -3,7 +3,7 @@ import React, { useRef, useCallback, useState, useEffect } from "react";
 import { IoCaretForwardCircleOutline } from "react-icons/io5";
 import { PiDotOutlineFill } from "react-icons/pi";
 
-const CustomCarousel = ({ carouselData, perView = 1 }) => {
+const CustomCarousel_1 = ({ carouselData }) => {
   const containerRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const divCount = carouselData.length; // Number of divs in the CustomCarousel
@@ -12,8 +12,7 @@ const CustomCarousel = ({ carouselData, perView = 1 }) => {
     if (currentIndex === 0) return;
     containerRef.current.scrollTo({
       left:
-        containerRef.current.scrollLeft -
-        containerRef.current.offsetWidth / (perView > 1 ? 3 : 1),
+        containerRef.current.scrollLeft - containerRef.current.offsetWidth / 3,
       behavior: "smooth",
     });
     setCurrentIndex((prevIndex) =>
@@ -25,14 +24,14 @@ const CustomCarousel = ({ carouselData, perView = 1 }) => {
     if (currentIndex === divCount - 1) return;
     containerRef.current.scrollTo({
       left:
-        containerRef.current.scrollLeft +
-        containerRef.current.offsetWidth / (perView > 1 ? 3 : 1),
+        containerRef.current.scrollLeft + containerRef.current.offsetWidth / 3,
       behavior: "smooth",
     });
     setCurrentIndex((prevIndex) =>
       prevIndex === divCount - 1 ? 0 : prevIndex + 1
     );
   }, [currentIndex]);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,11 +61,7 @@ const CustomCarousel = ({ carouselData, perView = 1 }) => {
         className="overflow-hidden h-full w-full overflow-x-scroll flex flex-nowrap snap-mandatory snap-x  scroll-smooth gap-3 [&::-webkit-scrollbar]:hidden rounded-xl [scrollbar-width:none]"
       >
         {carouselData.map((item, index) => (
-          <div
-            key={index}
-            style={{ minWidth: 100 / perView + "%" }}
-            className="min-w-[100%] w-[50%] h-full snap-center flex items-center object-contain justify-center  bg-slate-700 shadow-xl rounded-xl"
-          >
+          <div key={index} style={{minWidth:"33.4%"}} className="h-full snap-center flex items-center object-contain justify-center  bg-slate-700 shadow-xl rounded-xl">
             {item.element}
           </div>
         ))}
@@ -91,4 +86,4 @@ const CustomCarousel = ({ carouselData, perView = 1 }) => {
   );
 };
 
-export default CustomCarousel;
+export default CustomCarousel_1;
