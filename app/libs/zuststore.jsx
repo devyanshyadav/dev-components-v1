@@ -11,6 +11,7 @@ import TooltipsInfo from "../Preview_components/Tooltips/TooltipsInfo";
 import TogglesInfo from "../Preview_components/Toggle/TogglesInfo";
 import TabsInfo from "../Preview_components/Tabs/TabsInfo";
 import CarouselsInfo from "../Preview_components/Carousels/CarouselsInfo";
+import DropdownsInfo from "../Preview_components/Dropdowns/DropdownsInfo";
 
 const useDevStore = create((set, get) => ({
   ThemeColors: {
@@ -107,6 +108,13 @@ const useDevStore = create((set, get) => ({
       components_no: countObjects(CarouselsInfo),
       description:" A carousels component that allows users to navigate between different sections of content.",
       url: "/components/carousels",
+    },
+    {
+      name:"Dropdowns",
+      image: "/svg_icons/dropdown.png",
+      components_no: countObjects(DropdownsInfo),
+      description:"A dropdown that allows to select an option from a list.",
+      url: "/components/dropdowns",
     }
   ],
 }));
