@@ -34,7 +34,6 @@ const CustomDropdown = ({ setDropDownValue, dropDownValue, Options }) => {
           ></path>
         </svg>
       </label>
-      <span className="text-white">{dropDownValue}</span>
     </>
   );
 };
