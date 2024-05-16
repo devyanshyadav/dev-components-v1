@@ -2,8 +2,9 @@
 import React, { useEffect, useState, useRef } from "react";
 import clsx from "clsx";
 import { Tooltip as DropDown } from "react-tooltip";
+import { motion } from "framer-motion";
 
-const CustomDropDown_1 = ({ setDropDownValue, dropDownValue, Options }) => {
+const CustomDropDown_2 = ({ setDropDownValue, dropDownValue, Options }) => {
   const [calcWidth, setCalcWidth] = useState(0);
   const [mounted, setMounted] = useState(false);
   const dropdownRef = useRef(null);
@@ -40,20 +41,24 @@ const CustomDropDown_1 = ({ setDropDownValue, dropDownValue, Options }) => {
           clickable={mounted ? true : false}
           events={["click"]}
           isOpen
-          id="dev-dropdown"
+          id="dev-dropdown-framer"
           place="bottom"
           offset={2}
           style={{ backgroundColor: "transparent", padding: "0px" }}
         >
-          <div
-            className="flex z-10 shadow-md flex-col gap-1 bg-slate-700 rounded-md p-2 max-h-64 overflow-y-scroll [&::-webkit-scrollbar]:hidden [scrollbar-width:none]"
+          <motion.div
+            initial={{ scaleY: 0.8 }}
+            animate={{ scaleY: 1 }}
+            exit={{ scaleY: 0.8 }}
+            transition={{ duration: 0.2 }}
+            className="flex z-10 origin-top shadow-md flex-col gap-1 bg-slate-700 rounded-xl p-2 max-h-64 overflow-y-scroll [&::-webkit-scrollbar]:hidden [scrollbar-width:none]"
             style={{ width: calcWidth + "px" }}
             ref={dropdownRef}
           >
             {Options.map((elem, i) => (
               <label
                 className={clsx(
-                  "hover:bg-cyan-700 text-left rounded-lg p-1 overflow-hidden  px-2 cursor-pointer",
+                  "hover:bg-cyan-700 text-left rounded-xl p-1 overflow-hidden px-2 cursor-pointer",
                   dropDownValue == elem && "bg-cyan-400"
                 )}
                 key={i}
@@ -73,13 +78,13 @@ const CustomDropDown_1 = ({ setDropDownValue, dropDownValue, Options }) => {
                 />
               </label>
             ))}
-          </div>
+          </motion.div>
         </DropDown>
       )}
       <button
         onClick={() => setMounted(!mounted)}
-        data-tooltip-id  ="dev-dropdown"
-        className="min-w-40 transition-all flex items-center justify-between bg-slate-700 focus:border-cyan-400 border-cyan-700 text-white py-1 border rounded-md px-2"
+        data-tooltip-id="dev-dropdown-framer"
+        className="min-w-40 transition-all flex items-center justify-between bg-slate-700 focus:border-cyan-400 border-cyan-700 text-white py-1 border rounded-xl px-2"
         ref={buttonRef}
       >
         {dropDownValue}
@@ -99,4 +104,4 @@ const CustomDropDown_1 = ({ setDropDownValue, dropDownValue, Options }) => {
     </div>
   );
 };
-export default CustomDropDown_1;
+export default CustomDropDown_2;
