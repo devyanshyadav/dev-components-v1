@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import RadiosInfo from "@/app/Preview_components/Radio/RadiosInfo";
+import RadiosInfo from "@/app/Preview_components/Radios/RadiosInfo";
 import ComponentPreview from "@/app/Components/ComponentPreview";
-import CustomRadio from "@/app/Preview_components/Radio/CustomRadio";
+import CustomRadio from "@/app/Preview_components/Radios/CustomRadio";
 
 
 const page = () => {

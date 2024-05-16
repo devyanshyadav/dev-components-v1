@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Hamburger from "hamburger-react";
+import clsx from "clsx";
 
 const CustomNavbar = ({ navList }) => {
   const [on, toggle] = useState(false);
@@ -10,9 +11,7 @@ const CustomNavbar = ({ navList }) => {
       <h1 className="font-semibold text-4xl text-cyan-400">LOGO</h1>
       <nav
         className={
-          "z-50 flex items-start overflow-hidden duration-700 transition-[translate, opacity] " +
-          (on ? "translate-x-0 " : "-translate-x-full md:translate-x-0") +
-          " md:flex-row flex-col md:p-0 p-6 md:items-center gap-4 md:static fixed top-16 translate-y-1 md:translate-y-0 left-0 right-0 bottom-0 bg-slate-800 md:bg-transparent"
+          clsx("z-50 flex items-start overflow-hidden duration-700 transition-[translate, opacity] ", on ? "translate-x-0 " : "-translate-x-full md:translate-x-0", " md:flex-row flex-col md:p-0 p-6 md:items-center gap-4 md:static fixed top-14 md:border-0 border-t border-cyan-400 translate-y-1 md:translate-y-0 left-0 right-0 bottom-0 bg-slate-800 md:bg-transparent")
         }
       >
         <ul className="flex items-start justify-center gap-8 text-xl md:text-base md:gap-5 md:flex-row flex-col">
