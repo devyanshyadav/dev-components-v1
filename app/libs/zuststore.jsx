@@ -4,14 +4,15 @@ import ButtonsInfo from "../Preview_components/Buttons/ButtonsInfo";
 import countObjects from "./utils/countObjects";
 import AccordionsInfo from "../Preview_components/Accordions/AccordionsInfo";
 import CheckBoxesInfo from "../Preview_components/CheckBoxes/CheckBoxesInfo";
-import RadiosInfo from "../Preview_components/Radio/RadiosInfo";
+import RadiosInfo from "../Preview_components/Radios/RadiosInfo";
 import RangeSliderInfo from "../Preview_components/RangeSlider/RangeSlidersInfo";
-import ModalsInfo from "../Preview_components/Modal/ModalsInfo";
+import ModalsInfo from "../Preview_components/Modals/ModalsInfo";
 import TooltipsInfo from "../Preview_components/Tooltips/TooltipsInfo";
 import TogglesInfo from "../Preview_components/Toggle/TogglesInfo";
 import TabsInfo from "../Preview_components/Tabs/TabsInfo";
 import CarouselsInfo from "../Preview_components/Carousels/CarouselsInfo";
 import DropdownsInfo from "../Preview_components/Dropdowns/DropdownsInfo";
+import NavbarsInfo from "../Preview_components/Navbars/NavbarsInfo";
 
 const useDevStore = create((set, get) => ({
   ThemeColors: {
@@ -56,12 +57,12 @@ const useDevStore = create((set, get) => ({
       url: "/components/radios",
     },
     {
-      name: "Responsive Navbar",
+      name: "Responsive Navbars",
       image: "/svg_icons/nav.png",
-      components_no: countObjects(RadiosInfo),
+      components_no: countObjects(NavbarsInfo),
       description:
         "A navbar provides navigation options to users.",
-      url: "/components/navbar",
+      url: "/components/navbars",
     },
     {
       name: "Range Sliders",

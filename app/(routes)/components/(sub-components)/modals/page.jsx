@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import ComponentPreview from "@/app/Components/ComponentPreview";
-import ModalsInfo from "@/app/Preview_components/Modal/ModalsInfo";
-import CustomModal from "@/app/Preview_components/Modal/CustomModal";
+import ModalsInfo from "@/app/Preview_components/Modals/ModalsInfo";
+import CustomModal from "@/app/Preview_components/Modals/CustomModal";
 
 const page = () => {
   const [openModal, setOpenModal] = useState(false);

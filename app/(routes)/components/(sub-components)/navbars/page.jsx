@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import ComponentPreview from "@/app/Components/ComponentPreview";
-import NavbarsInfo from "@/app/Preview_components/Navbar/NavbarsInfo";
-import CustomNavbar from "@/app/Preview_components/Navbar/CustomNavbar";
+import NavbarsInfo from "@/app/Preview_components/Navbars/NavbarsInfo";
+import CustomNavbar from "@/app/Preview_components/Navbars/CustomNavbar";
 
 const page = () => {
   return (
