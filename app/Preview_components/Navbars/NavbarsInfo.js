@@ -21,7 +21,12 @@ const NavbarsInfo = [
       packages: [{
         pckg_name: "Hamburger",
         pckg_link: "https://www.npmjs.com/package/hamburger-react",
-      }],
+      },
+      {
+        pckg_name: "clsx",
+        pckg_link: "https://www.npmjs.com/package/clsx",
+      },
+      ],
     },
     usage_code: `import CustomNavbar from "@/app/dev_components/CustomNavbar";
         import React from "react";
