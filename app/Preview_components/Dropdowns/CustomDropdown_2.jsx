@@ -47,9 +47,9 @@ const CustomDropDown_2 = ({ setDropDownValue, dropDownValue, Options }) => {
           style={{ backgroundColor: "transparent", padding: "0px" }}
         >
           <motion.div
-            initial={{ scaleY: 0.8 }}
-            animate={{ scaleY: 1 }}
-            exit={{ scaleY: 0.8 }}
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0.8 }}
             transition={{ duration: 0.2 }}
             className="flex z-10 origin-top shadow-md flex-col gap-1 bg-slate-700 rounded-xl p-2 max-h-64 overflow-y-scroll [&::-webkit-scrollbar]:hidden [scrollbar-width:none]"
             style={{ width: calcWidth + "px" }}

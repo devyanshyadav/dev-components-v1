@@ -4,9 +4,12 @@ import ComponentPreview from "@/app/Components/ComponentPreview";
 import RangeSliderInfo from "@/app/Preview_components/RangeSlider/RangeSlidersInfo";
 import CustomRangeSlider_1 from "@/app/Preview_components/RangeSlider/CustomRangeSlider_1";
 import CustomRangeSlider from "@/app/Preview_components/RangeSlider/CustomRangeSlider";
+import MultiRangeSliderReact from "@/app/Preview_components/RangeSlider/MultiRangeSliderReact";
 
 const page = () => {
   const [rangeValue, setRangeValue] = useState(30);
+  const [minValue, set_minValue] = useState(25);
+  const [maxValue, set_maxValue] = useState(75);
   return (
     <>
       <ComponentPreview
@@ -48,19 +51,21 @@ const page = () => {
         component_code={RangeSliderInfo[1].code}
         component_packages={RangeSliderInfo[1].packages}
       />
-      {/* <ComponentPreview
-        component_name={RangeSliderInfo[0].title}
-        component_details={RangeSliderInfo[0].details}
-        component_usage_code={RangeSliderInfo[0].usage_code}
+      <ComponentPreview
+        component_name={RangeSliderInfo[2].title}
+        component_details={RangeSliderInfo[2].details}
+        component_usage_code={RangeSliderInfo[2].usage_code}
         component_preview={
-          <CustomRangeSlider
-            rangeValue={rangeValue}
-            setRangeValue={setRangeValue}
+          <MultiRangeSliderReact
+            minValue={minValue}
+            maxValue={maxValue}
+            set_minValue={set_minValue}
+            set_maxValue={set_maxValue}
           />
         }
-        component_code={RangeSliderInfo[0].code}
-        component_packages={RangeSliderInfo[0].packages}
-      /> */}
+        component_code={RangeSliderInfo[2].code}
+        component_packages={RangeSliderInfo[2].packages}
+      />
     </>
   );
 };

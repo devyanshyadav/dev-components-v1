@@ -1,3 +1,5 @@
+let minValue = "${minValue}";
+let maxValue = "${maxValue}";
 const RangeSliderInfo = [
   {
     title: "Custom Range Slider",
@@ -220,6 +222,165 @@ const RangeSliderInfo = [
     };
     
     export default CustomRangeSlider_1;
+    `,
+  },
+  {
+    title: "Multi Range Slider React",
+    details: {
+      description:
+        "A customizable range slider component for selecting dual numerical values lies in specific ranges.",
+      features: [
+        "Displays a range slider with two handles and numeric labels",
+        "Allows users to select a value by dragging the slider thumb",
+        "Provides visual feedback for the selected value",
+        "Customizable appearance and behavior",
+      ],
+      props: [
+        {
+          propName: "minValue",
+          propExample: "25",
+          propDetail: "The current minimum value of the range slider.",
+        },
+        {
+          propName: "maxValue",
+          propExample: "75",
+          propDetail: "The current maximum value of the range slider.",
+        },
+        {
+          propName: "set_minValue",
+          propExample: "set_minValue",
+          propDetail:
+            "A function to update the minValue state when the slider is moved.",
+        },
+        {
+          propName: "set_maxValue",
+          propExample: "set_maxValue",
+          propDetail:
+            "A function to update the maxValue state when the slider is moved.",
+        },
+      ],
+      packages: [
+        {
+          pckg_name: "multi-range-slider-react",
+          pckg_link: "https://www.npmjs.com/package/multi-range-slider-react",
+        },
+        {
+          pckg_name: "styled-components",
+          pckg_link: "https://www.npmjs.com/package/styled-components",
+        },
+      ],
+      doc_links: ["https://www.npmjs.com/package/multi-range-slider-react"],
+    },
+
+    usage_code: `
+    import MultiRangeSliderReact from "@/app/dev_components/MultiRangeSliderReact";
+    import React from "react";
+    
+    const page = () => {
+      const [minValue, set_minValue] = useState(25);
+      const [maxValue, set_maxValue] = useState(75);
+      return (
+        <MultiRangeSliderReact
+        minValue={minValue}
+        maxValue={maxValue}
+        set_minValue={set_minValue}
+        set_maxValue={set_maxValue}
+      />
+      );
+    };
+    
+    export default page;
+    `,
+    code: `
+    import React from "react";
+    import MultiRangeSlider from "multi-range-slider-react";
+    import styled from "styled-components";
+    
+    const RangeDiv = styled.div\`
+      .multi-range-slider .thumb .caption * {
+        background-color: #0e7490 !important;
+        box-shadow: inset 0px 0px 5px transparent !important;
+        border-radius: 8px !important;
+      }
+      .multi-range-slider .bar-left,
+      .multi-range-slider .bar-right {
+        box-shadow: inset 0px 0px 5px transparent !important;
+    
+        // The height of the range container
+        height: 20px !important;
+      }
+      .multi-range-slider .bar-inner {
+        box-shadow: inset 0px 0px 5px transparent !important;
+        border: none !important;
+      }
+      .multi-range-slider .thumb {
+        border: 2px solid #22d3ee !important;
+        margin-top: 5.9px !important;
+      }
+      .multi-range-slider .thumb::before {
+        box-shadow: inset 0px 0px 5px transparent !important;
+        border: 2px solid #22d3ee !important;
+        height: 20px !important;
+        width: 20px !important;
+    
+        // the position of the thumb needs to be adjusted while height of the container changes
+        margin-left: -9px !important;
+      }
+    \`;
+    function MultiRangeSliderReact({
+      minValue,
+      maxValue,
+      set_minValue,
+      set_maxValue,
+    }) {
+      const handleInput = (e) => {
+        set_minValue(e.minValue);
+        set_maxValue(e.maxValue);
+      };
+    
+      return (
+        <div className=" max-w-md w-full bg-cyan-700/20 p-3 rounded-md">
+          <div className="flex justify-between items-center">
+            <h2 className="text-cyan-400 select-none font-semibold text-sm">
+              Filter by Price
+            </h2>
+            <pre className="border-cyan-400  text-white rounded-md text-sm  space-x-2 border bg-cyan-700/50 flex px-2">
+              <p>
+                Rs.
+                {minValue} - Rs.{maxValue}
+              </p>
+            </pre>
+          </div>
+    
+          <RangeDiv className="w-full">
+            <MultiRangeSlider
+              preventWheel={false}
+              baseClassName="multi-range-slider"
+              minCaption={\`Rs. ${minValue}\`}
+              maxCaption={\`Rs. ${maxValue}\`}
+              ruler={false}
+              label={false}
+              barLeftColor="#0E7490"
+              barInnerColor="#22D3EE"
+              barRightColor="#0E7490"
+              thumbLeftColor="#0E7490"
+              thumbRightColor="#0E7490"
+              className="bg-transparent !border-0 !shadow-none"
+              min={0}
+              max={100}
+              step={5}
+              minValue={minValue}
+              maxValue={maxValue}
+              onInput={(e) => {
+                handleInput(e);
+              }}
+            />
+          </RangeDiv>
+        </div>
+      );
+    }
+    
+    export default MultiRangeSliderReact;
     `,
   },
 ];
