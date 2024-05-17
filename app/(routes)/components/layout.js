@@ -17,7 +17,7 @@ const layout = ({ children }) => {
       </span>
       <main className="w-full overflow-hidden bg-gradient-to-r p-5 pt-10 md:px-0 from-primary via-[#064F51] md:pr-3 px-2 to-primary bg-white h-screen mx-0 flex gap-2">
         <SideBar />
-        <section className="md:w-[80vw] flex-1 h-full bg-secondary/20 rounded-xl p-3 md:p-5 space-y-4 overflow-y-scroll [&::-webkit-scrollbar]:hidden [&::-webkit-scrollbar-track]:hidden [&::-webkit-scrollbar-thumb]">
+        <section className="md:w-[80vw] flex-1 md:flex-none h-full bg-secondary/20 rounded-xl p-3 md:p-5 space-y-4 overflow-y-scroll [&::-webkit-scrollbar]:hidden [&::-webkit-scrollbar-track]:hidden [&::-webkit-scrollbar-thumb]">
           {children}
         </section>
       </main>
