@@ -28,7 +28,7 @@ const SearchComponents = () => {
   return (
     <>
       <section className="relative z-50">
-        <div className="w-full flex items-center border-2 border-accent rounded-full p-1 bg-secondary/20 text-white/70">
+        <div className="w-full flex items-center border-2 border-accent rounded-full md:p-1 p-2 bg-secondary/20 text-white/70">
           <LuSearch className="text-accent text-xl" />{" "}
           <input
             type="text"

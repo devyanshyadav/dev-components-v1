@@ -12,7 +12,7 @@ const layout = ({ children }) => {
       >
         Dev Components
       </Link>
-      <span className="top-0 fixed right-2 md:hidden">
+      <span className="top-0 fixed right-2 md:hidden bg-secondary/50 px-1 rounded-bl-xl">
         <ToggleHamburger />
       </span>
       <main className="w-full overflow-hidden bg-gradient-to-r p-5 pt-10 md:px-0 from-primary via-[#064F51] md:pr-3 px-2 to-primary bg-white h-screen mx-0 flex gap-2">

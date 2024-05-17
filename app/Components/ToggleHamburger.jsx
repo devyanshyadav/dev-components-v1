@@ -13,7 +13,7 @@ const ToggleHamburger = () => {
 
 
   return (
-    <Hamburger toggled={isOpen} toggle={setOpen} color="#22D3EE"  />
+    <Hamburger toggled={isOpen} size={25} toggle={setOpen} color="#22D3EE"  />
   )
 }
 

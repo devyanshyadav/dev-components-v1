@@ -22,7 +22,7 @@ const ReactResponsiveModal = ({
         onClose={() => setOpenModal(false)}
         center
       >
-        <section className="relative min-w-[90vw] flex flex-col md:min-w-[40vw] min-h-60 rounded-xl shadow-md bg-slate-700 overflow-hidden">
+        <section className="relative min-w-72 flex flex-col md:min-w-[40vw] min-h-60 rounded-xl shadow-md bg-slate-700 overflow-hidden">
           <div className="w-full  bg-cyan-700/20 font-semibold flex items-center justify-between relative">
             <h3 className="p-3 text-cyan-400">hello</h3>
             <IoIosCloseCircleOutline
