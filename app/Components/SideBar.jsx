@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { GoDotFill } from "react-icons/go";
 import useDevStore from "../libs/zuststore";
 import Link from "next/link";
