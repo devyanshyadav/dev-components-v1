@@ -6,7 +6,7 @@ function CustomRangeSlider({ rangeValue, setRangeValue }) {
     <div className=" max-w-md w-full bg-cyan-700/20 p-3 rounded-md">
       <div className="flex justify-between items-center">
         <h2 className="text-cyan-400 select-none font-semibold text-sm">
-          Width
+          Select Range
         </h2>
         <span className="border-cyan-400  rounded-md text-sm text-cyan-800 space-x-2 w-14 border bg-white flex px-2">
           <input
