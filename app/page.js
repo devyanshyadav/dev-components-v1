@@ -5,7 +5,7 @@ import ComponentsHome from "./Components/ComponentHome";
 const page = () => {
   return (
     <>
-      <section className="w-full text-center p-5 space-y-3 md:max-w-lg  mx-auto">
+      <section className="w-full text-center p-5 z-10 space-y-3 md:max-w-lg sticky md:relative top-0 md:backdrop-blur-0 backdrop-blur-sm rounded-b-xl shadow-md md:shadow-none border-b border-secondary md:border-none mx-auto">
         <h1 className="text-4xl font-bold text-white">Dev Components</h1>
         <p className="text-white/80 font-light text-center text-sm">
           Crafting a Lightweight Website using In-House Components for Maximum
@@ -15,8 +15,8 @@ const page = () => {
         <SearchComponents />
       </section>
 
-      <section className="grid grid-cols-4 my-10 w-full max-w-5xl mx-auto gap-3">
-       <ComponentsHome/>
+      <section className="grid grid-cols-1 md:grid-cols-4 py-0 p-3 md:p-0 my-10 w-full max-w-5xl mx-auto gap-3">
+        <ComponentsHome />
       </section>
     </>
   );

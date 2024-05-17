@@ -21,6 +21,12 @@ const useDevStore = create((set, get) => ({
     accent: "#01FFF5",
     text: "#FFFFFF",
   },
+ 
+  SideBar: true,
+
+  SideBarToggle: () => {
+    set((state) => ({ SideBar: !state.SideBar }));
+  },
   ComponentData: [
     {
       name: "Buttons",
