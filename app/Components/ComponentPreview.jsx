@@ -30,7 +30,7 @@ const ComponentPreview = ({
               target="_blank"
               href={item}
               key={index}
-              className="p-1 gap-2 hover:opacity-80 text-xs flex items-center justify-center w-fit px-2 rounded-md border border-secondary bg-secondary/20 text-accent"
+              className="p-1 gap-2 hover:opacity-80 text-xs flex items-center justify-center w-fit px-2 rounded-md border border-secondary bg-secondary/40 text-accent"
             >
               Docs <GoLinkExternal />
             </Link>
@@ -91,7 +91,7 @@ const ComponentPreview = ({
               {component_details.description}
             </h2>
 
-            <h3 className="font-semibold text-secondary">
+            <h3 className="font-semibold text-accent/80">
               Packages: {component_details.packages.length}
             </h3>
 
@@ -127,14 +127,14 @@ const ComponentPreview = ({
               </code>
             )}
 
-            <h3 className="font-semibold text-secondary">Features</h3>
+            <h3 className="font-semibold text-accent/80">Features</h3>
             <ul className="text-sm font-light list-disc list-inside list-accent marker:text-accent">
               {component_details.features.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
 
-            <h3 className="font-semibold text-secondary flex  gap-3 items-center">
+            <h3 className="font-semibold text-accent/80 flex  gap-3 items-center">
               Props{" "}
               <p className="text-xs font-light">
                 ( Additional props can be included as needed )
