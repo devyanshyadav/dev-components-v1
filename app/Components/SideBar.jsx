@@ -12,9 +12,12 @@ const SideBar = () => {
   );
   const params = usePathname();
   const data = ComponentData.filter((item) => item.url === params);
+  useEffect(() => {
+    SideBarToggle();
+  }, []);
 
   return (
-    (
+    SideBar && (
       <motion.section
         initial={{ left: "-100px" }}
         animate={{ left: 0 }}

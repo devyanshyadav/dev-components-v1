@@ -67,7 +67,7 @@ const ComponentPreview = ({
           </div>
         ) : CurrTab == 1 ? (
           <SyntaxHighlighter
-            className="text-sm text-wrap er"
+            className="text-sm rounded-b-lg [&::-webkit-scrollbar]:hidden [&::-webkit-scrollbar-track]:hidden [&::-webkit-scrollbar-thumb]:hidden"
             language="javascript"
             style={atomOneDark}
             wrapLines={true}
@@ -77,7 +77,7 @@ const ComponentPreview = ({
           </SyntaxHighlighter>
         ) : CurrTab == 2 ? (
           <SyntaxHighlighter
-            className="text-sm text-wrap er"
+            className="text-sm rounded-b-lg [&::-webkit-scrollbar]:hidden [&::-webkit-scrollbar-track]:hidden [&::-webkit-scrollbar-thumb]:hidden"
             language="javascript"
             style={atomOneDark}
             wrapLines={true}
