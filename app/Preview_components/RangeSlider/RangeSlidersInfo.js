@@ -68,7 +68,10 @@ const RangeSliderInfo = [
             min={0}
             max={100}
             step={1}
-            className="w-full accent-cyan-500 hover:[&::-webkit-slider-thumb]:shadow-[0_0_0_6px_rgba(9,153,153,0.20)] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer "
+            className="w-full accent-cyan-500 
+            [&::-moz-range-thumb]:cursor-pointer
+            [&::-moz-range-thumb]:shadow-[0_0_0_6px_rgba(9,153,153,0.20)]
+            hover:[&::-webkit-slider-thumb]:shadow-[0_0_0_6px_rgba(9,153,153,0.20)] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer "
             value={rangeValue}
             onChange={(e) => setRangeValue(e.target.value)}
           />
