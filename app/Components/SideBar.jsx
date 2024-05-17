@@ -14,9 +14,12 @@ const SideBar = () => {
   const data = ComponentData.filter((item) => item.url === params);
 
   return (
-    SideBar && (
-      <section
-       
+    (
+      <motion.section
+        initial={{ left: "-100px" }}
+        animate={{ left: 0 }}
+        exit={{ left: 0 }}
+        transition={{ duration: 0.2 }}
         className="h-full md:w-[20vw] w-[50vw] fixed md:static z-50 bg-primary border border-secondary/30 rounded-r-xl p-3 text-white/60"
       >
         <ul className="space-y-2 ">
@@ -52,7 +55,7 @@ const SideBar = () => {
             </>
           ))}
         </ul>
-      </section>
+      </motion.section>
     )
   );
 };
