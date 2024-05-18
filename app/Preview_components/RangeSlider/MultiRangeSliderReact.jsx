@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MultiRangeSlider from "multi-range-slider-react";
 import styled from "styled-components";
 
@@ -44,46 +44,52 @@ function MultiRangeSliderReact({
     set_minValue(e.minValue);
     set_maxValue(e.maxValue);
   };
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
-    <div className=" max-w-md w-full bg-cyan-700/20 p-3 rounded-md">
-      <div className="flex justify-between items-center">
-        <h2 className="text-cyan-400 select-none font-semibold text-sm">
-          Filter by Price
-        </h2>
-        <pre className="border-cyan-400  text-white rounded-md text-sm  space-x-2 border bg-cyan-700/50 flex px-2">
-          <p>
-            Rs.
-            {minValue} - Rs.{maxValue}
-          </p>
-        </pre>
-      </div>
+    mounted && (
+      <div className=" max-w-md w-full bg-cyan-700/20 p-3 rounded-md">
+        <div className="flex justify-between items-center">
+          <h2 className="text-cyan-400 select-none font-semibold text-sm">
+            Filter by Price
+          </h2>
+          <pre className="border-cyan-400  text-white rounded-md text-sm  space-x-2 border bg-cyan-700/50 flex px-2">
+            <p>
+              Rs.
+              {minValue} - Rs.{maxValue}
+            </p>
+          </pre>
+        </div>
 
-      <RangeDiv className="w-full">
-        <MultiRangeSlider
-          preventWheel={false}
-          baseClassName="multi-range-slider"
-          minCaption={`Rs. ${minValue}`}
-          maxCaption={`Rs. ${maxValue}`}
-          ruler={false}
-          label={false}
-          barLeftColor="#0E7490"
-          barInnerColor="#22D3EE"
-          barRightColor="#0E7490"
-          thumbLeftColor="#0E7490"
-          thumbRightColor="#0E7490"
-          className="bg-transparent !border-0 !shadow-none"
-          min={0}
-          max={100}
-          step={5}
-          minValue={minValue}
-          maxValue={maxValue}
-          onInput={(e) => {
-            handleInput(e);
-          }}
-        />
-      </RangeDiv>
-    </div>
+        <RangeDiv className="w-full">
+          <MultiRangeSlider
+            preventWheel={false}
+            baseClassName="multi-range-slider"
+            minCaption={`Rs. ${minValue}`}
+            maxCaption={`Rs. ${maxValue}`}
+            ruler={false}
+            label={false}
+            barLeftColor="#0E7490"
+            barInnerColor="#22D3EE"
+            barRightColor="#0E7490"
+            thumbLeftColor="#0E7490"
+            thumbRightColor="#0E7490"
+            className="bg-transparent !border-0 !shadow-none"
+            min={0}
+            max={100}
+            step={5}
+            minValue={minValue}
+            maxValue={maxValue}
+            onInput={(e) => {
+              handleInput(e);
+            }}
+          />
+        </RangeDiv>
+      </div>
+    )
   );
 }
 
