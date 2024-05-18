@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useId } from "react";
 import clsx from "clsx";
 import { Tooltip as DropDown } from "react-tooltip";
 import { createPortal } from "react-dom";
@@ -9,6 +9,7 @@ const CustomDropDown_1 = ({ setDropDownValue, dropDownValue, Options }) => {
   const [mounted, setMounted] = useState(false);
   const dropdownRef = useRef(null);
   const buttonRef = useRef(null);
+  const randomId=useId()
   useEffect(() => {
     if (buttonRef.current) {
       setCalcWidth(buttonRef.current.offsetWidth);
@@ -42,7 +43,7 @@ const CustomDropDown_1 = ({ setDropDownValue, dropDownValue, Options }) => {
             clickable={mounted ? true : false}
             events={["click"]}
             isOpen
-            id="dev-dropdown"
+            id={randomId}
             place="bottom"
             offset={2}
             style={{ backgroundColor: "transparent", padding: "0px" }}
@@ -81,7 +82,7 @@ const CustomDropDown_1 = ({ setDropDownValue, dropDownValue, Options }) => {
         )}
       <button
         onClick={() => setMounted(!mounted)}
-        data-tooltip-id="dev-dropdown"
+        data-tooltip-id={randomId}
         className="min-w-40 transition-all flex items-center justify-between bg-slate-700 focus:border-cyan-400 border-cyan-700 text-white py-1 border rounded-md px-2"
         ref={buttonRef}
       >
