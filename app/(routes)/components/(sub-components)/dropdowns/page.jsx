@@ -34,7 +34,7 @@ const page = () => {
         component_details={DropdownsInfo[1].details}
         component_usage_code={DropdownsInfo[1].usage_code}
         component_preview={
-          <div className="bg-cyan-700/20 text-center space-y-3 p-5 rounded-lg min-w-full md:min-w-40 h-56">
+          <div className="bg-cyan-700/20 text-center space-y-3 p-5 rounded-lg min-w-full md:min-w-40">
             <span className="text-white">{dropDownValue}</span>
             <CustomDropDown_1
               setDropDownValue={setDropDownValue}

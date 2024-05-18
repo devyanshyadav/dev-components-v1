@@ -3,6 +3,8 @@ import React, { useEffect, useState, useRef } from "react";
 import clsx from "clsx";
 import { Tooltip as DropDown } from "react-tooltip";
 import { motion } from "framer-motion";
+import { createPortal } from "react-dom";
+
 
 const CustomDropDown_2 = ({ setDropDownValue, dropDownValue, Options }) => {
   const [calcWidth, setCalcWidth] = useState(0);
@@ -36,50 +38,50 @@ const CustomDropDown_2 = ({ setDropDownValue, dropDownValue, Options }) => {
 
   return (
     <div>
-      {mounted && (
+      {mounted && createPortal(
         <DropDown
-          clickable={mounted ? true : false}
-          events={["click"]}
-          isOpen
-          id="dev-dropdown-framer"
-          place="bottom"
-          offset={2}
-          style={{ backgroundColor: "transparent", padding: "0px" }}
+        clickable={mounted ? true : false}
+        events={["click"]}
+        isOpen
+        id="dev-dropdown-framer"
+        place="bottom"
+        offset={2}
+        style={{ backgroundColor: "transparent", padding: "0px" }}
+      >
+        <motion.div
+          initial={{ scale: 0.8 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0.8 }}
+          transition={{ duration: 0.2 }}
+          className="flex z-10 origin-top shadow-md flex-col gap-1 bg-slate-700 rounded-xl p-2 max-h-64 overflow-y-scroll [&::-webkit-scrollbar]:hidden [scrollbar-width:none]"
+          style={{ width: calcWidth + "px" }}
+          ref={dropdownRef}
         >
-          <motion.div
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0.8 }}
-            transition={{ duration: 0.2 }}
-            className="flex z-10 origin-top shadow-md flex-col gap-1 bg-slate-700 rounded-xl p-2 max-h-64 overflow-y-scroll [&::-webkit-scrollbar]:hidden [scrollbar-width:none]"
-            style={{ width: calcWidth + "px" }}
-            ref={dropdownRef}
-          >
-            {Options.map((elem, i) => (
-              <label
-                className={clsx(
-                  "hover:bg-cyan-700 text-left rounded-xl p-1 overflow-hidden px-2 cursor-pointer",
-                  dropDownValue == elem && "bg-cyan-400"
-                )}
-                key={i}
-                htmlFor={elem}
-              >
-                {elem}
-                <input
-                  onChange={(e) => {
-                    setDropDownValue(e.target.value);
-                    setMounted(false);
-                  }}
-                  type="radio"
-                  id={elem}
-                  name="drop-down"
-                  value={elem}
-                  className="opacity-0"
-                />
-              </label>
-            ))}
-          </motion.div>
-        </DropDown>
+          {Options.map((elem, i) => (
+            <label
+              className={clsx(
+                "hover:bg-cyan-700 text-left rounded-xl p-1 overflow-hidden px-2 cursor-pointer",
+                dropDownValue == elem && "bg-cyan-400"
+              )}
+              key={i}
+              htmlFor={elem}
+            >
+              {elem}
+              <input
+                onChange={(e) => {
+                  setDropDownValue(e.target.value);
+                  setMounted(false);
+                }}
+                type="radio"
+                id={elem}
+                name="drop-down"
+                value={elem}
+                className="opacity-0"
+              />
+            </label>
+          ))}
+        </motion.div>
+      </DropDown>, document.body
       )}
       <button
         onClick={() => setMounted(!mounted)}
