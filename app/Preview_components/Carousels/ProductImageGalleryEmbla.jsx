@@ -53,14 +53,14 @@ const ProductImageGalleryEmbla = ({ carouselData }) => {
         <button
           type="button"
           className="absolute top-1/2 left-1 text-2xl rotate-180 text-cyan-400 hover:text-cyan-700"
-          onClick={() => emblaApi.canScrollPrev() && emblaApi.scrollPrev()}
+          onClick={() => emblaApi && emblaApi.scrollPrev()}
         >
           <IoCaretForwardCircleOutline />
         </button>
         <button
           type="button"
           className="absolute top-1/2 right-1 text-2xl text-cyan-400 hover:text-cyan-700"
-          onClick={() => emblaApi.canScrollNext() && emblaApi.scrollNext()}
+          onClick={() => emblaApi && emblaApi.scrollNext()}
         >
           <IoCaretForwardCircleOutline />
         </button>
