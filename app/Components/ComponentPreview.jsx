@@ -37,8 +37,8 @@ const ComponentPreview = ({
           ))}
       </h3>
 
-      <div className="w-full mt-2 max-h-96 min-h-56 bg-primary rounded-lg p-3 overflow-hidden relative flex flex-col">
-        <ul className="w-full flex items-center gap-5 text-white/80 text-sm   ">
+      <div className="w-full mt-2 p-3 pt-0 overflow-y-scroll [&::-webkit-scrollbar]:hidden [&::-webkit-scrollbar-track]:hidden [&::-webkit-scrollbar-thumb]:hidden max-h-96 min-h-56 bg-primary rounded-lg overflow-hidden relative flex flex-col">
+        <ul className="w-full p-3 pb-0 flex items-center backdrop-blur-lg  gap-5 text-white/80 text-sm sticky top-0 z-10   ">
           {["Preview", "Code", "Usage", "Details"].map((item, index) => (
             <li
               key={index}
@@ -50,17 +50,22 @@ const ComponentPreview = ({
               {item}
             </li>
           ))}
+          <li>
+            <CopyCode
+              textToCopy={codeString}
+              copied={copyCode}
+              setCopied={setCopyCode}
+            >
+              <button className="bg-secondary/20 text-accent border border-secondary absolute  select-none top-0 -right-3 rounded-bl-lg rounded-tr-lg z-50 p-1 px-3 text-sm font-semibold cursor-pointer hover:bg-secondary">
+                {copyCode ? "Copied!" : "Copy"}
+              </button>
+            </CopyCode>
+          </li>
+          <li>
+            <hr className="transform absolute  border-0 right-0 left-0 h-[2px] bottom-0 bg-gradient-to-r from-secondary to-primary" />
+          </li>
         </ul>
-        <hr className="transform -translate-y-[2px] border-0 h-[2px] bg-secondary/50" />
-        <CopyCode
-          textToCopy={codeString}
-          copied={copyCode}
-          setCopied={setCopyCode}
-        >
-          <button className="bg-secondary/20 text-accent border border-secondary absolute top-0 select-none right-0 rounded-bl-lg rounded-tr-lg p-1 px-3 text-sm font-semibold cursor-pointer hover:bg-secondary">
-            {copyCode ? "Copied!" : "Copy"}
-          </button>
-        </CopyCode>
+
         {CurrTab == 0 ? (
           <div className="flex-1 w-full svg-pattern-dots rounded-xl flex items-center justify-center p-5">
             {component_preview}

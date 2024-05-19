@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.1.1",
     "framer-motion": "^11.1.9",
     "hamburger-react": "^2.5.0",
     "jsx-to-string": "^1.4.0",

@@ -25,7 +25,10 @@ const CustomToggle = ({ hasToggle, setHasToggle }) => {
           onChange={(e) => setHasToggle(e.target.checked)}
         />
         <div
-          className="h-full absolute  bg-white aspect-square pointer-events-none transition-all duration-400 rounded-full"
+          className={clsx(
+            "h-full absolute border-4 bg-white aspect-square pointer-events-none transition-all duration-400 rounded-full",
+            hasToggle ? "border-cyan-400" : "border-cyan-700"
+          )}
           style={{
             transform: hasToggle
               ? "translateX(" + (toggleSize.width - toggleSize.height) + "px)"
