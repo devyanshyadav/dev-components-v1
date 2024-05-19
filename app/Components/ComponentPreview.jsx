@@ -19,6 +19,8 @@ const ComponentPreview = ({
   const [copyCode, setCopyCode] = useState(false);
   const [copyNPM, setCopyNPM] = useState(false);
   const codeString = component_code;
+  const usageCodeString = component_usage_code;
+
   return (
     <div className="w-full">
       <h3 className="font-semibold flex items-center gap-4 text-white/80 text-xl">
@@ -52,7 +54,7 @@ const ComponentPreview = ({
           ))}
           <li key={"copy-code"}>
             <CopyCode
-              textToCopy={codeString}
+              textToCopy={CurrTab == 2 ? usageCodeString : codeString}
               copied={copyCode}
               setCopied={setCopyCode}
             >
