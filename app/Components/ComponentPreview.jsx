@@ -28,6 +28,7 @@ const ComponentPreview = ({
           component_details.doc_links.map((item, index) => (
             <Link
               target="_blank"
+              key={index}
               href={item}
               className="p-1 gap-2 hover:opacity-80 text-xs flex items-center justify-center w-fit px-2 rounded-md border border-secondary bg-secondary/40 text-accent"
             >
