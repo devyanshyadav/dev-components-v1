@@ -2,6 +2,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { IoCaretForwardCircleOutline } from "react-icons/io5";
+import clsx from "clsx";
 
 const ProductImageGalleryEmbla = ({ carouselData }) => {
   const [selectedSlideIndex, setSelectedSlideIndex] = useState(0);
@@ -38,7 +39,7 @@ const ProductImageGalleryEmbla = ({ carouselData }) => {
         <div className=" flex h-full">
           {carouselData.map((elem, index) => (
             <div
-              key={`slide-${index}`}
+              key={index}
               className="flex-grow-0 flex-shrink-0 basis-full"
               onClick={() => scrollTo(index)}
             >
@@ -68,18 +69,14 @@ const ProductImageGalleryEmbla = ({ carouselData }) => {
       <section className="flex flex-wrap gap-2 rounded-md justify-center ">
         {carouselData.map((elem, index) => (
           <div
-            key={`thumbnail-${index}`}
+            key={index}
             className="h-12 aspect-square overflow-hidden rounded-md cursor-pointer"
             onClick={() => scrollTo(index)}
           >
             <img
               src={elem}
               alt="product-images"
-              className={`object-cover border-2 rounded-md object-center h-full aspect-square ${
-                index == selectedSlideIndex
-                  ? "border-cyan-400"
-                  : "border-cyan-700 "
-              }`}
+              className={clsx("object-cover border-2 rounded-md object-center h-full aspect-square", index == selectedSlideIndex ? "border-cyan-400" : "border-cyan-700")}
             />
           </div>
         ))}

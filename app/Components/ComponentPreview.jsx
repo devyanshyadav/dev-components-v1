@@ -29,7 +29,6 @@ const ComponentPreview = ({
             <Link
               target="_blank"
               href={item}
-              key={index}
               className="p-1 gap-2 hover:opacity-80 text-xs flex items-center justify-center w-fit px-2 rounded-md border border-secondary bg-secondary/40 text-accent"
             >
               Docs <GoLinkExternal />
@@ -50,7 +49,7 @@ const ComponentPreview = ({
               {item}
             </li>
           ))}
-          <li>
+          <li key={"copy-code"}>
             <CopyCode
               textToCopy={codeString}
               copied={copyCode}
@@ -61,7 +60,7 @@ const ComponentPreview = ({
               </button>
             </CopyCode>
           </li>
-          <li>
+          <li key={"bottom-line"}>
             <hr className="transform absolute  border-0 right-0 left-0 h-[2px] bottom-0 bg-gradient-to-r from-secondary to-primary" />
           </li>
         </ul>
@@ -104,16 +103,14 @@ const ComponentPreview = ({
               <code className="text-sm bg-secondary/20 text-accent w-fit p-1 border border-secondary px-2 rounded-lg">
                 npm i
                 {component_details.packages.map((item, index) => (
-                  <React.Fragment key={index}>
-                    {" "}
-                    <Link
-                      target="_blank"
-                      className="hover:underline cursor-pointer"
-                      href={item.pckg_link}
-                    >
-                      {item.pckg_name}
-                    </Link>
-                  </React.Fragment>
+                  <Link
+                    key={index}
+                    target="_blank"
+                    className="hover:underline cursor-pointer"
+                    href={item.pckg_link}
+                  >
+                    {item.pckg_name}
+                  </Link>
                 ))}
                 <CopyCode
                   textToCopy={

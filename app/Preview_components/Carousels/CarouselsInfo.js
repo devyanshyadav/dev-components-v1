@@ -1,5 +1,3 @@
-let index = "index";
-let selectedSlideIndex = "selectedSlideIndex";
 const CarouselsInfo = [
   {
     title: "Custom Carousel",
@@ -191,6 +189,10 @@ const CarouselsInfo = [
           pckg_name: "react-icons",
           pckg_link: "https://react-icons.github.io/react-icons",
         },
+        {
+          pckg_name: "clsx",
+          pckg_link: "https://www.npmjs.com/package/clsx",
+        },
       ],
       doc_links: ["https://www.embla-carousel.com/get-started/react/"],
     },
@@ -223,6 +225,7 @@ const CarouselsInfo = [
     import React, { useCallback, useEffect, useState } from "react";
     import useEmblaCarousel from "embla-carousel-react";
     import { IoCaretForwardCircleOutline } from "react-icons/io5";
+    import clsx from "clsx";
     
     const ProductImageGalleryEmbla = ({ carouselData }) => {
       const [selectedSlideIndex, setSelectedSlideIndex] = useState(0);
@@ -259,7 +262,7 @@ const CarouselsInfo = [
             <div className=" flex h-full">
               {carouselData.map((elem, index) => (
                 <div
-                  key={\`slide-${index}\`}
+                  key={index}
                   className="flex-grow-0 flex-shrink-0 basis-full"
                   onClick={() => scrollTo(index)}
                 >
@@ -289,18 +292,14 @@ const CarouselsInfo = [
           <section className="flex flex-wrap gap-2 rounded-md justify-center ">
             {carouselData.map((elem, index) => (
               <div
-                key={\`thumbnail-${index}\`}
+                key={index}
                 className="h-12 aspect-square overflow-hidden rounded-md cursor-pointer"
                 onClick={() => scrollTo(index)}
               >
                 <img
                   src={elem}
                   alt="product-images"
-                  className={\`object-cover border-2 rounded-md object-center h-full aspect-square ${
-                    index == selectedSlideIndex
-                      ? "border-cyan-400"
-                      : "border-cyan-700 "
-                  }\`}
+                  className={clsx("object-cover border-2 rounded-md object-center h-full aspect-square", index == selectedSlideIndex ? "border-cyan-400" : "border-cyan-700")}
                 />
               </div>
             ))}
@@ -350,6 +349,10 @@ const CarouselsInfo = [
           pckg_name: "react-icons",
           pckg_link: "https://react-icons.github.io/react-icons",
         },
+        {
+          pckg_name: "clsx",
+          pckg_link: "https://www.npmjs.com/package/clsx",
+        },
       ],
       doc_links: ["https://www.embla-carousel.com/get-started/react/"],
     },
@@ -387,6 +390,7 @@ const CarouselsInfo = [
     import useEmblaCarousel from "embla-carousel-react";
     import { GoDot } from "react-icons/go";
     import { IoCaretForwardCircleOutline } from "react-icons/io5";
+    import clsx from "clsx";
     
     const EmblaCarousel = ({ carouselData, perView = 1 }) => {
       const [selectedSlideIndex, setSelectedSlideIndex] = useState(0);
@@ -421,7 +425,7 @@ const CarouselsInfo = [
           <div className=" flex h-full  gap-2">
             {carouselData.map((elem, index) => (
               <div
-                key={\`slide-${index}\`}
+                key={index}
                 className="flex-grow-0 flex-shrink-0 basis-full overflow-hidden rounded-lg"
                 style={{ minWidth: 100 / perView + "%" }}
                 onClick={() => scrollTo(index)}
@@ -433,14 +437,14 @@ const CarouselsInfo = [
           <button
             type="button"
             className="absolute top-1/2 -translate-y-1/2 rotate-180 left-1 text-3xl text-cyan-400 hover:text-cyan-700"
-            onClick={() => emblaApi.scrollPrev()}
+            onClick={() => emblaApi && emblaApi.scrollPrev()}
           >
             <IoCaretForwardCircleOutline />
           </button>
           <button
             type="button"
             className="absolute top-1/2 -translate-y-1/2 right-1 text-3xl text-cyan-400 hover:text-cyan-700"
-            onClick={() => emblaApi.scrollNext()}
+            onClick={() => emblaApi && emblaApi.scrollNext()}
           >
             <IoCaretForwardCircleOutline />
           </button>
@@ -449,11 +453,7 @@ const CarouselsInfo = [
               <GoDot
                 onClick={() => scrollTo(index)}
                 key={index}
-                className={\`cursor-pointer transition-all duration-400 hover:text-cyan-400 ${
-                  index === selectedSlideIndex
-                    ? "text-cyan-400 text-lg"
-                    : "text-cyan-700 text-base"
-                }\`}
+                className={clsx("cursor-pointer transition-all duration-400 hover:text-cyan-400", index === selectedSlideIndex ? "text-cyan-400 text-lg" : "text-cyan-700 text-base")}
               />
             ))}
           </span>

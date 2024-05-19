@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { GoDot } from "react-icons/go";
 import { IoCaretForwardCircleOutline } from "react-icons/io5";
+import clsx from "clsx";
 
 const EmblaCarousel = ({ carouselData, perView = 1 }) => {
   const [selectedSlideIndex, setSelectedSlideIndex] = useState(0);
@@ -65,11 +66,7 @@ const EmblaCarousel = ({ carouselData, perView = 1 }) => {
           <GoDot
             onClick={() => scrollTo(index)}
             key={index}
-            className={` cursor-pointer transition-all duration-400 hover:text-cyan-400 ${
-              index === selectedSlideIndex
-                ? "text-cyan-400 text-lg"
-                : "text-cyan-700 text-base"
-            }`}
+            className={clsx("cursor-pointer transition-all duration-400 hover:text-cyan-400", index === selectedSlideIndex ? "text-cyan-400 text-lg" : "text-cyan-700 text-base")}
           />
         ))}
       </span>
