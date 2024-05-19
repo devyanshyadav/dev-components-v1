@@ -102,16 +102,18 @@ const ComponentPreview = ({
 
             {component_details.packages.length > 0 && (
               <code className="text-sm bg-secondary/20 text-accent w-fit p-1 border border-secondary px-2 rounded-lg">
-                npm i
+                npm i npm i
                 {component_details.packages.map((item, index) => (
-                  <Link
-                    key={index}
-                    target="_blank"
-                    className="hover:underline cursor-pointer"
-                    href={item.pckg_link}
-                  >
-                    {item.pckg_name}
-                  </Link>
+                  <React.Fragment key={index}>
+                    {" "}
+                    <Link
+                      target="_blank"
+                      className="hover:underline cursor-pointer"
+                      href={item.pckg_link}
+                    >
+                      {item.pckg_name}
+                    </Link>
+                  </React.Fragment>
                 ))}
                 <CopyCode
                   textToCopy={

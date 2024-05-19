@@ -16,7 +16,7 @@ const page = () => {
           width={500}
           height={500}
           src="/carousel_images/carousel1.avif"
-          className="object-cover object-center w-full"
+          className="object-cover object-center w-full h-full"
         />
       ),
     },
@@ -27,7 +27,7 @@ const page = () => {
           width={500}
           height={500}
           src="/carousel_images/carousel2.avif"
-          className="object-cover object-center w-full"
+          className="object-cover object-center w-full h-full"
         />
       ),
     },
@@ -38,7 +38,7 @@ const page = () => {
           width={500}
           height={500}
           src="/carousel_images/carousel3.avif"
-          className="object-cover object-center w-full"
+          className="object-cover object-center w-full h-full"
         />
       ),
     },
@@ -49,7 +49,7 @@ const page = () => {
           width={500}
           height={500}
           src="/carousel_images/carousel4.avif"
-          className="object-cover object-center w-full"
+          className="object-cover object-center w-full h-full"
         />
       ),
     },
@@ -60,7 +60,7 @@ const page = () => {
           width={500}
           height={500}
           src="/carousel_images/carousel1.avif"
-          className="object-cover object-center w-full"
+          className="object-cover object-center w-full h-full"
         />
       ),
     },
@@ -71,7 +71,7 @@ const page = () => {
           width={500}
           height={500}
           src="/carousel_images/carousel2.avif"
-          className="object-cover object-center w-full"
+          className="object-cover object-center w-full h-full"
         />
       ),
     },
@@ -82,7 +82,7 @@ const page = () => {
           width={500}
           height={500}
           src="/carousel_images/carousel3.avif"
-          className="object-cover object-center w-full"
+          className="object-cover object-center w-full h-full"
         />
       ),
     },
@@ -93,7 +93,7 @@ const page = () => {
           width={500}
           height={500}
           src="/carousel_images/carousel4.avif"
-          className="object-cover object-center w-full"
+          className="object-cover object-center w-full h-full"
         />
       ),
     },
