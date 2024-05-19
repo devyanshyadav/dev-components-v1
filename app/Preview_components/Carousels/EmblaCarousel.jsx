@@ -49,14 +49,14 @@ const EmblaCarousel = ({ carouselData, perView = 1 }) => {
       <button
         type="button"
         className="absolute top-1/2 -translate-y-1/2 rotate-180 left-1 text-3xl text-cyan-400 hover:text-cyan-700"
-        onClick={() => emblaApi.scrollPrev()}
+        onClick={() => emblaApi && emblaApi.scrollPrev()}
       >
         <IoCaretForwardCircleOutline />
       </button>
       <button
         type="button"
         className="absolute top-1/2 -translate-y-1/2 right-1 text-3xl text-cyan-400 hover:text-cyan-700"
-        onClick={() => emblaApi.scrollNext()}
+        onClick={() => emblaApi && emblaApi.scrollNext()}
       >
         <IoCaretForwardCircleOutline />
       </button>
