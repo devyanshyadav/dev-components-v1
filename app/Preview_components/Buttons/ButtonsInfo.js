@@ -50,6 +50,240 @@ const ButtonsInfo = [
       export default BaseButton;`,
   },
   {
+    title: "DevButton",
+    details: {
+      description:
+        "A versatile button component designed for development purposes, supporting various styles, sizes, and functionalities.",
+      features: [
+        "Supports different types of buttons (solid, outline, light, flat, ghost)",
+        "Can display ripples effect on interaction",
+        "Adjustable size (small, medium, large)",
+        "Customizable roundness (none, small, medium, large, full)",
+        "Can act as a link with external or internal navigation",
+        "Can include icons within the button",
+      ],
+      props: [
+        {
+          propName: "type",
+          propExample: "solid",
+          propDetail:
+            "Determines the button's appearance. Options include 'solid', 'outline', 'light', 'flat', 'ghost'.",
+        },
+        {
+          propName: "size",
+          propExample: "md",
+          propDetail:
+            "Specifies the button's size. Options include 'sm' for small, 'md' for medium, and 'lg' for large.",
+        },
+        {
+          propName: "href",
+          propExample: "/",
+          propDetail:
+            "Defines the URL for the button if it should act as a link.",
+        },
+        {
+          propName: "rounded",
+          propExample: "none",
+          propDetail:
+            "Controls the button's roundness. Options include 'none', 'sm', 'md', 'lg', 'full'.",
+        },
+        {
+          propName: "ripple",
+          propExample: true,
+          propDetail:
+            "Enables the ripple effect on button interaction. Set to true to enable.",
+        },
+        {
+          propName: "icon",
+          propExample: true,
+          propDetail:
+            "Indicates whether the button should display an icon. Set to true to enable.",
+        },
+      ],
+      packages: [
+        {
+          pckg_name: "material-ripple-effects",
+          pckg_link: "https://www.npmjs.com/package/material-ripple-effects",
+        },
+        {
+          pckg_name: "clsx",
+          pckg_link: "https://www.npmjs.com/package/clsx",
+        },
+      ],
+
+    },
+
+    usage_code: `
+      import DevButton from "@/app/Preview_components/Buttons/DevButton";
+      import React from "react";
+      
+      const page = () => {
+        return (
+          <section className="space-y-4">
+            <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
+              <h2 className="font-semibold text-white">Base Buttons</h2>
+              <div className="flex gap-2">
+                <DevButton type="solid">
+                  {/* Default Solid  */}
+                  Button
+                </DevButton>
+                <DevButton type="outline">Button</DevButton>
+                <DevButton type="light">Button</DevButton>
+                <DevButton type="flat">Button</DevButton>
+                <DevButton type="ghost">Button</DevButton>
+              </div>
+            </div>
+            <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
+              <h2 className="font-semibold text-white">Ripples Effect</h2>
+              <div className="flex gap-2">
+                <DevButton type="solid" ripple={true}>
+                  Button
+                </DevButton>
+                <DevButton type="outline" ripple={true}>
+                  Button
+                </DevButton>
+                <DevButton type="light" ripple={true}>
+                  Button
+                </DevButton>
+                <DevButton type="flat" ripple={true}>
+                  Button
+                </DevButton>
+                <DevButton type="ghost" ripple={true}>
+                  Button
+                </DevButton>
+              </div>
+            </div>
+            <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
+              <h2 className="font-semibold text-white">Buttons Sizes</h2>
+              <div className="flex gap-2 items-center">
+                <DevButton type="solid" size="sm">
+                  Size sm
+                </DevButton>
+                <DevButton type="solid" size="md">
+                  Size md
+                </DevButton>
+                <DevButton type="solid" size="lg">
+                  Size lg
+                </DevButton>
+              </div>
+            </div>
+            <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
+              <h2 className="font-semibold text-white">Buttons Roundness</h2>
+              <div className="flex gap-2 items-center">
+                <DevButton type="solid" rounded="none">
+                  Rounded none
+                </DevButton>
+
+                <DevButton type="solid" rounded="sm">
+                  Rounded sm
+                </DevButton>
+                <DevButton type="solid" rounded="lg">
+                  Rounded md
+                </DevButton>
+                <DevButton type="solid" rounded="full">
+                  Rounded lg
+                </DevButton>
+              </div>
+            </div>
+            <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
+              <h2 className="font-semibold text-white">Using as Link</h2>
+              <div className="flex gap-2">
+                <DevButton type="solid" href="/" target="_blank">
+                  Button as Link
+                </DevButton>
+              </div>
+            </div>
+            <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
+              <h2 className="font-semibold text-white">Using as Icon</h2>
+              <div className="flex gap-2">
+                <DevButton type="solid" size="lg" icon={true}>
+                  <IoSearch />
+                </DevButton>
+                <DevButton type="solid" size="lg" icon={true}>
+                  <HiHome />
+                </DevButton>
+                <DevButton type="solid" size="lg" icon={true}>
+                  <MdCameraAlt />
+                </DevButton>
+              </div>
+            </div>
+          </section>);
+      };
+      
+      export default page;
+      
+      `,
+
+    code: `"use client"; // Require when ripple functionality is needed in NextJS
+    import React from "react";
+    import clsx from "clsx";
+    import Ripple from "material-ripple-effects";
+    
+    const DevButton = ({
+      type = "solid",
+      size = "md",
+      href,
+      rounded,
+      ripple = false,
+      icon,
+      children,
+      ...props
+    }) => {
+      const initRipple = new Ripple();
+      const commonStyle =
+        "transition-all flex items-center gap-1 justify-center active:scale-95 w-fit h-fit";
+    
+      const buttontype = {
+        solid: "bg-cyan-400 text-white",
+        outline: "border-2 border-cyan-400 text-cyan-400 font-semibold ", // Changed from 'outline'
+        light:
+          "border-2 border-cyan-400 hover:bg-cyan-400/30 text-cyan-400 font-semibold ",
+        flat: "border-2 border-cyan-400/10 bg-cyan-400/20 text-cyan-400 font-semibold ",
+        ghost:
+          "border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-semibold ",
+      };
+    
+      const buttonSizes = {
+        sm: icon ? "p-[4px] aspect-square" : "p-1 px-2",
+        md: icon ? "p-1 aspect-square" : "p-2 px-4",
+        lg: icon ? "p-2 aspect-square" : "p-3 px-6",
+      };
+      const buttonRoundness = {
+        sm: "rounded-md",
+        md: "rounded-lg",
+        lg: "rounded-xl",
+        full: "rounded-full",
+        none: "rounded-none",
+      };
+    
+      const buttonType = buttontype[type] || buttontype.solid;
+      const buttonSizeClass = buttonSizes[size] || buttonSizes.md;
+      const buttonRoundnessClass = buttonRoundness[rounded] || buttonRoundness.md;
+    
+      const ButtonComponent = href ? "a" : "button";
+    
+      return (
+        <ButtonComponent
+          href={href}
+          {...props}
+          {...(ripple && { onMouseUp: (e) => initRipple.create(e, "light") })}
+          className={clsx(
+            commonStyle,
+            buttonType,
+            buttonSizeClass,
+            buttonRoundnessClass,
+            props.className
+          )}
+        >
+          {children}
+        </ButtonComponent>
+      );
+    };
+    
+    export default DevButton;
+    `,
+  },
+  {
     title: "Custom Async Button",
     details: {
       description:
