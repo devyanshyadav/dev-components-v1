@@ -6,7 +6,7 @@ const page = () => {
   return (
     <>
       <section className="w-full text-center p-5 z-10 space-y-3 md:max-w-lg sticky md:relative top-0 md:backdrop-blur-0 backdrop-blur-sm rounded-b-xl shadow-md md:shadow-none border-b border-secondary md:border-none mx-auto">
-        <h1 className="text-4xl font-bold text-white">Dev Components</h1>
+        <h1 className="text-4xl font-bold text-white select-none">Dev Components.</h1>
         <p className="text-white/80 font-light text-center text-sm">
           Crafting a Lightweight Website using In-House Components for Maximum
           Control
