@@ -45,6 +45,7 @@ const ProductImageGalleryEmbla = ({ carouselData }) => {
             >
               <img
                 src={elem}
+                onClick={(event) => event.target.requestFullscreen()}
                 alt="product-images"
                 className="object-cover object-center w-full aspect-square"
               />

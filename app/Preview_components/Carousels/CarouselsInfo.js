@@ -167,6 +167,7 @@ const CarouselsInfo = [
         "Supports looping through images",
         "Draggable and swipeable interface",
         "Thumbnail previews with click-to-navigate",
+        "Full-screen mode",
         "Customizable via props",
       ],
       props: [
@@ -268,6 +269,7 @@ const CarouselsInfo = [
                 >
                   <img
                     src={elem}
+                    onClick={(event) => event.target.requestFullscreen()}
                     alt="product-images"
                     className="object-cover object-center w-full aspect-square"
                   />

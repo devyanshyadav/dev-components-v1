@@ -15,7 +15,7 @@ const page = () => {
         <SearchComponents />
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-4 py-0 p-3 md:p-0 my-10 w-full max-w-5xl mx-auto gap-3">
+      <section className="grid overflow-y-scroll [&::-webkit-scrollbar]:hidden [&::-webkit-scrollbar-track]:hidden [&::-webkit-scrollbar-thumb] grid-cols-1 md:grid-cols-4 py-0 p-3 md:p-0 my-10 w-full max-w-5xl mx-auto gap-3">
         <ComponentsHome />
       </section>
     </>
