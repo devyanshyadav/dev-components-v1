@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -56,6 +57,7 @@ export default function RootLayout({ children }) {
           <div className="bg-gradient-to-t from-primary to-secondary/50 w-full h-full"></div>
         </div>
       </body>
+      <GoogleAnalytics gaId="G-BQTKMVNV86" />
     </html>
   );
 }
