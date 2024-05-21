@@ -40,16 +40,16 @@ export default function RootLayout({ children }) {
         {/* svg line patterns */}
         <Link
           href="/"
-          className="absolute hover:opacity-80 z-50 top-1 flex items-center text-base text-accent gap-1  p-[2px] rounded-r-full px-4"
+          className="fixed md:absolute left-1/2 transform select-none md:translate-x-0 md:left-0 -translate-x-1/2 hover:opacity-80 z-50 top-1 flex items-center text-base text-accent gap-1  p-[2px] rounded-r-full px-4"
         >
           <Image
             src="/next.svg"
             alt="logo"
             width={500}
             height={500}
-            className="w-8 "
+            className="md:w-8 w-10 select-none "
           />
-          Dev Components
+          <h2 className="md:block hidden select-none">Dev Components</h2>
         </Link>
 
         <div className="svg-pattern absolute h-52 inset-0 -z-10 opacity-60">

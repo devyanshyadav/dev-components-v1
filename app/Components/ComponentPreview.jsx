@@ -40,7 +40,7 @@ const ComponentPreview = ({
       </h3>
 
       <div className="w-full mt-2 p-3 pt-0 overflow-y-scroll [&::-webkit-scrollbar]:hidden [&::-webkit-scrollbar-track]:hidden [&::-webkit-scrollbar-thumb]:hidden max-h-96 min-h-56 bg-primary rounded-lg overflow-hidden relative flex flex-col">
-        <ul className="w-full p-3 pb-0 flex items-center backdrop-blur-lg  gap-5 text-white/80 text-sm sticky top-0 z-10   ">
+        <ul className="w-full p-3 pb-0 flex items-center backdrop-blur-lg  gap-5 text-white/80 text-sm sticky top-0 z-0   ">
           {["Preview", "Code", "Usage", "Details"].map((item, index) => (
             <li
               key={index}
