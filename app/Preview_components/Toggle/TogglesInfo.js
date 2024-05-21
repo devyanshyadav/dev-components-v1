@@ -287,7 +287,7 @@ const TogglesInfo = [
      `,
   },
   {
-    title: "Custom Toggle 2",
+    title: "Custom Toggles 3",
     details: {
       description:
         "A custom toggle component that supports multiple toggles for various functionalities like notifications, mute, theme switcher, play/pause, like/dislike, and lock/unlock.",
