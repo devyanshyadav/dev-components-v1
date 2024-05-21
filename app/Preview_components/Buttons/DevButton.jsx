@@ -19,12 +19,12 @@ const DevButton = ({
 
   const buttontype = {
     solid: "bg-cyan-400 text-white",
-    outline: "border-2 border-cyan-400 text-cyan-400 font-semibold ", // Changed from 'outline'
+    outline: "outline outline-cyan-400 text-cyan-400 font-semibold ", // Changed from 'outline'
     light:
-      "border-2 border-cyan-400 hover:bg-cyan-400/30 text-cyan-400 font-semibold ",
-    flat: "border-2 border-cyan-400/10 bg-cyan-400/20 text-cyan-400 font-semibold ",
+      "outline outline-cyan-400 hover:bg-cyan-400/30 text-cyan-400 font-semibold ",
+    flat: "bg-cyan-400/20 text-cyan-400 font-semibold ",
     ghost:
-      "border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-semibold ",
+      "outline outline-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-semibold ",
   };
 
   const buttonSizes = {

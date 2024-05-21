@@ -35,34 +35,34 @@ const page = () => {
           <section className="space-y-4">
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Base Buttons</h2>
-              <div className="flex gap-2">
+              <div className="flex gap-2 items-center">
                 <DevButton type="solid">
                   {/* Default Solid  */}
-                  Button
+                  Solid
                 </DevButton>
-                <DevButton type="outline">Button</DevButton>
-                <DevButton type="light">Button</DevButton>
-                <DevButton type="flat">Button</DevButton>
-                <DevButton type="ghost">Button</DevButton>
+                <DevButton type="outline">Outline</DevButton>
+                <DevButton type="light">Light</DevButton>
+                <DevButton type="flat">Flat</DevButton>
+                <DevButton type="ghost">Ghost</DevButton>
               </div>
             </div>
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Ripples Effect</h2>
-              <div className="flex gap-2">
+              <div className="flex gap-2 items-center">
                 <DevButton type="solid" ripple={true}>
-                  Button
+                  Solid
                 </DevButton>
                 <DevButton type="outline" ripple={true}>
-                  Button
+                  Outline
                 </DevButton>
                 <DevButton type="light" ripple={true}>
-                  Button
+                  Light
                 </DevButton>
                 <DevButton type="flat" ripple={true}>
-                  Button
+                  Flat
                 </DevButton>
                 <DevButton type="ghost" ripple={true}>
-                  Button
+                  Ghost
                 </DevButton>
               </div>
             </div>
@@ -108,7 +108,7 @@ const page = () => {
             </div>
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Using as Icon</h2>
-              <div className="flex gap-2">
+              <div className="flex gap-2 items-center">
                 <DevButton type="solid" size="lg" icon={true}>
                   <IoSearch />
                 </DevButton>
