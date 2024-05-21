@@ -6,12 +6,6 @@ import ToggleHamburger from "@/app/Components/ToggleHamburger";
 const layout = ({ children }) => {
   return (
     <>
-      <Link
-        href={"/"}
-        className="fixed top-2 hover:text-secondary left-4 text-accent font-semibold"
-      >
-        Dev Components
-      </Link>
       <span className="top-0 fixed right-2 z-20 md:hidden bg-secondary/50 px-1 rounded-bl-xl">
         <ToggleHamburger />
       </span>
