@@ -4,9 +4,12 @@ import ComponentPreview from "@/app/Components/ComponentPreview";
 import ModalsInfo from "@/app/Preview_components/Modals/ModalsInfo";
 import CustomModal from "@/app/Preview_components/Modals/CustomModal";
 import ReactResponsiveModal from "@/app/Preview_components/Modals/ReactResponsiveModal";
+import CustomModal_1 from "@/app/Preview_components/Modals/CustomModal_1";
 
 const page = () => {
   const [openModal, setOpenModal] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
+
   const [openReactModal, setOpenReactModal] = useState(false);
 
   return (
@@ -34,6 +37,7 @@ const page = () => {
         component_code={ModalsInfo[0].code}
         component_packages={ModalsInfo[0].packages}
       />
+
       <ComponentPreview
         component_name={ModalsInfo[1].title}
         component_details={ModalsInfo[1].details}
@@ -61,6 +65,29 @@ const page = () => {
         }
         component_code={ModalsInfo[1].code}
         component_packages={ModalsInfo[1].packages}
+      />
+      <ComponentPreview
+        component_name={ModalsInfo[2].title}
+        component_details={ModalsInfo[2].details}
+        component_usage_code={ModalsInfo[2].usage_code}
+        component_preview={
+          <CustomModal_1
+            openModal={openDialog}
+            setOpenModal={setOpenDialog}
+            modalTitle="Modal Title"
+            openBtn={
+              <button className="bg-cyan-400 p-2 px-3 rounded-lg text-white active:scale-95 hover:bg-cyan-700/50">
+                Open Modal
+              </button>
+            }
+          >
+            <div className="text-white font-semibold text-lg">
+              Modal Content
+            </div>
+          </CustomModal_1>
+        }
+        component_code={ModalsInfo[2].code}
+        component_packages={ModalsInfo[2].packages}
       />
     </>
   );

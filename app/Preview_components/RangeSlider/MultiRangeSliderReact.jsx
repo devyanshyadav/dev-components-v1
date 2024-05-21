@@ -22,7 +22,7 @@ const RangeDiv = styled.div`
   }
   .multi-range-slider .thumb {
     border: 2px solid #22d3ee !important;
-    margin-top: 5.9px !important;
+    margin-top: 6px !important;
   }
   .multi-range-slider .thumb::before {
     box-shadow: inset 0px 0px 5px transparent !important;

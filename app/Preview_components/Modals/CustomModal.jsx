@@ -43,7 +43,7 @@ const CustomModal = ({
             transition={{ duration: 0.2 }}
             onClick={() => setOpenModal(false)}
             initial={{ visibility: "hidden", opacity: 0 }}
-            className="bg-black/50 z-50 fixed filter backdrop-blur-sm inset-0 h-screen w-screen grid place-content-center"
+            className="bg-black/50 z-50 fixed inset-0 h-screen w-screen grid place-content-center"
           >
             <motion.section
               animate={openModal ? "open" : "close"}

@@ -123,7 +123,7 @@ const ModalsInfo = [
                 transition={{ duration: 0.2 }}
                 onClick={() => setOpenModal(false)}
                 initial={{ visibility: "hidden", opacity: 0 }}
-                className="bg-black/50 z-50 fixed filter backdrop-blur-sm inset-0 h-screen w-screen grid place-content-center"
+                className="bg-black/50 z-50 fixed inset-0 h-screen w-screen grid place-content-center"
               >
                 <motion.section
                   animate={openModal ? "open" : "close"}
@@ -204,7 +204,7 @@ const ModalsInfo = [
       doc_links: ["https://www.npmjs.com/package/react-responsive-modal"],
     },
 
-    usage_code: `import CustomModal from "@/app/dev_components/CustomModal";
+    usage_code: `import ReactResponsiveModal from "@/app/dev_components/ReactResponsiveModal";
     import React, { useState } from "react";
 
     // Add this Css code to the css file of your project.
@@ -276,6 +276,130 @@ const ModalsInfo = [
     };
     
     export default ReactResponsiveModal;
+    `,
+  },
+  {
+    title: "Custom Modal using HTML <dialog> element",
+    details: {
+      description:
+        "A modal component that can be used to display content or prompts.",
+      features: [
+        "Displays a modal window with a title and content",
+        "Provides an open and close button to toggle the modal",
+        "Supports customization of the modal title and content",
+      ],
+      props: [
+        {
+          propName: "children",
+          propExample: "<div>Modal Content</div>",
+          propDetail: "The content to be displayed inside the modal.",
+        },
+        {
+          propName: "openModal",
+          propExample: "true",
+          propDetail:
+            "A boolean value indicating whether the modal should be open or closed.",
+        },
+        {
+          propName: "setOpenModal",
+          propExample: "setOpenModal",
+          propDetail:
+            "A function to update the openModal state and toggle the modal.",
+        },
+        {
+          propName: "openBtn",
+          propExample: "<button>Open Modal</button>",
+          propDetail:
+            "A React element representing the button or component that opens the modal.",
+        },
+        {
+          propName: "modalTitle",
+          propExample: '"Modal Title"',
+          propDetail: "The title to be displayed in the modal header.",
+        },
+      ],
+      doc_links: [
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog",
+      ],
+      packages: [
+        {
+          pckg_name: "react-icons",
+          pckg_link: "https://react-icons.github.io/react-icons/",
+        },
+      ],
+    },
+    usage_code: `
+    import CustomModal_1 from "@/app/dev_components/CustomModal_1";
+    import React, { useState } from "react";
+    
+    const page = () => {
+      const [openModal, setOpenModal] = useState(false);
+    
+      return (
+        <CustomModal
+          openModal={openModal}
+          setOpenModal={setOpenModal}
+          modalTitle="Modal Title"
+          openBtn={
+            <button className="bg-cyan-400 p-2 px-3 rounded-lg text-white active:scale-95 hover:bg-cyan-700/50">
+              Open Modal
+            </button>
+          }
+        >
+          <div className="text-white font-semibold text-lg">Modal Content</div>
+        </CustomModal>
+      );
+    };
+    
+    export default page;
+        `,
+    code: `
+    import { useEffect, useRef } from "react";
+    import { IoIosCloseCircleOutline } from "react-icons/io";
+    
+    function CustomModal_1({
+      openModal,
+      setOpenModal,
+      children,
+      openBtn,
+      modalTitle,
+    }) {
+      const ref = useRef();
+    
+      useEffect(() => {
+        if (openModal) {
+          ref.current?.showModal();
+        } else {
+          ref.current?.close();
+        }
+      }, [openModal]);
+    
+      return (
+        <>
+          <div className="w-fit" onClick={() => setOpenModal(true)}>
+            {openBtn}
+          </div>
+          <dialog
+            className="backdrop:bg-black/50 overflow-hidden relative flex-none bg-slate-700 md:w-[40vw] min-h-60 rounded-xl"
+            ref={ref}
+            onCancel={() => setOpenModal(false)}
+          >
+            <div className="w-full  bg-cyan-700/20 font-semibold flex items-center justify-between relative">
+              <h3 className="p-3 text-cyan-400">{modalTitle}</h3>
+              <IoIosCloseCircleOutline
+                onClick={() => setOpenModal(false)}
+                className="absolute top-3 right-3 text-2xl cursor-pointer text-cyan-400 hover:text-cyan-400/50"
+              />
+            </div>
+            <div className="flex items-center justify-center flex-1">
+              {children}
+            </div>
+          </dialog>
+        </>
+      );
+    }
+    
+    export default CustomModal_1;
     `,
   },
 ];
