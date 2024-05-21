@@ -7,7 +7,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Dev Components - Fully Customizable Web Components",
+  title: "Dev Components - Fully Customizable Functional Web Components",
   description:
     "Discover Dev Components, a unique platform offering a wide range of fully customizable and functional web components. Enhance your web development experience with our ready-to-use, highly flexible UI elements.",
   keywords:
@@ -17,7 +17,7 @@ export const metadata = {
   canonical: "https://dev-components.vercel.app/",
   viewport: "width=device-width, initial-scale=1.0",
   themeColor: "#1E293B",
-  ogTitle: "Dev Components - Fully Customizable Web Components",
+  ogTitle: "Dev Components - Fully Customizable Functional Web Components",
   ogDescription:
     "Discover Dev Components, a unique platform offering a wide range of fully customizable and functional web components. Enhance your web development experience with our ready-to-use, highly flexible UI elements.",
   ogImage: "/next.svg",
