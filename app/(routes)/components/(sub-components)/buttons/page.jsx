@@ -40,7 +40,7 @@ const page = () => {
                   {/* Default Solid  */}
                   Solid
                 </DevButton>
-                <DevButton type="outline">Outline</DevButton>
+                <DevButton type="border">Border</DevButton>
                 <DevButton type="light">Light</DevButton>
                 <DevButton type="flat">Flat</DevButton>
                 <DevButton type="ghost">Ghost</DevButton>
@@ -52,8 +52,8 @@ const page = () => {
                 <DevButton type="solid" ripple={true}>
                   Solid
                 </DevButton>
-                <DevButton type="outline" ripple={true}>
-                  Outline
+                <DevButton type="border" ripple={true}>
+                  Border
                 </DevButton>
                 <DevButton type="light" ripple={true}>
                   Light
@@ -86,15 +86,17 @@ const page = () => {
                 <DevButton type="solid" rounded="none">
                   Rounded none
                 </DevButton>
-
                 <DevButton type="solid" rounded="sm">
                   Rounded sm
                 </DevButton>
-                <DevButton type="solid" rounded="lg">
+                <DevButton type="solid" rounded="md">
                   Rounded md
                 </DevButton>
-                <DevButton type="solid" rounded="full">
+                <DevButton type="solid" rounded="lg">
                   Rounded lg
+                </DevButton>
+                <DevButton type="solid" rounded="full">
+                  Rounded full
                 </DevButton>
               </div>
             </div>

@@ -173,15 +173,17 @@ const ButtonsInfo = [
                 <DevButton type="solid" rounded="none">
                   Rounded none
                 </DevButton>
-
                 <DevButton type="solid" rounded="sm">
                   Rounded sm
                 </DevButton>
-                <DevButton type="solid" rounded="lg">
+                <DevButton type="solid" rounded="md">
                   Rounded md
                 </DevButton>
-                <DevButton type="solid" rounded="full">
+                <DevButton type="solid" rounded="lg">
                   Rounded lg
+                </DevButton>
+                <DevButton type="solid" rounded="full">
+                  Rounded full
                 </DevButton>
               </div>
             </div>
