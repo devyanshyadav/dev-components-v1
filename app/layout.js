@@ -19,7 +19,7 @@ export const metadata = {
   ogTitle: "Dev Components - Fully Customizable Web Components",
   ogDescription:
     "Discover Dev Components, a unique platform offering a wide range of fully customizable and functional web components. Enhance your web development experience with our ready-to-use, highly flexible UI elements.",
-  ogImage: "https://dev-components.vercel.app/og-image.jpg",
+  ogImage: "/next.svg",
   ogUrl: "https://dev-components.vercel.app/",
   ogSiteName: "Dev Components",
   ogType: "website",
