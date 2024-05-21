@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^14.0.5-canary.59",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.1.1",
     "framer-motion": "^11.1.9",
