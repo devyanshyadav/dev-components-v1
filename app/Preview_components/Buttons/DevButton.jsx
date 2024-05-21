@@ -31,9 +31,9 @@ const DevButton = ({
     lg: icon ? "p-2 aspect-square" : "p-3 px-7",
   };
   const buttonRoundness = {
-    sm: "rounded-md",
+    sm: "rounded-sm",
     md: "rounded-lg",
-    lg: "rounded-xl",
+    lg: "rounded-2xl",
     full: "rounded-full",
     none: "rounded-none",
   };
