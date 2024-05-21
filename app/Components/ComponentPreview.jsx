@@ -78,7 +78,6 @@ const ComponentPreview = ({
             language="javascript"
             style={atomOneDark}
             wrapLines={true}
-            wrapLongLines={true}
           >
             {codeString}
           </SyntaxHighlighter>
@@ -88,7 +87,6 @@ const ComponentPreview = ({
             language="javascript"
             style={atomOneDark}
             wrapLines={true}
-            wrapLongLines={true}
           >
             {component_usage_code}
           </SyntaxHighlighter>

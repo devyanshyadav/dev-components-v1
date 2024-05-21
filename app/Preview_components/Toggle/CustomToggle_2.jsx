@@ -1,10 +1,11 @@
 "use client";
 import clsx from "clsx";
 import React from "react";
+import { MdWbSunny } from "react-icons/md";
+import { IoMdMoon } from "react-icons/io";
 
-const CustomToggle = ({ hasToggle, setHasToggle }) => {
+const CustomToggle_2 = ({ hasToggle, setHasToggle }) => {
   const toggleSize = { width: 50, height: 25 };
-
   return (
     <>
       <label
@@ -26,7 +27,7 @@ const CustomToggle = ({ hasToggle, setHasToggle }) => {
         />
         <div
           className={clsx(
-            "h-full absolute bg-white aspect-square pointer-events-none transition-all duration-400 rounded-full"
+            "h-full absolute text-cyan-700 text-xl grid place-items-center bg-white aspect-square pointer-events-none transition-all duration-400 rounded-full"
           )}
           style={{
             transform: hasToggle
@@ -35,11 +36,13 @@ const CustomToggle = ({ hasToggle, setHasToggle }) => {
                 "px) scale(0.7)"
               : "scale(0.7)",
           }}
-        ></div>
+        >
+          {hasToggle ? <MdWbSunny /> : <IoMdMoon />}
+        </div>
       </label>
       <span className="text-white m-3 ">{hasToggle ? "ON" : "OFF"}</span>
     </>
   );
 };
 
-export default CustomToggle;
+export default CustomToggle_2;

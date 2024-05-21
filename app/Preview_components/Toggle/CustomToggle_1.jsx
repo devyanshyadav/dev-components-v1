@@ -2,8 +2,8 @@
 import clsx from "clsx";
 import React from "react";
 
-const CustomToggle = ({ hasToggle, setHasToggle }) => {
-  const toggleSize = { width: 50, height: 25 };
+const CustomToggle_1 = ({ hasToggle, setHasToggle }) => {
+  const toggleSize = { width: 50, height: 22 };
 
   return (
     <>
@@ -13,11 +13,17 @@ const CustomToggle = ({ hasToggle, setHasToggle }) => {
           height: toggleSize.height + "px",
         }}
         htmlFor="toggleBox"
-        className={clsx(
-          "p-1 rounded-full relative grid",
-          hasToggle ? "bg-cyan-400" : "bg-cyan-700"
-        )}
+        className={clsx("p-1 relative grid items-center")}
       >
+        <hr
+          className={clsx(
+            hasToggle ? "bg-cyan-400" : "bg-cyan-700",
+            "w-full rounded-full border-none"
+          )}
+          style={{
+            height: toggleSize.height + 50 + "%",
+          }}
+        />
         <input
           type="checkbox"
           className="opacity-0 peer absolute cursor-pointer inset-0"
@@ -30,10 +36,8 @@ const CustomToggle = ({ hasToggle, setHasToggle }) => {
           )}
           style={{
             transform: hasToggle
-              ? "translateX(" +
-                (toggleSize.width - toggleSize.height) +
-                "px) scale(0.7)"
-              : "scale(0.7)",
+              ? "translateX(" + (toggleSize.width - toggleSize.height) + "px)"
+              : "none",
           }}
         ></div>
       </label>
@@ -42,4 +46,4 @@ const CustomToggle = ({ hasToggle, setHasToggle }) => {
   );
 };
 
-export default CustomToggle;
+export default CustomToggle_1;
