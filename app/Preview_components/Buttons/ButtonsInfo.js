@@ -233,7 +233,7 @@ const ButtonsInfo = [
     }) => {
       const initRipple = new Ripple();
       const commonStyle =
-        "transition-all flex items-center gap-1 justify-center active:scale-95 w-fit h-fit";
+        "transition-all flex items-center text-nowrap gap-1 justify-center active:scale-95 w-fit h-fit";
     
       const buttontype = {
         solid: "bg-cyan-400 text-white",

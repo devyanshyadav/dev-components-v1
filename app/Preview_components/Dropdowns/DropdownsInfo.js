@@ -199,7 +199,7 @@ const DropdownsInfo = [
               id="dev-dropdown"
               place="bottom"
               offset={2}
-              style={{ backgroundColor: "transparent", padding: "0px" }}
+              style={{ backgroundColor: "transparent", padding: "0px", zIndex: 1000 }}
             >
               <div
                 className="flex z-10 shadow-md flex-col gap-1 bg-slate-700 rounded-md p-2 max-h-64 overflow-y-scroll [&::-webkit-scrollbar]:hidden [scrollbar-width:none]"
@@ -370,7 +370,7 @@ const DropdownsInfo = [
               id="dev-dropdown-framer"
               place="bottom"
               offset={2}
-              style={{ backgroundColor: "transparent", padding: "0px" }}
+              style={{ backgroundColor: "transparent", padding: "0px", zIndex: 1000 }}
             >
               <motion.div
                 initial={{ scale: 0.8 }}

@@ -48,7 +48,11 @@ const CustomDropDown_2 = ({ setDropDownValue, dropDownValue, Options }) => {
             id={randomId}
             place="bottom"
             offset={2}
-            style={{ backgroundColor: "transparent", padding: "0px" }}
+            style={{
+              backgroundColor: "transparent",
+              padding: "0px",
+              zIndex: 1000,
+            }}
           >
             <motion.div
               initial={{ scale: 0.8 }}

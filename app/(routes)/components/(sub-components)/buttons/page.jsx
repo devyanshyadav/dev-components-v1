@@ -35,7 +35,7 @@ const page = () => {
           <section className="space-y-4">
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Base Buttons</h2>
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center flex-wrap">
                 <DevButton type="solid">
                   {/* Default Solid  */}
                   Solid
@@ -48,7 +48,7 @@ const page = () => {
             </div>
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Ripples Effect</h2>
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center flex-wrap">
                 <DevButton type="solid" ripple={true}>
                   Solid
                 </DevButton>
@@ -68,7 +68,7 @@ const page = () => {
             </div>
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Buttons Sizes</h2>
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center flex-wrap">
                 <DevButton type="solid" size="sm">
                   Size sm
                 </DevButton>
@@ -82,7 +82,7 @@ const page = () => {
             </div>
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Buttons Roundness</h2>
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center flex-wrap">
                 <DevButton type="solid" rounded="none">
                   Rounded none
                 </DevButton>
@@ -110,7 +110,7 @@ const page = () => {
             </div>
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Using as Icon</h2>
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center flex-wrap">
                 <DevButton type="solid" size="lg" icon={true}>
                   <IoSearch />
                 </DevButton>

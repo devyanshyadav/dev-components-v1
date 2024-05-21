@@ -15,7 +15,7 @@ const DevButton = ({
 }) => {
   const initRipple = new Ripple();
   const commonStyle =
-    "transition-all flex items-center gap-1 justify-center active:scale-95 w-fit h-fit border-2 border-cyan-400";
+    "transition-all flex items-center gap-1 text-nowrap justify-center active:scale-95 w-fit h-fit border-2 border-cyan-400";
 
   const buttontype = {
     solid: " bg-cyan-400 text-white",
