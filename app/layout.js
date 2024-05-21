@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { GoogleAnalytics } from '@next/third-parties/google'
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
