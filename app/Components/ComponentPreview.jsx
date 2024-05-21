@@ -102,7 +102,7 @@ const ComponentPreview = ({
 
             {component_details.packages.length > 0 && (
               <code className="text-sm bg-secondary/20 text-accent w-fit p-1 border border-secondary px-2 rounded-lg">
-                npm i npm i
+                npm i
                 {component_details.packages.map((item, index) => (
                   <React.Fragment key={index}>
                     {" "}

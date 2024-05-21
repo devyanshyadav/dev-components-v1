@@ -5,6 +5,7 @@ import CustomToggle from "@/app/Preview_components/Toggle/CustomToggle";
 import TogglesInfo from "@/app/Preview_components/Toggle/TogglesInfo";
 import CustomToggle_1 from "@/app/Preview_components/Toggle/CustomToggle_1";
 import CustomToggle_2 from "@/app/Preview_components/Toggle/CustomToggle_2";
+import CustomToggle_3 from "@/app/Preview_components/Toggle/CustomToggle_3";
 
 const page = () => {
   const [hasToggle, setHasToggle] = useState(false);
@@ -46,6 +47,18 @@ const page = () => {
       }
       component_code={TogglesInfo[2].code}
       component_packages={TogglesInfo[2].packages}
+    />
+     <ComponentPreview
+      component_name={TogglesInfo[3].title}
+      component_details={TogglesInfo[3].details}
+      component_usage_code={TogglesInfo[3].usage_code}
+      component_preview={
+        <div className="bg-cyan-700/20 p-5 rounded-lg min-w-full md:min-w-40 grid place-content-center">
+          <CustomToggle_3 hasToggle={hasToggle} setHasToggle={setHasToggle} />
+        </div>
+      }
+      component_code={TogglesInfo[3].code}
+      component_packages={TogglesInfo[3].packages}
     />
     </>
   );
