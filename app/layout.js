@@ -2,8 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
-import { GoogleAnalytics } from '@next/third-parties/google'
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,8 +56,8 @@ export default function RootLayout({ children }) {
         <div className="svg-pattern absolute h-52 inset-0 -z-10 opacity-60">
           <div className="bg-gradient-to-t from-primary to-secondary/50 w-full h-full"></div>
         </div>
+        <GoogleAnalytics gaId="G-BQTKMVNV86" />
       </body>
-      <GoogleAnalytics gaId="G-BQTKMVNV86" />
     </html>
   );
 }
