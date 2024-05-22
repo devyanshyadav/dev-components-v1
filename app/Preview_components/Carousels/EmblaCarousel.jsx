@@ -32,7 +32,7 @@ const EmblaCarousel = ({ carouselData, perView = 1 }) => {
 
   return (
     <section
-      className=" w-full max-w-md h-64 aspect-square overflow-hidden relative pb-5 rounded-lg"
+      className=" w-full max-w-md h-64 aspect-square overflow-hidden relative rounded-lg"
       ref={emblaRef}
     >
       <div className=" flex h-full  gap-2">
@@ -61,12 +61,17 @@ const EmblaCarousel = ({ carouselData, perView = 1 }) => {
       >
         <IoCaretForwardCircleOutline />
       </button>
-      <span className="flex z-10 items-center justify-center absolute left-1/2 transform -translate-x-1/2 bottom-0">
+      <span className="flex z-10 items-center justify-center absolute left-1/2 transform -translate-x-1/2 bottom-3">
         {carouselData.map((_, index) => (
           <GoDot
             onClick={() => scrollTo(index)}
             key={index}
-            className={clsx("cursor-pointer transition-all duration-400 hover:text-cyan-400", index === selectedSlideIndex ? "text-cyan-400 text-lg" : "text-cyan-700 text-base")}
+            className={clsx(
+              "cursor-pointer transition-all duration-400 hover:text-cyan-400",
+              index === selectedSlideIndex
+                ? "text-cyan-400 text-lg"
+                : "text-cyan-700 text-base"
+            )}
           />
         ))}
       </span>

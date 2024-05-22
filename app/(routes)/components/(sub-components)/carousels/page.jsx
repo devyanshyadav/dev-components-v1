@@ -3,7 +3,6 @@ import React from "react";
 import ComponentPreview from "@/app/Components/ComponentPreview";
 import CustomCarousel from "@/app/Preview_components/Carousels/CustomCarousel";
 import CarouselsInfo from "@/app/Preview_components/Carousels/CarouselsInfo";
-import CustomCarousel_1 from "@/app/Preview_components/Carousels/CustomCarousel_1";
 import ProductImageGalleryEmbla from "@/app/Preview_components/Carousels/ProductImageGalleryEmbla";
 import EmblaCarousel from "@/app/Preview_components/Carousels/EmblaCarousel";
 

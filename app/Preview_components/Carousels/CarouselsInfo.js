@@ -139,16 +139,16 @@ const CarouselsInfo = [
             className="absolute z-10 right-3 top-1/2 -translate-y-1/2 text-2xl text-cyan-400 hover:text-cyan-700"
           >
             <IoCaretForwardCircleOutline />
-          </button>
-          <span className="flex z-10 items-center justify-center absolute left-1/2 transform -translate-x-1/2 bottom-0 translate-y-3">
-            {carouselData.map((_, index) => (
-              <PiDotOutlineFill
-                key={index}
-                className="text-cyan-700"
-                style={{ color: currentIndex === index && "cyan" }}
-              />
-            ))}
-          </span>
+          </button>     
+           <span className="flex z-10 items-center justify-center absolute left-1/2 transform -translate-x-1/2 bottom-5 translate-y-3">
+          {carouselData.map((_, index) => (
+            <PiDotOutlineFill
+              key={index}
+              className="text-cyan-700 text-xl"
+              style={{ color: currentIndex === index && "cyan" }}
+            />
+          ))}
+        </span>
         </main>
       );
     };
@@ -450,7 +450,7 @@ const CarouselsInfo = [
           >
             <IoCaretForwardCircleOutline />
           </button>
-          <span className="flex z-10 items-center justify-center absolute left-1/2 transform -translate-x-1/2 bottom-0">
+          <span className="flex z-10 items-center justify-center absolute left-1/2 transform -translate-x-1/2 bottom-3">
             {carouselData.map((_, index) => (
               <GoDot
                 onClick={() => scrollTo(index)}

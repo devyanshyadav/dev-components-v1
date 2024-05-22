@@ -49,7 +49,7 @@ const CustomCarousel = ({ carouselData, perView = 1 }) => {
   }, [divCount]);
 
   return (
-    <main className="relative w-full max-w-md h-60 p-2">
+    <main className="relative w-full max-w-md h-60">
       <button
         onClick={handlePrev}
         className="absolute z-10 left-3 rotate-180 top-1/2 -translate-y-1/2 text-2xl text-cyan-400 hover:text-cyan-700"
@@ -78,11 +78,11 @@ const CustomCarousel = ({ carouselData, perView = 1 }) => {
       >
         <IoCaretForwardCircleOutline />
       </button>
-      <span className="flex z-10 items-center justify-center absolute left-1/2 transform -translate-x-1/2 bottom-0 translate-y-3">
+      <span className="flex z-10 items-center justify-center absolute left-1/2 transform -translate-x-1/2 bottom-5 translate-y-3">
         {carouselData.map((_, index) => (
           <PiDotOutlineFill
             key={index}
-            className="text-cyan-700"
+            className="text-cyan-700 text-xl"
             style={{ color: currentIndex === index && "cyan" }}
           />
         ))}
