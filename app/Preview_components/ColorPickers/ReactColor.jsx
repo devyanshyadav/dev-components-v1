@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import { SketchPicker } from "react-color";
 import { createPortal } from "react-dom";
 import { Tooltip as PopOver } from "react-tooltip";
@@ -17,9 +18,14 @@ const PickerDiv = styled.div`
 `;
 
 const ReactColor = ({ color, setColor }) => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, [])
+  
   return (
     <>
-      {createPortal(
+      {mounted && createPortal(
         <PopOver
           id="color-picker-popover"
           clickable={true}
