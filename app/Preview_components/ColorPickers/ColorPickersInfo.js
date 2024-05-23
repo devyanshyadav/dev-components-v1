@@ -152,6 +152,7 @@ const ColorPickersInfo = [
         "Customizable appearance through styled-components",
         "Tooltip as popover for color preview",
         "Alpha channel support for RGBA colors",
+        "Also supports custom color presets",
       ],
       props: [
         {
@@ -248,6 +249,16 @@ const ColorPickersInfo = [
                           borderRadius: "8px",
                           color: "white",
                         }}
+                        presets={[
+                          "#f44336",
+                          "#e91e63",
+                          "#9c27b0",
+                          "#673ab7",
+                          "#3f51b5",
+                          "#2196f3",
+                          "#00bcd4",
+                          "#009688",
+                        ]}
                         color={color.rgb || color.hex}
                         onChange={(color) => setColor(color)}
                       />

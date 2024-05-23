@@ -32,6 +32,16 @@ const ReactPickColor = ({ color, setColor }) => {
           >
             <div>
               <ColorPicker
+                presets={[
+                  "#f44336",
+                  "#e91e63",
+                  "#9c27b0",
+                  "#673ab7",
+                  "#3f51b5",
+                  "#2196f3",
+                  "#00bcd4",
+                  "#009688",
+                ]}
                 theme={{
                   background: "#1E293B",
                   inputBackground: "#1B384C",
