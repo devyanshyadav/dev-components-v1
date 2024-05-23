@@ -32,6 +32,7 @@ const PickerDiv = styled.div`
 `;
 const ReactColorful = ({ color, setColor }) => {
   const [mounted, setMounted] = useState(false);
+  
   useEffect(() => {
     setMounted(true);
   }, []);
