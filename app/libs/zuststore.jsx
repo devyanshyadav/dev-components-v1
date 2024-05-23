@@ -13,6 +13,7 @@ import TabsInfo from "../Preview_components/Tabs/TabsInfo";
 import CarouselsInfo from "../Preview_components/Carousels/CarouselsInfo";
 import DropdownsInfo from "../Preview_components/Dropdowns/DropdownsInfo";
 import NavbarsInfo from "../Preview_components/Navbars/NavbarsInfo";
+import ColorPickersInfo from "../Preview_components/ColorPickers/ColorPickersInfo";
 
 const useDevStore = create((set, get) => ({
   ThemeColors: {
@@ -21,7 +22,7 @@ const useDevStore = create((set, get) => ({
     accent: "#01FFF5",
     text: "#FFFFFF",
   },
- 
+
   SideBar: true,
 
   SideBarToggle: () => {
@@ -66,8 +67,7 @@ const useDevStore = create((set, get) => ({
       name: "Responsive Navbars",
       image: "/svg_icons/nav.png",
       components_no: countObjects(NavbarsInfo),
-      description:
-        "A navbar provides navigation options to users.",
+      description: "A navbar provides navigation options to users.",
       url: "/components/navbars",
     },
     {
@@ -95,7 +95,7 @@ const useDevStore = create((set, get) => ({
       url: "/components/tooltips",
     },
     {
-      name:"Toggle",
+      name: "Toggle",
       image: "/svg_icons/toggle.png",
       components_no: countObjects(TogglesInfo),
       description:
@@ -103,26 +103,35 @@ const useDevStore = create((set, get) => ({
       url: "/components/toggles",
     },
     {
-      name:"Tabs",
+      name: "Tabs",
       image: "/svg_icons/tab.png",
       components_no: countObjects(TabsInfo),
-      description:" A tab component that allows users to navigate between different sections of content.",
+      description:
+        " A tab component that allows users to navigate between different sections of content.",
       url: "/components/tabs",
     },
     {
-      name:"Carousels",
+      name: "Carousels",
       image: "/svg_icons/carousel.png",
       components_no: countObjects(CarouselsInfo),
-      description:" A carousels component that allows users to navigate between different sections of content.",
+      description:
+        " A carousels component that allows users to navigate between different sections of content.",
       url: "/components/carousels",
     },
     {
-      name:"Dropdowns",
+      name: "Dropdowns",
       image: "/svg_icons/dropdown.png",
       components_no: countObjects(DropdownsInfo),
-      description:"A dropdown that allows to select an option from a list.",
+      description: "A dropdown that allows to select an option from a list.",
       url: "/components/dropdowns",
-    }
+    },
+    {
+      name: "Color Pickers",
+      image: "/svg_icons/color-picker.png",
+      components_no: countObjects(ColorPickersInfo),
+      description: "A color picker that allows to select and choose colors",
+      url: "/components/color-pickers",
+    },
   ],
 }));
 
