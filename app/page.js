@@ -11,8 +11,8 @@ const page = () => {
           Dev Components.
         </h1>
         <p className="text-white/80 font-light text-center text-sm">
-          Crafting a Lightweight Website using In-House Components for Maximum
-          Control
+          Crafting a Lightweight Website using customizable and functional Web
+          Components for Maximum Control
         </p>
 
         <SearchComponents />
