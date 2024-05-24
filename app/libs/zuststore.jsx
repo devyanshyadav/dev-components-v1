@@ -125,13 +125,13 @@ const useDevStore = create((set, get) => ({
       description: "A dropdown that allows to select an option from a list.",
       url: "/components/dropdowns",
     },
-    {
-      name: "Color Pickers",
-      image: "/svg_icons/color-picker.png",
-      components_no: countObjects(ColorPickersInfo),
-      description: "A color picker that allows to select and choose colors",
-      url: "/components/color-pickers",
-    },
+    // {
+    //   name: "Color Pickers",
+    //   image: "/svg_icons/color-picker.png",
+    //   components_no: countObjects(ColorPickersInfo),
+    //   description: "A color picker that allows to select and choose colors",
+    //   url: "/components/color-pickers",
+    // },
   ],
 }));
 
