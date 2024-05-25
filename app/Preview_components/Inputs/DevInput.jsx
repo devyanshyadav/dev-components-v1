@@ -63,7 +63,8 @@ const DevInput = ({
           inputSize,
           commonStyle,
           inputRound,
-          inputVariant
+          inputVariant,
+          props.className
         )}
       >
         <span className="text-xl text-cyan-400">{icon}</span>
