@@ -24,7 +24,7 @@ const DevInput = ({
     faded:
       "bg-cyan-700/20 border border-cyan-700 outline-cyan-700 rounded-full",
     underline: clsx(
-      " border-b-4 border-cyan-700 outline-none relative after:content-[''] after:absolute after:h-[3px] after:bg-cyan-400 after:-bottom-1 after:w-full after:scale-x-0  after:transition after:duration-300 after:origin-center rounded-none px-0",
+      " border-b-4 border-cyan-700 outline-none relative after:content-[''] after:absolute after:h-1 after:bg-cyan-400 after:-bottom-1 after:w-full after:scale-x-0  after:transition after:duration-300 after:origin-center rounded-none px-0",
       active && "after:scale-x-100"
     ),
   };
