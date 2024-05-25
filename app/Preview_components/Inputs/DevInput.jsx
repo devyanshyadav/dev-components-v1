@@ -38,9 +38,9 @@ const DevInput = ({
   };
 
   const inputSizes = {
-    sm: "p-1 px-2",
-    md: "p-2 px-2",
-    lg: "p-3 px-4",
+    sm: "p-1",
+    md: "p-2",
+    lg: "p-3",
   };
   const inputSize = inputSizes[size] || inputSizes.md;
   const inputVariant = inputVariants[variant] || inputVariants.base;
