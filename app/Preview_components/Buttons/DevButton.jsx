@@ -4,7 +4,7 @@ import clsx from "clsx";
 import Ripple from "material-ripple-effects";
 
 const DevButton = ({
-  type = "solid",
+  variant = "solid",
   size = "md",
   href,
   rounded,
@@ -17,7 +17,7 @@ const DevButton = ({
   const commonStyle =
     "transition-all flex items-center gap-1 text-nowrap justify-center active:scale-95 w-fit h-fit border-2 border-cyan-400";
 
-  const buttontype = {
+  const buttonVariants = {
     solid: " bg-cyan-400 text-white",
     border: "text-cyan-400 font-semibold ", // Changed from 'outline'
     light: "hover:bg-cyan-400/30 text-cyan-400 font-semibold ",
@@ -38,7 +38,7 @@ const DevButton = ({
     none: "rounded-none",
   };
 
-  const buttonType = buttontype[type] || buttontype.solid;
+  const buttonVariant = buttonVariants[variant] || buttonVariants.solid;
   const buttonSizeClass = buttonSizes[size] || buttonSizes.md;
   const buttonRoundnessClass = buttonRoundness[rounded] || buttonRoundness.md;
 
@@ -51,7 +51,7 @@ const DevButton = ({
       {...(ripple && { onMouseUp: (e) => initRipple.create(e, "light") })}
       className={clsx(
         commonStyle,
-        buttonType,
+        buttonVariant,
         buttonSizeClass,
         buttonRoundnessClass,
         props.className

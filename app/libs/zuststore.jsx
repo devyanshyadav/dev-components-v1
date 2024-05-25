@@ -14,6 +14,7 @@ import CarouselsInfo from "../Preview_components/Carousels/CarouselsInfo";
 import DropdownsInfo from "../Preview_components/Dropdowns/DropdownsInfo";
 import NavbarsInfo from "../Preview_components/Navbars/NavbarsInfo";
 import ColorPickersInfo from "../Preview_components/ColorPickers/ColorPickersInfo";
+import InputsInfo from "../Preview_components/Inputs/InputsInfo";
 
 const useDevStore = create((set, get) => ({
   ThemeColors: {
@@ -131,6 +132,13 @@ const useDevStore = create((set, get) => ({
       components_no: countObjects(ColorPickersInfo),
       description: "A color picker that allows to select and choose colors",
       url: "/components/color-pickers",
+    },
+    {
+      name: "Inputs",
+      image: "/svg_icons/input.png",
+      components_no: countObjects(InputsInfo),
+      description: "A Input component that allows to input values in different formats",
+      url: "/components/inputs",
     },
   ],
 }));
