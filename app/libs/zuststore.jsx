@@ -15,6 +15,7 @@ import DropdownsInfo from "../Preview_components/Dropdowns/DropdownsInfo";
 import NavbarsInfo from "../Preview_components/Navbars/NavbarsInfo";
 import ColorPickersInfo from "../Preview_components/ColorPickers/ColorPickersInfo";
 import InputsInfo from "../Preview_components/Inputs/InputsInfo";
+import PopoversInfo from "../Preview_components/Popovers/Popoversinfo";
 
 const useDevStore = create((set, get) => ({
   ThemeColors: {
@@ -137,8 +138,17 @@ const useDevStore = create((set, get) => ({
       name: "Inputs",
       image: "/svg_icons/input.png",
       components_no: countObjects(InputsInfo),
-      description: "A Input component that allows to input values in different formats",
+      description:
+        "A Input component that allows to input values in different formats",
       url: "/components/inputs",
+    },
+    {
+      name: "Popovers",
+      image: "/svg_icons/popover.svg",
+      components_no: countObjects(PopoversInfo),
+      description:
+        "A Popover component that use to display content on trigger",
+      url: "/components/popovers",
     },
   ],
 }));
