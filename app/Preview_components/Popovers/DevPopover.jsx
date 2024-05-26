@@ -5,7 +5,11 @@ import { motion } from "framer-motion";
 import { createPortal } from "react-dom";
 import clsx from "clsx";
 
-const DevPopover = ({ children="Popover Content", popButton }) => {
+const DevPopover = ({
+  children = "Popover Content",
+  popButton,
+  contentClick = false,
+}) => {
   const [mounted, setMounted] = useState(false);
   const popoverRef = useRef(null);
   const randomId = useId();
@@ -45,6 +49,11 @@ const DevPopover = ({ children="Popover Content", popButton }) => {
               exit={{ scale: 0.8 }}
               transition={{ duration: 0.2 }}
               ref={popoverRef}
+              onClick={() => {
+                if (contentClick) {
+                  setMounted(!mounted);
+                }
+              }}
               className={clsx(
                 "origin-top",
                 !children && "p-2 rounded-lg bg-slate-800"
