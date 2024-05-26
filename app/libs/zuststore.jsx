@@ -15,7 +15,7 @@ import DropdownsInfo from "../Preview_components/Dropdowns/DropdownsInfo";
 import NavbarsInfo from "../Preview_components/Navbars/NavbarsInfo";
 import ColorPickersInfo from "../Preview_components/ColorPickers/ColorPickersInfo";
 import InputsInfo from "../Preview_components/Inputs/InputsInfo";
-import PopoversInfo from "../Preview_components/Popovers/Popoversinfo";
+import PopoversInfo from "../Preview_components/Popovers/PopoversInfo";
 
 const useDevStore = create((set, get) => ({
   ThemeColors: {
