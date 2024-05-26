@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import PopoversInfo from "@/app/Preview_components/Popovers/Popoversinfo";
 import ComponentPreview from "@/app/Components/ComponentPreview";
 import DevPopover from "@/app/Preview_components/Popovers/DevPopover";
 import { FaCircleUser } from "react-icons/fa6";
@@ -9,6 +8,7 @@ import { RiProfileLine } from "react-icons/ri";
 import { IoSettingsOutline } from "react-icons/io5";
 import { LuLogOut } from "react-icons/lu";
 import clsx from "clsx";
+import PopoversInfo from "@/app/Preview_components/Popovers/Popoversinfo";
 
 const page = () => {
   return (
