@@ -8,7 +8,7 @@ import { RiProfileLine } from "react-icons/ri";
 import { IoSettingsOutline } from "react-icons/io5";
 import { LuLogOut } from "react-icons/lu";
 import clsx from "clsx";
-import PopoversInfo from "@/app/Preview_components/Popovers/Popoversinfo";
+import PopoversInfo from "@/app/Preview_components/Popovers/PopoversInfo";
 
 const page = () => {
   return (
