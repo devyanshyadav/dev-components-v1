@@ -112,11 +112,11 @@ const page = () => {
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Using with Icon</h2>
               <div className="flex gap-2">
-                <DevButton type="solid" href="/" target="_blank">
+                <DevButton type="solid" target="_blank">
                   <HiHome />
                   Home
                 </DevButton>
-                <DevButton type="solid" href="/" target="_blank">
+                <DevButton type="solid" target="_blank">
                   Proceed
                   <IoIosArrowForward />
                 </DevButton>

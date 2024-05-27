@@ -55,6 +55,7 @@ const DevButton = ({
         buttonVariant,
         buttonSizeClass,
         buttonRoundnessClass,
+        ButtonComponent === "a" && "underline",
         props.className
       )}
     >
