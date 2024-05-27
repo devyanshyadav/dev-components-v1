@@ -128,36 +128,37 @@ const ButtonsInfo = [
       
       const page = () => {
         return (
+        
           <section className="space-y-4">
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Base Buttons</h2>
               <div className="flex gap-2 items-center flex-wrap">
-                <DevButton type="solid">
+                <DevButton variant="solid">
                   {/* Default Solid  */}
                   Solid
                 </DevButton>
-                <DevButton type="border">Border</DevButton>
-                <DevButton type="light">Light</DevButton>
-                <DevButton type="flat">Flat</DevButton>
-                <DevButton type="ghost">Ghost</DevButton>
+                <DevButton variant="border">Border</DevButton>
+                <DevButton variant="light">Light</DevButton>
+                <DevButton variant="flat">Flat</DevButton>
+                <DevButton variant="ghost">Ghost</DevButton>
               </div>
             </div>
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Ripples Effect</h2>
               <div className="flex gap-2 items-center flex-wrap">
-                <DevButton type="solid" ripple={true}>
+                <DevButton variant="solid" ripple={true}>
                   Solid
                 </DevButton>
-                <DevButton type="border" ripple={true}>
+                <DevButton variant="border" ripple={true}>
                   Border
                 </DevButton>
-                <DevButton type="light" ripple={true}>
+                <DevButton variant="light" ripple={true}>
                   Light
                 </DevButton>
-                <DevButton type="flat" ripple={true}>
+                <DevButton variant="flat" ripple={true}>
                   Flat
                 </DevButton>
-                <DevButton type="ghost" ripple={true}>
+                <DevButton variant="ghost" ripple={true}>
                   Ghost
                 </DevButton>
               </div>
@@ -165,13 +166,13 @@ const ButtonsInfo = [
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Buttons Sizes</h2>
               <div className="flex gap-2 items-center flex-wrap">
-                <DevButton type="solid" size="sm">
+                <DevButton variant="solid" size="sm">
                   Size sm
                 </DevButton>
-                <DevButton type="solid" size="md">
+                <DevButton variant="solid" size="md">
                   Size md
                 </DevButton>
-                <DevButton type="solid" size="lg">
+                <DevButton variant="solid" size="lg">
                   Size lg
                 </DevButton>
               </div>
@@ -179,19 +180,19 @@ const ButtonsInfo = [
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Buttons Roundness</h2>
               <div className="flex gap-2 items-center flex-wrap">
-                <DevButton type="solid" rounded="none">
+                <DevButton variant="solid" rounded="none">
                   Rounded none
                 </DevButton>
-                <DevButton type="solid" rounded="sm">
+                <DevButton variant="solid" rounded="sm">
                   Rounded sm
                 </DevButton>
-                <DevButton type="solid" rounded="md">
+                <DevButton variant="solid" rounded="md">
                   Rounded md
                 </DevButton>
-                <DevButton type="solid" rounded="lg">
+                <DevButton variant="solid" rounded="lg">
                   Rounded lg
                 </DevButton>
-                <DevButton type="solid" rounded="full">
+                <DevButton variant="solid" rounded="full">
                   Rounded full
                 </DevButton>
               </div>
@@ -199,7 +200,7 @@ const ButtonsInfo = [
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Using as Link</h2>
               <div className="flex gap-2">
-                <DevButton type="solid" href="/" target="_blank">
+                <DevButton variant="solid" href="/" target="_blank">
                   Button as Link
                 </DevButton>
               </div>
@@ -207,11 +208,11 @@ const ButtonsInfo = [
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Using with Icon</h2>
               <div className="flex gap-2">
-                <DevButton type="solid" target="_blank">
+                <DevButton variant="solid" target="_blank">
                   <HiHome />
                   Home
                 </DevButton>
-                <DevButton type="solid" target="_blank">
+                <DevButton variant="solid" target="_blank">
                   Proceed
                   <IoIosArrowForward />
                 </DevButton>
@@ -220,13 +221,13 @@ const ButtonsInfo = [
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Using as Icon</h2>
               <div className="flex gap-2 items-center flex-wrap">
-                <DevButton type="solid" size="lg" icon={true}>
+                <DevButton variant="solid" size="lg" icon={true}>
                   <IoSearch />
                 </DevButton>
-                <DevButton type="solid" size="lg" icon={true}>
+                <DevButton variant="solid" size="lg" icon={true}>
                   <HiHome />
                 </DevButton>
-                <DevButton type="solid" size="lg" icon={true}>
+                <DevButton variant="solid" size="lg" icon={true}>
                   <MdCameraAlt />
                 </DevButton>
               </div>
