@@ -1,12 +1,13 @@
 "use client";
-import React from "react";
+import React, { useId } from "react";
 import { Tooltip } from "react-tooltip";
 
 const ReactTooltip = ({ children, place = "top", tipData }) => {
+  const Id = useId();
   return (
     <>
       <Tooltip
-        id="dev-tooltip"
+        id={Id}
         place={place}
         offset={2}
         style={{ backgroundColor: "transparent", padding: "0px" }}
@@ -15,7 +16,7 @@ const ReactTooltip = ({ children, place = "top", tipData }) => {
           {tipData}
         </div>
       </Tooltip>
-      <div className="w-fit" data-tooltip-id="dev-tooltip">
+      <div className="w-fit" data-tooltip-id={Id}>
         {children}
       </div>
     </>
