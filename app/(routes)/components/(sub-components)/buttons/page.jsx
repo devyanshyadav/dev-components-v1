@@ -8,6 +8,7 @@ import DevButton from "@/app/Preview_components/Buttons/DevButton";
 import { IoSearch } from "react-icons/io5";
 import { MdCameraAlt } from "react-icons/md";
 import { HiHome } from "react-icons/hi2";
+import { IoIosArrowForward } from "react-icons/io";
 
 const page = () => {
   return (
@@ -105,6 +106,19 @@ const page = () => {
               <div className="flex gap-2">
                 <DevButton type="solid" href="/" target="_blank">
                   Button as Link
+                </DevButton>
+              </div>
+            </div>
+            <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
+              <h2 className="font-semibold text-white">Using with Icon</h2>
+              <div className="flex gap-2">
+                <DevButton type="solid" href="/" target="_blank">
+                  <HiHome />
+                  Home
+                </DevButton>
+                <DevButton type="solid" href="/" target="_blank">
+                  Proceed
+                  <IoIosArrowForward />
                 </DevButton>
               </div>
             </div>

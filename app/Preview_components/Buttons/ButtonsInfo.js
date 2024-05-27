@@ -99,6 +99,12 @@ const ButtonsInfo = [
           propDetail:
             "Indicates whether the button should display an icon. Set to true to enable.",
         },
+        {
+          propName: "rippleAccent",
+          propExample: "light",
+          propDetail:
+            "Determines the color of the ripple effect. Options include 'light' and 'dark'",
+        },
       ],
       packages: [
         {
@@ -115,73 +121,77 @@ const ButtonsInfo = [
     usage_code: `
       import DevButton from "@/app/Preview_components/Buttons/DevButton";
       import React from "react";
+      import { IoSearch } from "react-icons/io5";
+      import { MdCameraAlt } from "react-icons/md";
+      import { HiHome } from "react-icons/hi2";
+      import { IoIosArrowForward } from "react-icons/io";
       
       const page = () => {
         return (
           <section className="space-y-4">
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Base Buttons</h2>
-              <div className="flex gap-2">
-                <DevButton variant="solid">
+              <div className="flex gap-2 items-center flex-wrap">
+                <DevButton type="solid">
                   {/* Default Solid  */}
-                  Button
+                  Solid
                 </DevButton>
-                <DevButton variant="outline">Button</DevButton>
-                <DevButton variant="light">Button</DevButton>
-                <DevButton variant="flat">Button</DevButton>
-                <DevButton variant="ghost">Button</DevButton>
+                <DevButton type="border">Border</DevButton>
+                <DevButton type="light">Light</DevButton>
+                <DevButton type="flat">Flat</DevButton>
+                <DevButton type="ghost">Ghost</DevButton>
               </div>
             </div>
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Ripples Effect</h2>
-              <div className="flex gap-2">
-                <DevButton variant="solid" ripple={true}>
-                  Button
+              <div className="flex gap-2 items-center flex-wrap">
+                <DevButton type="solid" ripple={true}>
+                  Solid
                 </DevButton>
-                <DevButton variant="outline" ripple={true}>
-                  Button
+                <DevButton type="border" ripple={true}>
+                  Border
                 </DevButton>
-                <DevButton variant="light" ripple={true}>
-                  Button
+                <DevButton type="light" ripple={true}>
+                  Light
                 </DevButton>
-                <DevButton variant="flat" ripple={true}>
-                  Button
+                <DevButton type="flat" ripple={true}>
+                  Flat
                 </DevButton>
-                <DevButton variant="ghost" ripple={true}>
-                  Button
+                <DevButton type="ghost" ripple={true}>
+                  Ghost
                 </DevButton>
               </div>
             </div>
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Buttons Sizes</h2>
-              <div className="flex gap-2 items-center">
-                <DevButton variant="solid" size="sm">
+              <div className="flex gap-2 items-center flex-wrap">
+                <DevButton type="solid" size="sm">
                   Size sm
                 </DevButton>
-                <DevButton variant="solid" size="md">
+                <DevButton type="solid" size="md">
                   Size md
                 </DevButton>
-                <DevButton variant="solid" size="lg">
+                <DevButton type="solid" size="lg">
                   Size lg
                 </DevButton>
               </div>
             </div>
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Buttons Roundness</h2>
-              <div className="flex gap-2 items-center">
-                <DevButton variant="solid" rounded="none">
+              <div className="flex gap-2 items-center flex-wrap">
+                <DevButton type="solid" rounded="none">
                   Rounded none
                 </DevButton>
-                <DevButton variant="solid" rounded="sm">
+                <DevButton type="solid" rounded="sm">
                   Rounded sm
                 </DevButton>
-                <DevButton variant="solid" rounded="md">
+                <DevButton type="solid" rounded="md">
                   Rounded md
                 </DevButton>
-                <DevButton variant="solid" rounded="lg">
+                <DevButton type="solid" rounded="lg">
                   Rounded lg
                 </DevButton>
-                <DevButton variant="solid" rounded="full">
+                <DevButton type="solid" rounded="full">
                   Rounded full
                 </DevButton>
               </div>
@@ -189,21 +199,34 @@ const ButtonsInfo = [
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
               <h2 className="font-semibold text-white">Using as Link</h2>
               <div className="flex gap-2">
-                <DevButton variant="solid" href="/" target="_blank">
+                <DevButton type="solid" href="/" target="_blank">
                   Button as Link
                 </DevButton>
               </div>
             </div>
             <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
-              <h2 className="font-semibold text-white">Using as Icon</h2>
+              <h2 className="font-semibold text-white">Using with Icon</h2>
               <div className="flex gap-2">
-                <DevButton variant="solid" size="lg" icon={true}>
+                <DevButton type="solid" href="/" target="_blank">
+                  <HiHome />
+                  Home
+                </DevButton>
+                <DevButton type="solid" href="/" target="_blank">
+                  Proceed
+                  <IoIosArrowForward />
+                </DevButton>
+              </div>
+            </div>
+            <div className="space-y-2 bg-primary/50 p-3 border border-secondary/50 rounded-md">
+              <h2 className="font-semibold text-white">Using as Icon</h2>
+              <div className="flex gap-2 items-center flex-wrap">
+                <DevButton type="solid" size="lg" icon={true}>
                   <IoSearch />
                 </DevButton>
-                <DevButton variant="solid" size="lg" icon={true}>
+                <DevButton type="solid" size="lg" icon={true}>
                   <HiHome />
                 </DevButton>
-                <DevButton variant="solid" size="lg" icon={true}>
+                <DevButton type="solid" size="lg" icon={true}>
                   <MdCameraAlt />
                 </DevButton>
               </div>

@@ -10,6 +10,7 @@ const DevButton = ({
   rounded,
   ripple = false,
   icon,
+  rippleAccent = "light",
   children,
   ...props
 }) => {
@@ -48,7 +49,7 @@ const DevButton = ({
     <ButtonComponent
       href={href}
       {...props}
-      {...(ripple && { onMouseUp: (e) => initRipple.create(e, "light") })}
+      {...(ripple && { onMouseUp: (e) => initRipple.create(e, rippleAccent) })}
       className={clsx(
         commonStyle,
         buttonVariant,
