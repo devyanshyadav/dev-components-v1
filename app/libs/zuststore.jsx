@@ -16,6 +16,7 @@ import NavbarsInfo from "../Preview_components/Navbars/NavbarsInfo";
 import ColorPickersInfo from "../Preview_components/ColorPickers/ColorPickersInfo";
 import InputsInfo from "../Preview_components/Inputs/InputsInfo";
 import PopoversInfo from "../Preview_components/Popovers/PopoversInfo";
+import ClipboardsInfo from "../Preview_components/Clipboards/ClipboardsInfo";
 
 const useDevStore = create((set, get) => ({
   ThemeColors: {
@@ -146,9 +147,16 @@ const useDevStore = create((set, get) => ({
       name: "Popovers",
       image: "/svg_icons/popover.svg",
       components_no: countObjects(PopoversInfo),
-      description:
-        "A Popover component that use to display content on trigger",
+      description: "A Popover component that use to display content on trigger",
       url: "/components/popovers",
+    },
+    {
+      name: "Clipboards",
+      image: "/svg_icons/clipboard.svg",
+      components_no: countObjects(ClipboardsInfo),
+      description:
+        "A Clipboard component that allows users to copy text to their clipboard on click",
+      url: "/components/clipboards",
     },
   ],
 }));
