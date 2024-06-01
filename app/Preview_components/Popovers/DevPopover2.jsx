@@ -4,11 +4,7 @@ import { Tooltip as Popover } from "react-tooltip";
 import { motion } from "framer-motion";
 import { createPortal } from "react-dom";
 
-const DevPopover = ({
-  children = "Popover Content",
-  popButton,
-  contentClick = false,
-}) => {
+const DevPopover2 = ({ children="Popover Content", popButton, contentClick = true }) => {
   const [mounted, setMounted] = useState(false);
   const popoverRef = useRef(null);
   const randomId = useId();
@@ -53,8 +49,24 @@ const DevPopover = ({
                   setMounted(!mounted);
                 }
               }}
-              className="origin-top min-h-4 bg-slate-800 shadow-md border border-cyan-700/50 min-w-36 rounded-lg p-1"
+              className="origin-top hidden md:block min-h-4 bg-slate-800 shadow-md border border-cyan-700/50 min-w-36 z-50 rounded-lg p-1"
             >
+              {children && children}
+            </motion.div>
+            <motion.div
+              initial={{ translateY: "100%" }}
+              animate={{ translateY: "0%" }}
+              exit={{ translateY: "100%" }}
+              transition={{ duration: 0.2 }}
+              ref={popoverRef}
+              onClick={() => {
+                if (contentClick) {
+                  setMounted(!mounted);
+                }
+              }}
+              className="bg-slate-800 shadow-md border border-cyan-700/50 min-w-36 rounded-lg p-1  flex-col z-50 block fixed bottom-0 left-0 right-0 md:hidden min-h-4 text-lg"
+            >
+              <hr className="w-1/4 m-1 h-2 mx-auto border-none rounded-full bg-cyan-700/50" />
               {children && children}
             </motion.div>
           </Popover>,
@@ -67,4 +79,4 @@ const DevPopover = ({
   );
 };
 
-export default DevPopover;
+export default DevPopover2;
