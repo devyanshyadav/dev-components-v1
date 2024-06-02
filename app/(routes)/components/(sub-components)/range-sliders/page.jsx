@@ -61,6 +61,9 @@ const page = () => {
             maxValue={maxValue}
             set_minValue={set_minValue}
             set_maxValue={set_maxValue}
+            min={10}
+            max={100}
+            step={5}
           />
         }
         component_code={RangeSliderInfo[2].code}

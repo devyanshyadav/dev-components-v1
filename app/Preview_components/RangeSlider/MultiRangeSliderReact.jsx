@@ -39,6 +39,9 @@ function MultiRangeSliderReact({
   maxValue,
   set_minValue,
   set_maxValue,
+  min,
+  max,
+  step = 1,
 }) {
   const handleInput = (e) => {
     set_minValue(e.minValue);
@@ -78,9 +81,9 @@ function MultiRangeSliderReact({
             thumbLeftColor="#0E7490"
             thumbRightColor="#0E7490"
             className="bg-transparent !border-0 !shadow-none"
-            min={0}
-            max={100}
-            step={5}
+            min={min}
+            max={max}
+            step={step}
             minValue={minValue}
             maxValue={maxValue}
             onInput={(e) => {
