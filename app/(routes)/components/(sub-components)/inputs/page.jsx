@@ -5,6 +5,7 @@ import DevInput from "@/app/Preview_components/Inputs/DevInput";
 import { FiSearch } from "react-icons/fi";
 import InputsInfo from "@/app/Preview_components/Inputs/InputsInfo";
 import DevLaserInput from "@/app/Preview_components/Inputs/DevLaserInput";
+import { LuSearch } from "react-icons/lu";
 
 const page = () => {
   return (
@@ -126,9 +127,10 @@ const page = () => {
         component_preview={
           <div className="md:w-1/2 w-full">
             <DevLaserInput
+              icon={<LuSearch className="text-accent text-xl" />}
               type="text"
               rounded="full"
-              size="lg"
+              size="md"
               placeholder="Enter name"
             />
           </div>

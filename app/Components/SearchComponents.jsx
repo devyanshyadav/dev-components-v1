@@ -28,12 +28,12 @@ const SearchComponents = () => {
 
   return (
     <>
-      <section className="relative z-50">
+      <section className="relative z-50 space-y-1">
         <DevLaserInput
           icon={<LuSearch className="text-accent text-xl" />}
           type="text"
           rounded="full"
-          size="lg"
+          size="md"
           onChange={(e) => {
             handleSearch(e);
             !e.target.value && setSearchData([]);

@@ -36,9 +36,9 @@ const DevLaserInput = ({
     }
   };
   const InputSizes = {
-    sm: "h-4",
-    md: "h-8",
-    lg: "h-10",
+    sm: "h-8",
+    md: "h-10",
+    lg: "h-12",
   };
   const InputRoundness = {
     none: "rounded-none",
@@ -74,15 +74,15 @@ const DevLaserInput = ({
       <div
         className={clsx(
           InputRounded,
-          "absolute p-4 text-sm inset-[2px] flex items-center justify-center flex-grow text-slate-300 border border-cyan-700/70 bg-slate-800 gap-2  outline outline-cyan-700/20",
+          "absolute text-sm px-2 inset-[2px] flex items-center justify-center flex-grow text-slate-300 border border-cyan-700/70 bg-slate-800 gap-2  outline outline-cyan-700/20",
           props.className
         )}
       >
-        {icon && <span className="z-10">{icon}</span>}
+        {icon && <span className={clsx("z-10", laserColor)}>{icon}</span>}
         <input
           spellCheck="false"
           {...props}
-          className="w-full outline-none bg-transparent min-h-8"
+          className="w-full outline-none bg-transparent"
         />
       </div>
     </div>
