@@ -6,11 +6,14 @@ const DevLaserInput = ({
   size = "md",
   rounded = "full",
   laserColor = "#01FFF5",
+  laserActiveOnClick = true,
   icon,
   ...props
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [childPosition, setChildPosition] = useState(0);
+  const [active, setActive] = useState(false);
+
   const [childColor, setChildColor] = useState(
     `linear-gradient(to right, transparent, ${laserColor}, transparent)`
   );
@@ -62,12 +65,13 @@ const DevLaserInput = ({
     >
       <span
         className={clsx(
-          "absolute top-0 bottom-0 w-24 rounded-lg transition-colors duration-500",
-          isHovered ? "block" : "hidden"
+          "absolute top-0 bottom-0 rounded-lg ",
+          isHovered || (active && laserActiveOnClick) ? "block" : "hidden",
+          active ? "w-full  transition-all  duration-200 opacity-50" : "w-24"
         )}
         style={{
-          left: `${childPosition}px`,
-          background: childColor,
+          left: `${active ? 0 : childPosition}px`,
+          background: active ? "#01FFF5" : childColor,
         }}
       />
 
@@ -80,6 +84,8 @@ const DevLaserInput = ({
       >
         {icon && <span className={clsx("z-10", laserColor)}>{icon}</span>}
         <input
+          onFocus={() => setActive(true)}
+          onBlur={() => setActive(false)}
           spellCheck="false"
           {...props}
           className="w-full outline-none bg-transparent"
