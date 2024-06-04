@@ -404,7 +404,7 @@ const RangeSliderInfo = [
                      }}
                    />
                  ) : (
-                   <span>Slider loading...</span>
+                   <span className="text-white">Slider loading...</span>
                  )}
                </RangeDiv>
              </div>
