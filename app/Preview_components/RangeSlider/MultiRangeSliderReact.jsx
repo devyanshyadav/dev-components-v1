@@ -53,21 +53,20 @@ function MultiRangeSliderReact({
   }, []);
 
   return (
-    mounted && (
-      <div className=" max-w-md w-full bg-cyan-700/20 p-3 rounded-md">
-        <div className="flex justify-between items-center">
-          <h2 className="text-cyan-400 select-none font-semibold text-sm">
-            Filter by Price
-          </h2>
-          <pre className="border-cyan-400  text-white rounded-md text-sm  space-x-2 border bg-cyan-700/50 flex px-2">
-            <p>
-              Rs.
-              {minValue} - Rs.{maxValue}
-            </p>
-          </pre>
-        </div>
-
-        <RangeDiv className="w-full">
+    <div className=" max-w-md w-full bg-cyan-700/20 p-3 rounded-md">
+      <div className="flex justify-between items-center">
+        <h2 className="text-cyan-400 select-none font-semibold text-sm">
+          Filter by Price
+        </h2>
+        <pre className="border-cyan-400  text-white rounded-md text-sm  space-x-2 border bg-cyan-700/50 flex px-2">
+          <p>
+            Rs.
+            {minValue} - Rs.{maxValue}
+          </p>
+        </pre>
+      </div>
+      <RangeDiv className="w-full">
+        {mounted ? (
           <MultiRangeSlider
             preventWheel={false}
             baseClassName="multi-range-slider"
@@ -90,9 +89,11 @@ function MultiRangeSliderReact({
               handleInput(e);
             }}
           />
-        </RangeDiv>
-      </div>
-    )
+        ) : (
+          <span>Slider loading...</span>
+        )}
+      </RangeDiv>
+    </div>
   );
 }
 

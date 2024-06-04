@@ -367,46 +367,47 @@ const RangeSliderInfo = [
         }, []);
       
         return (
-          mounted && (
-            <div className=" max-w-md w-full bg-cyan-700/20 p-3 rounded-md">
-              <div className="flex justify-between items-center">
-                <h2 className="text-cyan-400 select-none font-semibold text-sm">
-                  Filter by Price
-                </h2>
-                <pre className="border-cyan-400  text-white rounded-md text-sm  space-x-2 border bg-cyan-700/50 flex px-2">
-                  <p>
-                    Rs.
-                    {minValue} - Rs.{maxValue}
-                  </p>
-                </pre>
-              </div>
-      
-              <RangeDiv className="w-full">
-                <MultiRangeSlider
-                  preventWheel={false}
-                  baseClassName="multi-range-slider"
-                  minCaption={\`Rs. ${minValue}\`}
-                  maxCaption={\`Rs. ${maxValue}\`}
-                  ruler={false}
-                  label={false}
-                  barLeftColor="#0E7490"
-                  barInnerColor="#22D3EE"
-                  barRightColor="#0E7490"
-                  thumbLeftColor="#0E7490"
-                  thumbRightColor="#0E7490"
-                  className="bg-transparent !border-0 !shadow-none"
-                  min={min}
-                  max={max}
-                  step={step}
-                  minValue={minValue}
-                  maxValue={maxValue}
-                  onInput={(e) => {
-                    handleInput(e);
-                  }}
-                />
-              </RangeDiv>
-            </div>
-          )
+             <div className=" max-w-md w-full bg-cyan-700/20 p-3 rounded-md">
+               <div className="flex justify-between items-center">
+                 <h2 className="text-cyan-400 select-none font-semibold text-sm">
+                   Filter by Price
+                 </h2>
+                 <pre className="border-cyan-400  text-white rounded-md text-sm  space-x-2 border bg-cyan-700/50 flex px-2">
+                   <p>
+                     Rs.
+                     {minValue} - Rs.{maxValue}
+                   </p>
+                 </pre>
+               </div>
+               <RangeDiv className="w-full">
+                 {mounted ? (
+                   <MultiRangeSlider
+                     preventWheel={false}
+                     baseClassName="multi-range-slider"
+                     minCaption={\`Rs. ${minValue}\`}
+                     maxCaption={\`Rs. ${maxValue}\`}
+                     ruler={false}
+                     label={false}
+                     barLeftColor="#0E7490"
+                     barInnerColor="#22D3EE"
+                     barRightColor="#0E7490"
+                     thumbLeftColor="#0E7490"
+                     thumbRightColor="#0E7490"
+                     className="bg-transparent !border-0 !shadow-none"
+                     min={min}
+                     max={max}
+                     step={step}
+                     minValue={minValue}
+                     maxValue={maxValue}
+                     onInput={(e) => {
+                       handleInput(e);
+                     }}
+                   />
+                 ) : (
+                   <span>Slider loading...</span>
+                 )}
+               </RangeDiv>
+             </div>
         );
       }
       
