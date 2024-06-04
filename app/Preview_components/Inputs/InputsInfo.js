@@ -349,7 +349,6 @@ const InputsInfo = [
          size = "md",
          rounded = "full",
          laserColor = "#01FFF5",
-         icon={<LuSearch className="text-accent text-xl" />}
          icon,
          ...props
        }) => {
