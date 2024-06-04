@@ -7,6 +7,7 @@ import Image from "next/image";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { createPortal } from "react-dom";
+import DevLaserInput from "../Preview_components/Inputs/DevLaserInput";
 
 const SearchComponents = () => {
   const { ComponentData } = useDevStore((state) => state);
@@ -28,18 +29,17 @@ const SearchComponents = () => {
   return (
     <>
       <section className="relative z-50">
-        <div className="w-full flex items-center border-2 border-accent rounded-full md:p-1 p-2 bg-gradient-to-r from-secondary/10 to-accent/20 text-white/70">
-          <LuSearch className="text-accent text-xl" />{" "}
-          <input
-            type="text"
-            onChange={(e) => {
-              handleSearch(e);
-              !e.target.value && setSearchData([]);
-            }}
-            placeholder="Search"
-            className="outline-none w-full px-1 text-sm bg-transparent rounded-full"
-          />
-        </div>
+        <DevLaserInput
+          icon={<LuSearch className="text-accent text-xl" />}
+          type="text"
+          rounded="full"
+          size="lg"
+          onChange={(e) => {
+            handleSearch(e);
+            !e.target.value && setSearchData([]);
+          }}
+          placeholder="Search"
+        />
 
         {searchData.length > 0 && (
           <motion.ul

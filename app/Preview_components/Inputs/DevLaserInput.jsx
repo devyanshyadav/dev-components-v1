@@ -6,6 +6,7 @@ const DevLaserInput = ({
   size = "md",
   rounded = "full",
   laserColor = "#01FFF5",
+  icon,
   ...props
 }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -53,7 +54,7 @@ const DevLaserInput = ({
       className={clsx(
         InputSize,
         InputRounded,
-        "relative w-full overflow-hidden "
+        "relative w-full overflow-hidden"
       )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -69,15 +70,21 @@ const DevLaserInput = ({
           background: childColor,
         }}
       />
-      <input
-        spellCheck="false"
-        {...props}
+
+      <div
         className={clsx(
           InputRounded,
-          "absolute p-4 text-sm inset-[2px] text-slate-300 border border-cyan-700/70 bg-slate-800  outline outline-cyan-700/20",
+          "absolute p-4 text-sm inset-[2px] flex items-center justify-center flex-grow text-slate-300 border border-cyan-700/70 bg-slate-800 gap-2  outline outline-cyan-700/20",
           props.className
         )}
-      />
+      >
+        {icon && <span className="z-10">{icon}</span>}
+        <input
+          spellCheck="false"
+          {...props}
+          className="w-full outline-none bg-transparent min-h-8"
+        />
+      </div>
     </div>
   );
 };
