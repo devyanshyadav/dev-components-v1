@@ -1,6 +1,4 @@
-const laserColor = "${laserColor}";
-const childPosition = "${childPosition}";
-const active = "${active}";
+
 const InputsInfo = [
   {
     title: "DevInput",
@@ -365,7 +363,7 @@ const InputsInfo = [
         const [active, setActive] = useState(false);
       
         const [childColor, setChildColor] = useState(
-          \`linear-gradient(to right, transparent, ${laserColor}, transparent)\`
+          \`linear-gradient(to right, transparent, \${laserColor}, transparent)\`
         );
         const handleMouseMove = (e) => {
           const parentRect = e.currentTarget.getBoundingClientRect();
@@ -374,17 +372,17 @@ const InputsInfo = [
           if (x < 0) {
             setChildPosition(0);
             setChildColor(
-              \`linear-gradient(to right, ${laserColor}, ${laserColor}, transparent)\`
+              \`linear-gradient(to right, \${laserColor}, \${laserColor}, transparent)\`
             );
           } else if (x > parentRect.width - 100) {
             setChildPosition(parentRect.width - 96);
             setChildColor(
-              \`linear-gradient(to right, transparent, ${laserColor}, ${laserColor})\`
+              \`linear-gradient(to right, transparent, \${laserColor}, \${laserColor})\`
             );
           } else {
             setChildPosition(x);
             setChildColor(
-              \`linear-gradient(to right, transparent, ${laserColor} 50%, transparent)\`
+              \`linear-gradient(to right, transparent, \${laserColor} 50%, transparent)\`
             );
           }
         };
@@ -420,7 +418,7 @@ const InputsInfo = [
                 active ? "w-full  transition-all  duration-200 opacity-50" : "w-24"
               )}
               style={{
-                left: \`${active ? 0 : childPosition}px\`,
+             left: \`\${active ? 0 : childPosition}px\`,
                 background: active ? "#01FFF5" : childColor,
               }}
             />
