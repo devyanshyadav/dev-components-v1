@@ -17,6 +17,7 @@ import ColorPickersInfo from "../Preview_components/ColorPickers/ColorPickersInf
 import InputsInfo from "../Preview_components/Inputs/InputsInfo";
 import PopoversInfo from "../Preview_components/Popovers/PopoversInfo";
 import ClipboardsInfo from "../Preview_components/Clipboards/ClipboardsInfo";
+import EmojiPickersInfo from "../Preview_components/EmojiPickers/EmojiPickersInfo";
 
 const useDevStore = create((set, get) => ({
   ThemeColors: {
@@ -157,6 +158,14 @@ const useDevStore = create((set, get) => ({
       description:
         "A Clipboard component that allows users to copy text to their clipboard on click",
       url: "/components/clipboards",
+    },
+    {
+      name: "Emoji Pickers",
+      image: "/svg_icons/emoji-picker.svg",
+      components_no: countObjects(EmojiPickersInfo),
+      description:
+        "A Emoji Picker component that allows users to add emojis to their text",
+      url: "/components/emoji-pickers",
     },
   ],
 }));
