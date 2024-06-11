@@ -130,7 +130,7 @@ const DevPopover = ({
             isOpen
             id={randomId}
             place="bottom"
-            offset={1}
+            offset={1} opacity={1}
             style={{
               backgroundColor: "transparent",
               padding: "0px",
@@ -293,7 +293,7 @@ const DevPopover2 = ({ children="Popover Content", popButton, contentClick = tru
             isOpen
             id={randomId}
             place="bottom"
-            offset={1}
+            offset={1} opacity={1}
             style={{
               backgroundColor: "transparent",
               padding: "0px",

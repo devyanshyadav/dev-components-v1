@@ -47,7 +47,7 @@ const CustomDropDown_2 = ({ setDropDownValue, dropDownValue, Options }) => {
             isOpen
             id={randomId}
             place="bottom"
-            offset={2}
+            offset={2} opacity={1}
             style={{
               backgroundColor: "transparent",
               padding: "0px",

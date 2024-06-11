@@ -45,7 +45,7 @@ const ReactColorful = ({ color, setColor }) => {
             clickable={true}
             events={["click"]}
             place="bottom"
-            offset={2}
+            offset={2} opacity={1}
             defaultIsOpen={false}
             delayShow={0}
             delayHide={0}
