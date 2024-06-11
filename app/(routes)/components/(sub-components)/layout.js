@@ -1,18 +1,42 @@
-'use client'
-import useDevStore from "@/app/libs/zuststore";
-import { useParams, usePathname } from "next/navigation";
 import React from "react";
+import { headers } from "next/headers";
+import ComponentData from "@/app/libs/utils/ComponentDataArray";
 
-const layout = ({ children }) => {
-  const { ComponentData } = useDevStore((state) => state);
-  const params=usePathname();
-  const data = ComponentData.filter((item) => item.url === params);
+const getDataByPathname = (pathname) => {
+  if (!pathname) return null;
+  return ComponentData.find((item) => item.url.trim() === pathname) || null;
+};
+
+export const generateMetadata = () => {
+  const headerList = headers();
+  const pathname = headerList.get("x-current-path");
+
+  console.log("pathname", pathname);
+  const data = getDataByPathname(pathname);
+  return {
+    title: data?.name || "Dev Components",
+    description: data?.description || "Default Description",
+    openGraph: {
+      title: data?.name || "Dev Components",
+      description: data?.description || "Default Description",
+    },
+  };
+};
+
+const Layout = ({ children }) => {
+  const headerList = headers();
+  const pathname = headerList.get("x-current-path");
+
+  console.log("pathname", pathname);
+  const data = getDataByPathname(pathname);
   return (
     <>
       <div>
-        <h1 className="text-3xl font-semibold text-white">{data[0].name}</h1>
+        <h1 className="text-3xl font-semibold text-white">
+          {data?.name || "Default Title"}
+        </h1>
         <p className="text-white/70">
-          {data[0].description}
+          {data?.description || "Default Description"}
         </p>
       </div>
       {children}
@@ -20,4 +44,4 @@ const layout = ({ children }) => {
   );
 };
 
-export default layout;
+export default Layout;
