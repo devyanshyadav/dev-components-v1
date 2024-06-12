@@ -1,16 +1,15 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { LuSearch } from "react-icons/lu";
-import useDevStore from "../libs/zuststore";
 import Link from "next/link";
 import Image from "next/image";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { createPortal } from "react-dom";
 import DevLaserInput from "../Preview_components/Inputs/DevLaserInput";
+import ComponentData from "../libs/utils/ComponentDataArray";
 
 const SearchComponents = () => {
-  const { ComponentData } = useDevStore((state) => state);
   const [searchData, setSearchData] = useState([]);
   const [mount, setMount] = useState(false);
 

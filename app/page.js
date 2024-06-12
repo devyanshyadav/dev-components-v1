@@ -1,7 +1,6 @@
 import React from "react";
 import SearchComponents from "./Components/SearchComponents";
 import ComponentsHome from "./Components/ComponentHome";
-import Image from "next/image";
 
 const page = () => {
   return (
