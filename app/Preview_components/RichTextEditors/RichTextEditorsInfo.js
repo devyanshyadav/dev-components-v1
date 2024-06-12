@@ -379,7 +379,7 @@ const DevRichTextEditor = () => {
       <ContentEditable
         contentEditable
         className="md:w-[96%] border-x mt-2 mx-auto flex-1 focus:outline-none p-5"
-        onChange={(e) => setTxtData(e.target.value || "Enter Text")} // Update text data on change
+        onChange={(e) => setTxtData(e.target.value || "<div></div>")} // Update text data on change
         html={txtData} // Render HTML content
       />
     </main>
