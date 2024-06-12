@@ -5,9 +5,10 @@ import useDevStore from "../libs/zuststore";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import ComponentData from "../libs/utils/ComponentDataArray";
 
 const SideBar = () => {
-  const { ComponentData, SideBar, SideBarToggle } = useDevStore(
+  const {SideBar, SideBarToggle } = useDevStore(
     (state) => state
   );
   const params = usePathname();
