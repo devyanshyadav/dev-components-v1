@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import ComponentData from "../libs/utils/ComponentDataArray";
 
 const SideBar = () => {
-  const {SideBar, SideBarToggle } = useDevStore(
+  const { SideBar, SideBarToggle } = useDevStore(
     (state) => state
   );
   const params = usePathname();
@@ -30,16 +30,15 @@ const SideBar = () => {
           {ComponentData.map((item, index) => (
             <li
               key={index}
-              className={`w-full flex group items-center gap-2 hover:bg-secondary/20 hover:text-white rounded-lg cursor-pointer p-1 px-2 ${
-                data.length > 0 && data[0].name === item.name
+              className={`w-full flex group items-center gap-2 hover:bg-secondary/20 hover:text-white rounded-lg cursor-pointer p-1 px-2 ${data.length > 0 && data[0].name === item.name
                   ? "text-accent"
                   : ""
-              } `}
+                } `}
             >
               <GoDotFill className="text-xs group-hover:text-accent" />{" "}
-              <Link href={item.url} className="w-full">
+              <a href={item.url} className="w-full">
                 {item.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -48,11 +47,10 @@ const SideBar = () => {
             <li
               key={index}
               onClick={() => SideBarToggle()}
-              className={`w-full  group flex items-center gap-2 hover:bg-secondary/20 hover:text-white rounded-lg cursor-pointer p-1 px-2 ${
-                data.length > 0 && data[0].name === item.name
+              className={`w-full  group flex items-center gap-2 hover:bg-secondary/20 hover:text-white rounded-lg cursor-pointer p-1 px-2 ${data.length > 0 && data[0].name === item.name
                   ? "text-accent"
                   : ""
-              } `}
+                } `}
             >
               <GoDotFill className="text-xs group-hover:text-accent" />{" "}
               <Link href={item.url} className="w-full">
