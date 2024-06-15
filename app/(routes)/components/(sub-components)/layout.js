@@ -1,6 +1,7 @@
 import React from "react";
 import { headers } from "next/headers";
 import ComponentData from "@/app/libs/utils/ComponentDataArray";
+import ComponentTitle from "@/app/Components/ComponentTitle";
 
 const getDataByPathname = (pathname) => {
   if (!pathname) return null;
@@ -24,21 +25,9 @@ export const generateMetadata = () => {
 };
 
 const Layout = ({ children }) => {
-  const headerList = headers();
-  const pathname = headerList.get("x-current-path");
-
-  console.log("pathname", pathname);
-  const data = getDataByPathname(pathname);
   return (
     <>
-      <div>
-        <h1 className="text-3xl font-semibold text-white">
-          {data?.name || "Default Title"}
-        </h1>
-        <p className="text-white/70">
-          {data?.description || "Default Description"}
-        </p>
-      </div>
+      <ComponentTitle/>
       {children}
     </>
   );
