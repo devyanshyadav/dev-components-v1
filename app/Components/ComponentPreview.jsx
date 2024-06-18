@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import CopyCode from "./CopyCode";
 import { FaCheck } from "react-icons/fa6";
 import { IoCopy } from "react-icons/io5";
@@ -45,9 +45,8 @@ const ComponentPreview = ({
             <li
               key={index}
               onClick={() => setCurrTab(index)}
-              className={`hover:text-accent select-none cursor-pointer border-transparent border-b-2 hover:border-accent z-10 ${
-                CurrTab === index && "border-accent text-accent"
-              }`}
+              className={`hover:text-accent select-none cursor-pointer border-transparent border-b-2 hover:border-accent z-10 ${CurrTab === index && "border-accent text-accent"
+                }`}
             >
               {item}
             </li>
@@ -74,18 +73,18 @@ const ComponentPreview = ({
           </div>
         ) : CurrTab == 1 ? (
           <SyntaxHighlighter
-            className="text-sm rounded-b-lg [&::-webkit-scrollbar]:hidden [&::-webkit-scrollbar-track]:hidden [&::-webkit-scrollbar-thumb]:hidden"
+            className="editor-ref text-sm rounded-b-lg [&::-webkit-scrollbar]:hidden [&::-webkit-scrollbar-track]:hidden [&::-webkit-scrollbar-thumb]:hidden"
             language="javascript"
-            style={atomOneDark}
+            style={dracula}
             wrapLines={true}
           >
             {codeString}
           </SyntaxHighlighter>
         ) : CurrTab == 2 ? (
           <SyntaxHighlighter
-            className="text-sm rounded-b-lg [&::-webkit-scrollbar]:hidden [&::-webkit-scrollbar-track]:hidden [&::-webkit-scrollbar-thumb]:hidden"
+            className="editor-ref text-sm rounded-b-lg [&::-webkit-scrollbar]:hidden [&::-webkit-scrollbar-track]:hidden [&::-webkit-scrollbar-thumb]:hidden"
             language="javascript"
-            style={atomOneDark}
+            style={dracula}
             wrapLines={true}
           >
             {component_usage_code}
